@@ -21,7 +21,7 @@ class BranchObject implements \JsonSerializable
     /**
      * @param string $key
      *
-     * @return ListingObject
+     * @return BranchObject
      */
     public function setKey($key)
     {
