@@ -1,2 +1,2 @@
 language: php
-script: ./vendor/phpunit/phpunit/phpunit tests/
+script: ./vendor/phpunit/phpunit/phpunit
