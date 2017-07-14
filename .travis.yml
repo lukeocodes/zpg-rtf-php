@@ -1,6 +1,8 @@
 language: php
 
-# Create database, schema and fixtures
+php:
+  - 7.0
+
 install:
   - composer install
 
