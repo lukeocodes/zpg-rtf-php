@@ -1,2 +1,9 @@
 language: php
-script: ./vendor/phpunit/phpunit/phpunit
+
+# Create database, schema and fixtures
+install:
+  - composer install
+
+# Run script
+script:
+  - vendor/phpunit/phpunit/phpunit
