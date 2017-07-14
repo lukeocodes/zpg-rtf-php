@@ -3,9 +3,12 @@ language: php
 php:
   - 7.0
 
-install:
-  - composer install
+before_install:
+  - composer require satooshi/php-coveralls:dev-master
+  - composer install --dev
 
-# Run script
 script:
-  - phpunit
+  - phpunit --coverage-clover ./tests/logs/clover.xml
+
+after_script:
+  - php vendor/bin/coveralls -v
