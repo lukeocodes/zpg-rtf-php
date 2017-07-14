@@ -1,3 +1,2 @@
 language: php
-dist: trusty
 script: ./vendor/phpunit/phpunit/phpunit tests/
