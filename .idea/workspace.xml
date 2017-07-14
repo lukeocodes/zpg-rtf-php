@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9eb06bc1-9b59-4c3f-baf1-1d2e9ff19369" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/Objects/ListingObjectTest.php" afterPath="$PROJECT_DIR$/tests/Objects/ListingObjectTest.php" />
-    </list>
+    <list default="true" id="9eb06bc1-9b59-4c3f-baf1-1d2e9ff19369" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -285,7 +282,7 @@
       <option name="presentableId" value="Default" />
       <updated>1500042307879</updated>
       <workItem from="1500042309777" duration="133000" />
-      <workItem from="1500042456103" duration="9354000" />
+      <workItem from="1500042456103" duration="9481000" />
     </task>
     <task id="LOCAL-00001" summary="Travis setup.">
       <created>1500063782388</created>
@@ -330,7 +327,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9487000" />
+    <option name="totallyTimeSpent" value="9614000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
