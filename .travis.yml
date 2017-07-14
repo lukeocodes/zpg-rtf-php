@@ -8,4 +8,4 @@ install:
 
 # Run script
 script:
-  - vendor/phpunit/phpunit/phpunit
+  - phpunit
