@@ -386,16 +386,23 @@ class ListingObjectTest extends TestCase
             ListingObject::class,
             $this->object->setEpcRatings(new EpcRatingsObject())
         );
+
+        $this->assertInstanceOf(
+            EpcRatingsObject::class,
+            $this->object->getEpcRatings()
+        );
     }
 
     public function testCanSetFeatureList()
     {
         $this->assertInstanceOf(
             ListingObject::class,
-            $this->object->setFeatureList([
-                'Newly carpeted throughout',
-                'Remodelled kitchen'
-            ])
+            $this->object->setFeatureList(['Newly carpeted throughout', 'Remodelled kitchen'])
+        );
+
+        $this->assertSameSize(
+            ['Newly carpeted throughout', 'Remodelled kitchen'],
+            $this->object->getFeatureList()
         );
     }
 
@@ -427,12 +434,12 @@ class ListingObjectTest extends TestCase
     {
         $this->assertInstanceOf(
             ListingObject::class,
-            $this->object->setFloorLevels([
-                'basement',
-                'ground',
-                1,
-                2
-            ])
+            $this->object->setFloorLevels(['basement', 'ground', 1, 2])
+        );
+
+        $this->assertSameSize(
+            ['basement', 'ground', 1, 2],
+            $this->object->getFloorLevels()
         );
     }
 

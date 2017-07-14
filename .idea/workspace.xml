@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9eb06bc1-9b59-4c3f-baf1-1d2e9ff19369" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/php-test-framework.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Objects/ListingObjectTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/Objects/ListingObjectTest.php" afterPath="$PROJECT_DIR$/tests/Objects/ListingObjectTest.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -43,14 +41,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ListingObjectTest.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ListingObjectTest.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/Objects/ListingObjectTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="307">
-              <caret line="364" column="23" lean-forward="true" selection-start-line="364" selection-start-column="23" selection-end-line="364" selection-end-column="23" />
+            <state relative-caret-position="239">
+              <caret line="438" column="0" lean-forward="true" selection-start-line="438" selection-start-column="0" selection-end-line="438" selection-end-column="0" />
               <folding>
                 <element signature="e#40#71#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".travis.yml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.travis.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -82,6 +90,7 @@
         <option value="$PROJECT_DIR$/src/Objects/TenantEligibilityObject.php" />
         <option value="$PROJECT_DIR$/src/Objects/ListingObject.php" />
         <option value="$PROJECT_DIR$/tests/Objects/ListingObjectTest.php" />
+        <option value="$PROJECT_DIR$/.travis.yml" />
       </list>
     </option>
   </component>
@@ -132,6 +141,16 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="External Libraries" />
               <option name="myItemType" value="com.jetbrains.php.config.library.PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zpg-rtf-php" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zpg-rtf-php" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -266,14 +285,19 @@
       <option name="presentableId" value="Default" />
       <updated>1500042307879</updated>
       <workItem from="1500042309777" duration="133000" />
-      <workItem from="1500042456103" duration="8229000" />
+      <workItem from="1500042456103" duration="9354000" />
     </task>
+    <task id="LOCAL-00001" summary="Travis setup.">
+      <created>1500063782388</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1500063782388</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ListingObjectTest - 2017.07.14 at 17h 11m 46s.xml">
-      <configuration name="ListingObjectTest" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
     <history-entry file="ListingObjectTest - 2017.07.14 at 17h 11m 56s.xml">
       <configuration name="ListingObjectTest" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
@@ -295,6 +319,9 @@
     <history-entry file="ListingObjectTest - 2017.07.14 at 21h 00m 49s.xml">
       <configuration name="ListingObjectTest" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
+    <history-entry file="ListingObjectTest - 2017.07.14 at 21h 08m 50s.xml">
+      <configuration name="ListingObjectTest" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
     <history-entry file="ListingObjectTest_testCanSetDecorativeCondition - 2017.07.14 at 20h 59m 37s.xml">
       <configuration name="ListingObjectTest.testCanSetDecorativeCondition" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
@@ -303,7 +330,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8362000" />
+    <option name="totallyTimeSpent" value="9487000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -316,9 +343,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="30" width="1920" height="1170" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18229167" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18229167" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959852" sideWeight="0.50208336" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -361,6 +387,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Travis setup." />
+    <option name="LAST_COMMIT_MESSAGE" value="Travis setup." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -523,11 +553,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/Objects/ListingObjectTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="364" column="23" lean-forward="true" selection-start-line="364" selection-start-column="23" selection-end-line="364" selection-end-column="23" />
+        <state relative-caret-position="239">
+          <caret line="438" column="0" lean-forward="true" selection-start-line="438" selection-start-column="0" selection-end-line="438" selection-end-column="0" />
           <folding>
             <element signature="e#40#71#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.travis.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
