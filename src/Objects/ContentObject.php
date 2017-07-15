@@ -2,6 +2,11 @@
 
 namespace ZpgRtf\Objects;
 
+/**
+ * A content object specifies a single piece of media content associated with the listing, such as an image or brochure.
+ * The listing/update:content attribute is an array of these content objects, which will be displayed in the order
+ * provided.
+ */
 class ContentObject implements \JsonSerializable
 {
     /** @var string */

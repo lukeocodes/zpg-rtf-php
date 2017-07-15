@@ -2,6 +2,10 @@
 
 namespace ZpgRtf\Objects;
 
+/**
+ * This describes a single area. It is a constituent of a number of other objects. This should not be confused with the
+ * areas object.
+ */
 class AreaObject implements \JsonSerializable
 {
     /** @var int **/

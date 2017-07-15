@@ -2,6 +2,9 @@
 
 namespace ZpgRtf\Objects;
 
+/**
+ * The internal/external areas of the property.
+ */
 class AreasObject implements \JsonSerializable
 {
     /** @var MinMaxAreaObject */

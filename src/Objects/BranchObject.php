@@ -3,7 +3,7 @@
 namespace ZpgRtf\Objects;
 
 /**
- * The branch object structures the branch payload.
+ * The branch object structures the main branch payload.
  */
 class BranchObject implements \JsonSerializable
 {
