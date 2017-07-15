@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<class xmlns="http://xml.phpdox.net/src" full="ZpgRtf\Objects\CoordinatesObject" namespace="ZpgRtf\Objects" name="CoordinatesObject" abstract="false" final="false" start="5" end="8">
-  <file path="/home/luke/personal/zpg-rtf-php/src/Objects" file="CoordinatesObject.php" realpath="/home/luke/personal/zpg-rtf-php/src/Objects/CoordinatesObject.php" size="63" time="2017-07-14T22:26:41+00:00" unixtime="1500071201" sha1="4f83e8c96d103af255aa544f5f2b82dd0a32a8a7" relative="Objects/CoordinatesObject.php"/>
-</class>
