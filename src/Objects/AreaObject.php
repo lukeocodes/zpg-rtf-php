@@ -25,6 +25,8 @@ class AreaObject implements \JsonSerializable
 
     /**
      * @param int $value
+     *
+     * @return AreaObject
      */
     public function setValue($value)
     {
@@ -43,6 +45,8 @@ class AreaObject implements \JsonSerializable
 
     /**
      * @param string $units
+     *
+     * @return AreaObject
      */
     public function setUnits($units)
     {
