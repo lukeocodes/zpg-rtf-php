@@ -449,6 +449,11 @@ class ListingObjectTest extends TestCase
             ListingObject::class,
             $this->object->setFloors(4)
         );
+
+        $this->assertGreaterThan(
+            3,
+            $this->object->getFloors()
+        );
     }
 
     public function testCanSetFurnishedState()
@@ -456,6 +461,11 @@ class ListingObjectTest extends TestCase
         $this->assertInstanceOf(
             ListingObject::class,
             $this->object->setFurnishedState('furnished')
+        );
+
+        $this->assertStringStartsWith(
+            'furnished',
+            $this->object->getFurnishedState()
         );
     }
 
@@ -465,6 +475,11 @@ class ListingObjectTest extends TestCase
             ListingObject::class,
             $this->object->setGoogleStreetView(new GoogleStreetViewObject())
         );
+
+        $this->assertInstanceOf(
+            GoogleStreetViewObject::class,
+            $this->object->getGoogleStreetView()
+        );
     }
 
     public function testCanSetGroundRent()
@@ -472,6 +487,11 @@ class ListingObjectTest extends TestCase
         $this->assertInstanceOf(
             ListingObject::class,
             $this->object->setGroundRent(795.95)
+        );
+
+        $this->assertGreaterThan(
+            795.94,
+            $this->object->getGroundRent()
         );
     }
 
@@ -493,6 +513,11 @@ class ListingObjectTest extends TestCase
             ListingObject::class,
             $this->object->setLeaseExpiry(new LeaseExpiryObject())
         );
+
+        $this->assertInstanceOf(
+            LeaseExpiryObject::class,
+            $this->object->getLeaseExpiry()
+        );
     }
 
     public function testCanSetLifeCycleStatus()
@@ -500,6 +525,11 @@ class ListingObjectTest extends TestCase
         $this->assertInstanceOf(
             ListingObject::class,
             $this->object->setLifeCycleStatus('available')
+        );
+
+        $this->assertStringStartsWith(
+            'available',
+            $this->object->getLifeCycleStatus()
         );
     }
 
@@ -509,6 +539,11 @@ class ListingObjectTest extends TestCase
             ListingObject::class,
             $this->object->setListedBuildingGrade('grade_a')
         );
+
+        $this->assertStringStartsWith(
+            'grade_a',
+            $this->object->getListedBuildingGrade()
+        );
     }
 
     public function testCanSetListingReference()
@@ -516,6 +551,11 @@ class ListingObjectTest extends TestCase
         $this->assertInstanceOf(
             ListingObject::class,
             $this->object->setListingReference('listing-12345')
+        );
+
+        $this->assertStringStartsWith(
+            'listing-12345',
+            $this->object->getListingReference()
         );
     }
 
@@ -525,6 +565,11 @@ class ListingObjectTest extends TestCase
             ListingObject::class,
             $this->object->setLivingRooms(1)
         );
+
+        $this->assertGreaterThan(
+            0,
+            $this->object->getLivingRooms()
+        );
     }
 
     public function testCanSetLocation()
@@ -532,6 +577,11 @@ class ListingObjectTest extends TestCase
         $this->assertInstanceOf(
             ListingObject::class,
             $this->object->setLocation(new LocationObject())
+        );
+
+        $this->assertInstanceOf(
+            LocationObject::class,
+            $this->object->getLocation()
         );
     }
 
@@ -565,6 +615,11 @@ class ListingObjectTest extends TestCase
             ListingObject::class,
             $this->object->setOpenDay(new \DateTime('+1 month', new \DateTimeZone('UTC')))
         );
+
+        $this->assertInstanceOf(
+            \DateTime::class,
+            $this->object->getOpenDay()
+        );
     }
 
     public function testCanSetOutbuildings()
@@ -583,9 +638,12 @@ class ListingObjectTest extends TestCase
     {
         $this->assertInstanceOf(
             ListingObject::class,
-            $this->object->setOutsideSpace([
-                'roof_terrace'
-            ])
+            $this->object->setOutsideSpace(['roof_terrace'])
+        );
+
+        $this->assertSameSize(
+            ['roof_terrace'],
+            $this->object->getOutsideSpace()
         );
     }
 
@@ -593,10 +651,12 @@ class ListingObjectTest extends TestCase
     {
         $this->assertInstanceOf(
             ListingObject::class,
-            $this->object->setParking([
-                'off_street_parking',
-                'single_garage'
-            ])
+            $this->object->setParking(['off_street_parking', 'single_garage'])
+        );
+
+        $this->assertSameSize(
+            ['off_street_parking', 'single_garage'],
+            $this->object->getParking()
         );
     }
 
@@ -630,6 +690,11 @@ class ListingObjectTest extends TestCase
             ListingObject::class,
             $this->object->setPricing(new PricingObject())
         );
+
+        $this->assertInstanceOf(
+            PricingObject::class,
+            $this->object->getPricing()
+        );
     }
 
     public function testCanSetPropertyType()
@@ -637,6 +702,11 @@ class ListingObjectTest extends TestCase
         $this->assertInstanceOf(
             ListingObject::class,
             $this->object->setPropertyType(ListingObject::END_TERRACE)
+        );
+
+        $this->assertStringStartsWith(
+            ListingObject::END_TERRACE,
+            $this->object->getPropertyType()
         );
     }
 
@@ -646,6 +716,11 @@ class ListingObjectTest extends TestCase
             ListingObject::class,
             $this->object->setRateableValue(10000.00)
         );
+
+        $this->assertGreaterThan(
+            9999.99,
+            $this->object->getRateableValue()
+        );
     }
 
     public function testCanSetRentalTerm()
@@ -653,6 +728,11 @@ class ListingObjectTest extends TestCase
         $this->assertInstanceOf(
             ListingObject::class,
             $this->object->setRentalTerm(new MinimumContractLengthObject())
+        );
+
+        $this->assertInstanceOf(
+            MinimumContractLengthObject::class,
+            $this->object->getRentalTerm()
         );
     }
 
@@ -686,6 +766,11 @@ class ListingObjectTest extends TestCase
             ListingObject::class,
             $this->object->setSapRating(1)
         );
+
+        $this->assertGreaterThan(
+            0,
+            $this->object->getSapRating()
+        );
     }
 
     public function testCanSetServiceCharge()
@@ -693,6 +778,11 @@ class ListingObjectTest extends TestCase
         $this->assertInstanceOf(
             ListingObject::class,
             $this->object->setServiceCharge(new ServiceChargeObject())
+        );
+
+        $this->assertInstanceOf(
+            ServiceChargeObject::class,
+            $this->object->getServiceCharge()
         );
     }
 
@@ -726,6 +816,11 @@ class ListingObjectTest extends TestCase
             ListingObject::class,
             $this->object->setSummaryDescription('Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro.')
         );
+
+        $this->assertStringStartsWith(
+            'Zombie ipsum reversus',
+            $this->object->getSummaryDescription()
+        );
     }
 
     public function testCanSetSwimmingPool()
@@ -758,6 +853,11 @@ class ListingObjectTest extends TestCase
             ListingObject::class,
             $this->object->setTenantEligibility(new TenantEligibilityObject())
         );
+
+        $this->assertInstanceOf(
+            TenantEligibilityObject::class,
+            $this->object->getTenantEligibility()
+        );
     }
 
     public function testCanSetTennisCourt()
@@ -778,6 +878,11 @@ class ListingObjectTest extends TestCase
             ListingObject::class,
             $this->object->setTenure('freehold')
         );
+
+        $this->assertStringStartsWith(
+            'freehold',
+            $this->object->getTenure()
+        );
     }
 
     public function testCanSetTotalBedrooms()
@@ -785,6 +890,11 @@ class ListingObjectTest extends TestCase
         $this->assertInstanceOf(
             ListingObject::class,
             $this->object->setTotalBedrooms(3)
+        );
+
+        $this->assertGreaterThan(
+            2,
+            $this->object->getTotalBedrooms()
         );
     }
 
