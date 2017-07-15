@@ -5,8 +5,7 @@
     "require": {
         "php": "~7",
         "guzzlehttp/guzzle": "^6.3",
-        "php-di/php-di": "^5.4",
-        "satooshi/php-coveralls": "dev-master"
+        "php-di/php-di": "^5.4"
     },
     "autoload": {
         "psr-4": {
