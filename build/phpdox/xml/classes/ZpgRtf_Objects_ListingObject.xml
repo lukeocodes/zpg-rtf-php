@@ -1,0 +1,1997 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject" abstract="false" final="false" start="8" end="1973">
+  <file path="/home/luke/personal/zpg-rtf-php/src/Objects" file="ListingObject.php" realpath="/home/luke/personal/zpg-rtf-php/src/Objects/ListingObject.php" size="39210" time="2017-07-14T16:01:04+00:00" unixtime="1500048064" sha1="8db03e524804bd3d62e0198c7669b73951e6544d" relative="Objects/ListingObject.php"/>
+  <docblock>
+    <description compact="The listing object structures the listing payload."/>
+  </docblock>
+  <implements full="JsonSerializable" namespace="" name="JsonSerializable"/>
+  <member name="accessibility" visibility="private" static="false" line="11">
+    <docblock>
+      <var type="object">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </var>
+    </docblock>
+  </member>
+  <member name="administrationFees" visibility="private" static="false" line="14">
+    <docblock>
+      <var description="e.g. '£10 per person'" type="string"/>
+    </docblock>
+  </member>
+  <member name="annualBusinessRates" visibility="private" static="false" line="17">
+    <docblock>
+      <var description="e.g. 150.00" type="float"/>
+    </docblock>
+  </member>
+  <member name="areas" visibility="private" static="false" line="20">
+    <docblock>
+      <var type="object">
+        <type full="ZpgRtf\Objects\AreasObject" namespace="ZpgRtf\Objects" name="AreasObject"/>
+      </var>
+    </docblock>
+  </member>
+  <member name="availableBedrooms" visibility="private" static="false" line="23">
+    <docblock>
+      <var type="int"/>
+    </docblock>
+  </member>
+  <member name="availableFromDate" visibility="private" static="false" line="26">
+    <docblock>
+      <var type="object">
+        <type full="\DateTime" namespace="" name="DateTime"/>
+      </var>
+    </docblock>
+  </member>
+  <member name="basement" visibility="private" static="false" line="29">
+    <docblock>
+      <var type="object">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </var>
+    </docblock>
+  </member>
+  <member name="bathrooms" visibility="private" static="false" line="32">
+    <docblock>
+      <var type="int"/>
+    </docblock>
+  </member>
+  <member name="billsIncluded" visibility="private" static="false" line="40">
+    <docblock>
+      <description compact="Array of enum (electricity, gas, internet, satellite_cable_tv, telephone, tv_licence, water)"/>
+      <var description="['water', 'tv_licence']" type="array"/>
+      <todo value="Make these constants."/>
+    </docblock>
+  </member>
+  <member name="branchReference" visibility="private" static="false" line="43">
+    <docblock>
+      <var description="e.g. 'ref-1234'" type="string"/>
+    </docblock>
+  </member>
+  <member name="burglarAlarm" visibility="private" static="false" line="46">
+    <docblock>
+      <var type="object">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </var>
+    </docblock>
+  </member>
+  <member name="businessForSale" visibility="private" static="false" line="49">
+    <docblock>
+      <var type="object">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </var>
+    </docblock>
+  </member>
+  <member name="buyerIncentives" visibility="private" static="false" line="57">
+    <docblock>
+      <description compact="Array of enum (equity_loan, help_to_buy, mi_new_home, new_buy, part_buy_part_rent, shared_equity, shared_ownership)"/>
+      <var description="e.g. ['equity_loan', 'help_to_buy']" type="array"/>
+      <todo value="Make these constants."/>
+    </docblock>
+  </member>
+  <member name="category" visibility="private" static="false" line="65">
+    <docblock>
+      <description compact="Enum (commercial, residential)"/>
+      <var description="e.g. 'residential'" type="string"/>
+      <todo value="Make these constants."/>
+    </docblock>
+  </member>
+  <member name="centralHeating" visibility="private" static="false" line="73">
+    <docblock>
+      <description compact="Enum (full, partial, none)"/>
+      <var description="e.g. 'full'" type="string"/>
+      <todo value="Make these constants."/>
+    </docblock>
+  </member>
+  <member name="chainFree" visibility="private" static="false" line="76">
+    <docblock>
+      <var type="object">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </var>
+    </docblock>
+  </member>
+  <member name="commercialUseClasses" visibility="private" static="false" line="84">
+    <docblock>
+      <description/>
+      <see value="http://www.planningportal.gov.uk/permission/commonprojects/changeofuse"/>
+      <var description="e.g. ['A3', 'D2']" type="array"/>
+      <todo value="Make these constants."/>
+    </docblock>
+  </member>
+  <member name="connectedUtilities" visibility="private" static="false" line="92">
+    <docblock>
+      <description compact="Enum (electricity, fibre_optic, gas, satellite_cable_tv, telephone, water)"/>
+      <var description="e.g. ['electricity', 'gas']" type="array"/>
+      <todo value="Make these constants."/>
+    </docblock>
+  </member>
+  <member name="conservatory" visibility="private" static="false" line="95">
+    <docblock>
+      <var type="object">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </var>
+    </docblock>
+  </member>
+  <member name="constructionYear" visibility="private" static="false" line="98">
+    <docblock>
+      <var description="e.g. 1899" type="int"/>
+    </docblock>
+  </member>
+  <member name="content" visibility="private" static="false" line="101">
+    <docblock>
+      <var type="array"/>
+    </docblock>
+  </member>
+  <member name="councilTaxBand" visibility="private" static="false" line="109">
+    <docblock>
+      <description compact="Enum (A, B, C, D, E, F, G, H, I)"/>
+      <var type="string"/>
+      <todo value="Make these constants."/>
+    </docblock>
+  </member>
+  <member name="decorativeCondition" visibility="private" static="false" line="117">
+    <docblock>
+      <description compact="Enum (excellent, good, average, needs_modernisation)"/>
+      <var type="string"/>
+      <todo value="Make these constants."/>
+    </docblock>
+  </member>
+  <member name="deposit" visibility="private" static="false" line="120">
+    <docblock>
+      <var type="float"/>
+    </docblock>
+  </member>
+  <member name="detailedDescription" visibility="private" static="false" line="123">
+    <docblock>
+      <var type="array"/>
+    </docblock>
+  </member>
+  <member name="displayAddress" visibility="private" static="false" line="126">
+    <docblock>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="doubleGlazing" visibility="private" static="false" line="129">
+    <docblock>
+      <var type="object">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </var>
+    </docblock>
+  </member>
+  <member name="epcRatings" visibility="private" static="false" line="132">
+    <docblock>
+      <var type="object">
+        <type full="ZpgRtf\Objects\EpcRatingsObject" namespace="ZpgRtf\Objects" name="EpcRatingsObject"/>
+      </var>
+    </docblock>
+  </member>
+  <member name="featureList" visibility="private" static="false" line="135">
+    <docblock>
+      <var type="array"/>
+    </docblock>
+  </member>
+  <member name="fireplace" visibility="private" static="false" line="138">
+    <docblock>
+      <var type="object">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </var>
+    </docblock>
+  </member>
+  <member name="fishingRights" visibility="private" static="false" line="141">
+    <docblock>
+      <var type="object">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </var>
+    </docblock>
+  </member>
+  <member name="floorLevels" visibility="private" static="false" line="149">
+    <docblock>
+      <description compact="Enum (penthouse, &lt;integers greater than zero&gt;, ground, basement)"/>
+      <var description="e.g. ['basement', 'ground', 1, 2]" type="array"/>
+      <todo value="Make some of these constants."/>
+    </docblock>
+  </member>
+  <member name="floors" visibility="private" static="false" line="152">
+    <docblock>
+      <var type="int"/>
+    </docblock>
+  </member>
+  <member name="furnishedState" visibility="private" static="false" line="160">
+    <docblock>
+      <description compact="Emum (furnished, furnished_or_unfurnished, part_furnished, unfurnished)"/>
+      <var description="e.g. 'furnished'" type="string"/>
+      <todo value="Make these constants."/>
+    </docblock>
+  </member>
+  <member name="googleStreetView" visibility="private" static="false" line="163">
+    <docblock>
+      <var type="object">
+        <type full="ZpgRtf\Objects\GoogleStreetViewObject" namespace="ZpgRtf\Objects" name="GoogleStreetViewObject"/>
+      </var>
+    </docblock>
+  </member>
+  <member name="groundRent" visibility="private" static="false" line="166">
+    <docblock>
+      <var type="float"/>
+    </docblock>
+  </member>
+  <member name="gym" visibility="private" static="false" line="169">
+    <docblock>
+      <var type="object">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </var>
+    </docblock>
+  </member>
+  <member name="leaseExpiry" visibility="private" static="false" line="172">
+    <docblock>
+      <var type="object">
+        <type full="ZpgRtf\Objects\LeaseExpiryObject" namespace="ZpgRtf\Objects" name="LeaseExpiryObject"/>
+      </var>
+    </docblock>
+  </member>
+  <member name="lifeCycleStatus" visibility="private" static="false" line="180">
+    <docblock>
+      <description compact="Enum (available, under_offer, sold_subject_to_contract, sold, let_agreed, let)"/>
+      <var description="e.g. 'available'" type="string"/>
+      <todo value="Make these constants."/>
+    </docblock>
+  </member>
+  <member name="listedBuildingGrade" visibility="private" static="false" line="188">
+    <docblock>
+      <description compact="Enum(category_a, category_b, category_c, grade_a, grade_b, grade_b_plus, grade_one, grade_two, grade_two_star, locally_listed)"/>
+      <var type="string"/>
+      <todo value="Make these constants."/>
+    </docblock>
+  </member>
+  <member name="listingReference" visibility="private" static="false" line="191">
+    <docblock>
+      <var description="e.g. 'listing-1234'" type="string"/>
+    </docblock>
+  </member>
+  <member name="livingRooms" visibility="private" static="false" line="194">
+    <docblock>
+      <var type="int"/>
+    </docblock>
+  </member>
+  <member name="location" visibility="private" static="false" line="197">
+    <docblock>
+      <var type="object">
+        <type full="ZpgRtf\Objects\LocationObject" namespace="ZpgRtf\Objects" name="LocationObject"/>
+      </var>
+    </docblock>
+  </member>
+  <member name="loft" visibility="private" static="false" line="200">
+    <docblock>
+      <var type="object">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </var>
+    </docblock>
+  </member>
+  <member name="newHome" visibility="private" static="false" line="203">
+    <docblock>
+      <var type="object">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </var>
+    </docblock>
+  </member>
+  <member name="openDay" visibility="private" static="false" line="206">
+    <docblock>
+      <var type="object">
+        <type full="\DateTime" namespace="" name="DateTime"/>
+      </var>
+    </docblock>
+  </member>
+  <member name="outbuildings" visibility="private" static="false" line="209">
+    <docblock>
+      <var type="object">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </var>
+    </docblock>
+  </member>
+  <member name="outsideSpace" visibility="private" static="false" line="217">
+    <docblock>
+      <description compact="Enum (balcony, communal_garden, private_garden, roof_terrace, terrace)"/>
+      <var type="array"/>
+      <todo value="Make these constants."/>
+    </docblock>
+  </member>
+  <member name="parking" visibility="private" static="false" line="225">
+    <docblock>
+      <description compact="Enum (double_garage, off_street_parking, residents_parking, single_garage, underground)"/>
+      <var type="array"/>
+      <todo value="Make these constants."/>
+    </docblock>
+  </member>
+  <member name="petsAllowed" visibility="private" static="false" line="228">
+    <docblock>
+      <var type="object">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </var>
+    </docblock>
+  </member>
+  <member name="porterSecurity" visibility="private" static="false" line="231">
+    <docblock>
+      <var type="object">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </var>
+    </docblock>
+  </member>
+  <member name="pricing" visibility="private" static="false" line="234">
+    <docblock>
+      <var type="object">
+        <type full="ZpgRtf\Objects\PricingObject" namespace="ZpgRtf\Objects" name="PricingObject"/>
+      </var>
+    </docblock>
+  </member>
+  <member name="propertyType" visibility="private" static="false" line="241">
+    <docblock>
+      <description/>
+      <see value="self::PROPERTY_TYPES"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="rateableValue" visibility="private" static="false" line="248">
+    <docblock>
+      <description/>
+      <see value="https://www.gov.uk/correct-your-business-rates"/>
+      <var type="float"/>
+    </docblock>
+  </member>
+  <member name="rentalTerm" visibility="private" static="false" line="251">
+    <docblock>
+      <var type="object">
+        <type full="ZpgRtf\Objects\MinimumContractLengthObject" namespace="ZpgRtf\Objects" name="MinimumContractLengthObject"/>
+      </var>
+    </docblock>
+  </member>
+  <member name="repossession" visibility="private" static="false" line="254">
+    <docblock>
+      <var type="object">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </var>
+    </docblock>
+  </member>
+  <member name="retirement" visibility="private" static="false" line="257">
+    <docblock>
+      <var type="object">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </var>
+    </docblock>
+  </member>
+  <member name="sapRating" visibility="private" static="false" line="260">
+    <docblock>
+      <var type="int"/>
+    </docblock>
+  </member>
+  <member name="serviceCharge" visibility="private" static="false" line="263">
+    <docblock>
+      <var type="object">
+        <type full="ZpgRtf\Objects\ServiceChargeObject" namespace="ZpgRtf\Objects" name="ServiceChargeObject"/>
+      </var>
+    </docblock>
+  </member>
+  <member name="serviced" visibility="private" static="false" line="266">
+    <docblock>
+      <var type="object">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </var>
+    </docblock>
+  </member>
+  <member name="sharedAccommodation" visibility="private" static="false" line="269">
+    <docblock>
+      <var type="object">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </var>
+    </docblock>
+  </member>
+  <member name="summaryDescription" visibility="private" static="false" line="272">
+    <docblock>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="swimmingPool" visibility="private" static="false" line="275">
+    <docblock>
+      <var type="object">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </var>
+    </docblock>
+  </member>
+  <member name="tenanted" visibility="private" static="false" line="278">
+    <docblock>
+      <var type="object">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </var>
+    </docblock>
+  </member>
+  <member name="tenantEligibility" visibility="private" static="false" line="281">
+    <docblock>
+      <var type="object">
+        <type full="ZpgRtf\Objects\TenantEligibilityObject" namespace="ZpgRtf\Objects" name="TenantEligibilityObject"/>
+      </var>
+    </docblock>
+  </member>
+  <member name="tennisCourt" visibility="private" static="false" line="284">
+    <docblock>
+      <var type="object">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </var>
+    </docblock>
+  </member>
+  <member name="tenure" visibility="private" static="false" line="291">
+    <docblock>
+      <description compact="Enum (feudal, freehold, leasehold, share_of_freehold)"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="totalBedrooms" visibility="private" static="false" line="294">
+    <docblock>
+      <var type="int"/>
+    </docblock>
+  </member>
+  <member name="utilityRoom" visibility="private" static="false" line="297">
+    <docblock>
+      <var type="object">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </var>
+    </docblock>
+  </member>
+  <member name="waterfront" visibility="private" static="false" line="300">
+    <docblock>
+      <var type="object">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </var>
+    </docblock>
+  </member>
+  <member name="woodFloors" visibility="private" static="false" line="303">
+    <docblock>
+      <var type="object">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </var>
+    </docblock>
+  </member>
+  <constant type="array" name="PROPERTY_TYPES" value="">
+    <docblock>
+      <var type="array"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="BARN_CONVERSION" value="'barn_conversion'">
+    <docblock>
+      <var type="string"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="BLOCK_OF_FLATS" value="'block_of_flats'">
+    <docblock>
+      <var type="string"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="BUNGALOW" value="'bungalow'">
+    <docblock>
+      <var type="string"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="BUSINESS_PARK" value="'business_park'">
+    <docblock>
+      <var type="string"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="CHALET" value="'chalet'">
+    <docblock>
+      <var type="string"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="CHATEAU" value="'chateau'">
+    <docblock>
+      <var type="string"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="COTTAGE" value="'cottage'">
+    <docblock>
+      <var type="string"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="COUNTRY_HOUSE" value="'country_house'">
+    <docblock>
+      <var type="string"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="DETACHED" value="'detached'">
+    <docblock>
+      <var type="string"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="DETACHED_BUNGALOW" value="'detached_bungalow'">
+    <docblock>
+      <var type="string"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="END_TERRACE" value="'end_terrace'">
+    <docblock>
+      <var type="string"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="EQUESTRIAN" value="'equestrian'">
+    <docblock>
+      <var type="string"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="FARM" value="'farm'">
+    <docblock>
+      <var type="string"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="FARMHOUSE" value="'farmhouse'">
+    <docblock>
+      <var type="string"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="FINCA" value="'finca'">
+    <docblock>
+      <var type="string"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="FLAT" value="'flat'">
+    <docblock>
+      <var type="string"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="HOTEL" value="'hotel'">
+    <docblock>
+      <var type="string"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="HOUSEBOAT" value="'houseboat'">
+    <docblock>
+      <var type="string"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="INDUSTRIAL" value="'industrial'">
+    <docblock>
+      <var type="string"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="LAND" value="'land'">
+    <docblock>
+      <var type="string"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="LEISURE" value="'leisure'">
+    <docblock>
+      <var type="string"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="LIGHT_INDUSTRIAL" value="'light_industrial'">
+    <docblock>
+      <var type="string"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="LINK_DETACHED" value="'link_detached'">
+    <docblock>
+      <var type="string"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="LODGE" value="'lodge'">
+    <docblock>
+      <var type="string"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="LONGERE" value="'longere'">
+    <docblock>
+      <var type="string"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="MAISONETTE" value="'maisonette'">
+    <docblock>
+      <var type="string"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="MEWS" value="'mews'">
+    <docblock>
+      <var type="string"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="OFFICE" value="'office'">
+    <docblock>
+      <var type="string"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="PARK_HOME" value="'park_home'">
+    <docblock>
+      <var type="string"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="PARKING" value="'parking'">
+    <docblock>
+      <var type="string"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="PUB_BAR" value="'pub_bar'">
+    <docblock>
+      <var type="string"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="RESTAURANT" value="'restaurant'">
+    <docblock>
+      <var type="string"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="RETAIL" value="'retail'">
+    <docblock>
+      <var type="string"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="RIAD" value="'riad'">
+    <docblock>
+      <var type="string"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="SEMI_DETACHED" value="'semi_detached'">
+    <docblock>
+      <var type="string"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="SEMI_DETACHED_BUNGALOW" value="'semi_detached_bungalow'">
+    <docblock>
+      <var type="string"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="STUDIO" value="'studio'">
+    <docblock>
+      <var type="string"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="TERRACED" value="'terraced'">
+    <docblock>
+      <var type="string"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="TERRACED_BUNGALOW" value="'terraced_bungalow'">
+    <docblock>
+      <var type="string"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="TOWN_HOUSE" value="'town_house'">
+    <docblock>
+      <var type="string"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="VILLA" value="'villa'">
+    <docblock>
+      <var type="string"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="WAREHOUSE" value="'warehouse'">
+    <docblock>
+      <var type="string"/>
+    </docblock>
+  </constant>
+  <method name="hasAccessibility" start="480" end="483" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="setAccessibility" start="490" end="495" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$accessibility">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </param>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="accessibility" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getAdministrationFees" start="500" end="503" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="string"/>
+    </docblock>
+  </method>
+  <method name="setAdministrationFees" start="510" end="515" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$administrationFees"/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="administrationFees" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getAnnualBusinessRates" start="520" end="523" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="float"/>
+    </docblock>
+  </method>
+  <method name="setAnnualBusinessRates" start="530" end="535" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="float" variable="$annualBusinessRates"/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="annualBusinessRates" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getAreas" start="540" end="543" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\AreasObject" namespace="ZpgRtf\Objects" name="AreasObject"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="setAreas" start="550" end="555" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$areas">
+        <type full="ZpgRtf\Objects\AreasObject" namespace="ZpgRtf\Objects" name="AreasObject"/>
+      </param>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="areas" byreference="false" type="object">
+      <type full="ZpgRtf\Objects\AreasObject" namespace="ZpgRtf\Objects" name="AreasObject"/>
+    </parameter>
+  </method>
+  <method name="getAvailableBedrooms" start="560" end="563" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="int"/>
+    </docblock>
+  </method>
+  <method name="setAvailableBedrooms" start="570" end="575" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="int" variable="$availableBedrooms"/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="availableBedrooms" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getAvailableFromDate" start="580" end="583" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="object">
+        <type full="\DateTime" namespace="" name="DateTime"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="setAvailableFromDate" start="590" end="595" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$availableFromDate">
+        <type full="\DateTime" namespace="" name="DateTime"/>
+      </param>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="availableFromDate" byreference="false" type="object">
+      <type full="DateTime" namespace="" name="DateTime"/>
+    </parameter>
+  </method>
+  <method name="hasBasement" start="600" end="603" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="setBasement" start="610" end="615" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$basement">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </param>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="basement" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getBathrooms" start="620" end="623" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="int"/>
+    </docblock>
+  </method>
+  <method name="setBathrooms" start="630" end="635" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="int" variable="$bathrooms"/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="bathrooms" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getBillsIncluded" start="640" end="643" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="array"/>
+    </docblock>
+  </method>
+  <method name="setBillsIncluded" start="650" end="655" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="array" variable="$billsIncluded"/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="billsIncluded" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getBranchReference" start="660" end="663" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="string"/>
+    </docblock>
+  </method>
+  <method name="setBranchReference" start="670" end="675" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$branchReference"/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="branchReference" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="hasBurglarAlarm" start="680" end="683" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="setBurglarAlarm" start="690" end="695" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$burglarAlarm">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </param>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="burglarAlarm" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="isBusinessForSale" start="700" end="703" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="setBusinessForSale" start="710" end="715" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$businessForSale">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </param>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="businessForSale" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getBuyerIncentives" start="720" end="723" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="array"/>
+    </docblock>
+  </method>
+  <method name="setBuyerIncentives" start="730" end="735" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="array" variable="$buyerIncentives"/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="buyerIncentives" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getCategory" start="740" end="743" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="string"/>
+    </docblock>
+  </method>
+  <method name="setCategory" start="750" end="755" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$category"/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="category" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getCentralHeating" start="760" end="763" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="string"/>
+    </docblock>
+  </method>
+  <method name="setCentralHeating" start="770" end="775" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$centralHeating"/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="centralHeating" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="isChainFree" start="780" end="783" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="setChainFree" start="790" end="795" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$chainFree">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </param>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="chainFree" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getCommercialUseClasses" start="800" end="803" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="array"/>
+    </docblock>
+  </method>
+  <method name="setCommercialUseClasses" start="810" end="815" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="array" variable="$commercialUseClasses"/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="commercialUseClasses" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getConnectedUtilities" start="820" end="823" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="array"/>
+    </docblock>
+  </method>
+  <method name="setConnectedUtilities" start="830" end="835" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="array" variable="$connectedUtilities"/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="connectedUtilities" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="hasConservatory" start="840" end="843" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="setConservatory" start="850" end="855" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$conservatory">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </param>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="conservatory" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getConstructionYear" start="860" end="863" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="int"/>
+    </docblock>
+  </method>
+  <method name="setConstructionYear" start="870" end="875" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="int" variable="$constructionYear"/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="constructionYear" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getContent" start="880" end="883" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="array"/>
+    </docblock>
+  </method>
+  <method name="setContent" start="890" end="895" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="array" variable="$content"/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="content" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getCouncilTaxBand" start="900" end="903" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="string"/>
+    </docblock>
+  </method>
+  <method name="setCouncilTaxBand" start="910" end="915" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$councilTaxBand"/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="councilTaxBand" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getDecorativeCondition" start="920" end="923" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="string"/>
+    </docblock>
+  </method>
+  <method name="setDecorativeCondition" start="930" end="935" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$decorativeCondition"/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="decorativeCondition" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getDeposit" start="940" end="943" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="float"/>
+    </docblock>
+  </method>
+  <method name="setDeposit" start="950" end="955" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="float" variable="$deposit"/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="deposit" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getDetailedDescription" start="960" end="963" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="array"/>
+    </docblock>
+  </method>
+  <method name="setDetailedDescription" start="970" end="975" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="array" variable="$detailedDescription"/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="detailedDescription" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getDisplayAddress" start="980" end="983" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="string"/>
+    </docblock>
+  </method>
+  <method name="setDisplayAddress" start="990" end="995" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$displayAddress"/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="displayAddress" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="hasDoubleGlazing" start="1000" end="1003" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="setDoubleGlazing" start="1010" end="1015" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$doubleGlazing">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </param>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="doubleGlazing" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getEpcRatings" start="1020" end="1023" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\EpcRatingsObject" namespace="ZpgRtf\Objects" name="EpcRatingsObject"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="setEpcRatings" start="1030" end="1035" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$epcRatings">
+        <type full="ZpgRtf\Objects\EpcRatingsObject" namespace="ZpgRtf\Objects" name="EpcRatingsObject"/>
+      </param>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="epcRatings" byreference="false" type="object">
+      <type full="ZpgRtf\Objects\EpcRatingsObject" namespace="ZpgRtf\Objects" name="EpcRatingsObject"/>
+    </parameter>
+  </method>
+  <method name="getFeatureList" start="1040" end="1043" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="array"/>
+    </docblock>
+  </method>
+  <method name="setFeatureList" start="1050" end="1055" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="array" variable="$featureList"/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="featureList" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="hasFireplace" start="1060" end="1063" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="setFireplace" start="1070" end="1075" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$fireplace">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </param>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="fireplace" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="hasFishingRights" start="1080" end="1083" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="setFishingRights" start="1090" end="1095" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$fishingRights">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </param>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="fishingRights" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getFloorLevels" start="1100" end="1103" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="array"/>
+    </docblock>
+  </method>
+  <method name="setFloorLevels" start="1110" end="1115" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="array" variable="$floorLevels"/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="floorLevels" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getFloors" start="1120" end="1123" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="int"/>
+    </docblock>
+  </method>
+  <method name="setFloors" start="1130" end="1135" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="int" variable="$floors"/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="floors" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getFurnishedState" start="1140" end="1143" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="string"/>
+    </docblock>
+  </method>
+  <method name="setFurnishedState" start="1150" end="1155" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$furnishedState"/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="furnishedState" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getGoogleStreetView" start="1160" end="1163" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\GoogleStreetViewObject" namespace="ZpgRtf\Objects" name="GoogleStreetViewObject"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="setGoogleStreetView" start="1170" end="1175" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$googleStreetView">
+        <type full="ZpgRtf\Objects\GoogleStreetViewObject" namespace="ZpgRtf\Objects" name="GoogleStreetViewObject"/>
+      </param>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="googleStreetView" byreference="false" type="object">
+      <type full="ZpgRtf\Objects\GoogleStreetViewObject" namespace="ZpgRtf\Objects" name="GoogleStreetViewObject"/>
+    </parameter>
+  </method>
+  <method name="getGroundRent" start="1180" end="1183" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="float"/>
+    </docblock>
+  </method>
+  <method name="setGroundRent" start="1190" end="1195" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="float" variable="$groundRent"/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="groundRent" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="hasGym" start="1200" end="1203" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="setGym" start="1210" end="1215" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$gym">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </param>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="gym" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getLeaseExpiry" start="1220" end="1223" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\LeaseExpiryObject" namespace="ZpgRtf\Objects" name="LeaseExpiryObject"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="setLeaseExpiry" start="1230" end="1235" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$leaseExpiry">
+        <type full="ZpgRtf\Objects\LeaseExpiryObject" namespace="ZpgRtf\Objects" name="LeaseExpiryObject"/>
+      </param>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="leaseExpiry" byreference="false" type="object">
+      <type full="ZpgRtf\Objects\LeaseExpiryObject" namespace="ZpgRtf\Objects" name="LeaseExpiryObject"/>
+    </parameter>
+  </method>
+  <method name="getLifeCycleStatus" start="1240" end="1243" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="string"/>
+    </docblock>
+  </method>
+  <method name="setLifeCycleStatus" start="1250" end="1255" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$lifeCycleStatus"/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="lifeCycleStatus" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getListedBuildingGrade" start="1260" end="1263" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="string"/>
+    </docblock>
+  </method>
+  <method name="setListedBuildingGrade" start="1270" end="1275" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$listedBuildingGrade"/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="listedBuildingGrade" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getListingReference" start="1280" end="1283" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="string"/>
+    </docblock>
+  </method>
+  <method name="setListingReference" start="1290" end="1295" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$listingReference"/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="listingReference" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getLivingRooms" start="1300" end="1303" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="int"/>
+    </docblock>
+  </method>
+  <method name="setLivingRooms" start="1310" end="1315" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="int" variable="$livingRooms"/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="livingRooms" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getLocation" start="1320" end="1323" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\LocationObject" namespace="ZpgRtf\Objects" name="LocationObject"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="setLocation" start="1330" end="1335" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$location">
+        <type full="ZpgRtf\Objects\LocationObject" namespace="ZpgRtf\Objects" name="LocationObject"/>
+      </param>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="location" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="hasLoft" start="1340" end="1343" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="setLoft" start="1350" end="1355" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$loft">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </param>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="loft" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="isNewHome" start="1360" end="1363" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="setNewHome" start="1370" end="1375" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$newHome">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </param>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="newHome" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getOpenDay" start="1380" end="1383" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="object">
+        <type full="\DateTime" namespace="" name="DateTime"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="setOpenDay" start="1390" end="1395" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$openDay">
+        <type full="\DateTime" namespace="" name="DateTime"/>
+      </param>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="openDay" byreference="false" type="object">
+      <type full="DateTime" namespace="" name="DateTime"/>
+    </parameter>
+  </method>
+  <method name="hasOutbuildings" start="1400" end="1403" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="setOutbuildings" start="1410" end="1415" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$outbuildings">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </param>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="outbuildings" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getOutsideSpace" start="1420" end="1423" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="array"/>
+    </docblock>
+  </method>
+  <method name="setOutsideSpace" start="1430" end="1435" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="array" variable="$outsideSpace"/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="outsideSpace" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getParking" start="1440" end="1443" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="array"/>
+    </docblock>
+  </method>
+  <method name="setParking" start="1450" end="1455" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="array" variable="$parking"/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="parking" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="isPetsAllowed" start="1460" end="1463" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="setPetsAllowed" start="1470" end="1475" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$petsAllowed">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </param>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="petsAllowed" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="hasPorterSecurity" start="1480" end="1483" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="setPorterSecurity" start="1490" end="1495" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$porterSecurity">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </param>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="porterSecurity" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getPricing" start="1500" end="1503" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\PricingObject" namespace="ZpgRtf\Objects" name="PricingObject"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="setPricing" start="1510" end="1515" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$pricing">
+        <type full="ZpgRtf\Objects\PricingObject" namespace="ZpgRtf\Objects" name="PricingObject"/>
+      </param>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="pricing" byreference="false" type="object">
+      <type full="ZpgRtf\Objects\PricingObject" namespace="ZpgRtf\Objects" name="PricingObject"/>
+    </parameter>
+  </method>
+  <method name="getPropertyType" start="1520" end="1523" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="string"/>
+    </docblock>
+  </method>
+  <method name="setPropertyType" start="1530" end="1535" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$propertyType"/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="propertyType" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getRateableValue" start="1540" end="1543" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="float"/>
+    </docblock>
+  </method>
+  <method name="setRateableValue" start="1550" end="1555" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="float" variable="$rateableValue"/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="rateableValue" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getRentalTerm" start="1560" end="1563" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\MinimumContractLengthObject" namespace="ZpgRtf\Objects" name="MinimumContractLengthObject"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="setRentalTerm" start="1570" end="1575" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$rentalTerm">
+        <type full="ZpgRtf\Objects\MinimumContractLengthObject" namespace="ZpgRtf\Objects" name="MinimumContractLengthObject"/>
+      </param>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="rentalTerm" byreference="false" type="object">
+      <type full="ZpgRtf\Objects\MinimumContractLengthObject" namespace="ZpgRtf\Objects" name="MinimumContractLengthObject"/>
+    </parameter>
+  </method>
+  <method name="isRepossession" start="1580" end="1583" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="setRepossession" start="1590" end="1595" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$repossession">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </param>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="repossession" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="isRetirement" start="1600" end="1603" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="setRetirement" start="1610" end="1615" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$retirement">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </param>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="retirement" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getSapRating" start="1620" end="1623" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="int"/>
+    </docblock>
+  </method>
+  <method name="setSapRating" start="1630" end="1635" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="int" variable="$sapRating"/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="sapRating" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getServiceCharge" start="1640" end="1643" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ServiceChargeObject" namespace="ZpgRtf\Objects" name="ServiceChargeObject"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="setServiceCharge" start="1650" end="1655" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$serviceCharge">
+        <type full="ZpgRtf\Objects\ServiceChargeObject" namespace="ZpgRtf\Objects" name="ServiceChargeObject"/>
+      </param>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="serviceCharge" byreference="false" type="object">
+      <type full="ZpgRtf\Objects\ServiceChargeObject" namespace="ZpgRtf\Objects" name="ServiceChargeObject"/>
+    </parameter>
+  </method>
+  <method name="isServiced" start="1660" end="1663" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="setServiced" start="1670" end="1675" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$serviced">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </param>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="serviced" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="isSharedAccommodation" start="1680" end="1683" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="setSharedAccommodation" start="1690" end="1695" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$sharedAccommodation">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </param>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="sharedAccommodation" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getSummaryDescription" start="1700" end="1703" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="string"/>
+    </docblock>
+  </method>
+  <method name="setSummaryDescription" start="1710" end="1715" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$summaryDescription"/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="summaryDescription" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="hasSwimmingPool" start="1720" end="1723" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="setSwimmingPool" start="1730" end="1735" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$swimmingPool">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </param>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="swimmingPool" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="isTenanted" start="1740" end="1743" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="setTenanted" start="1750" end="1755" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$tenanted">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </param>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="tenanted" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getTenantEligibility" start="1760" end="1763" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\TenantEligibilityObject" namespace="ZpgRtf\Objects" name="TenantEligibilityObject"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="setTenantEligibility" start="1770" end="1775" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$tenantEligibility">
+        <type full="ZpgRtf\Objects\TenantEligibilityObject" namespace="ZpgRtf\Objects" name="TenantEligibilityObject"/>
+      </param>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="tenantEligibility" byreference="false" type="object">
+      <type full="ZpgRtf\Objects\TenantEligibilityObject" namespace="ZpgRtf\Objects" name="TenantEligibilityObject"/>
+    </parameter>
+  </method>
+  <method name="hasTennisCourt" start="1780" end="1783" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="setTennisCourt" start="1790" end="1795" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$tennisCourt">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </param>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="tennisCourt" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getTenure" start="1800" end="1803" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="string"/>
+    </docblock>
+  </method>
+  <method name="setTenure" start="1810" end="1815" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$tenure"/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="tenure" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getTotalBedrooms" start="1820" end="1823" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="int"/>
+    </docblock>
+  </method>
+  <method name="setTotalBedrooms" start="1830" end="1835" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="int" variable="$totalBedrooms"/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="totalBedrooms" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="hasUtilityRoom" start="1840" end="1843" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="setUtilityRoom" start="1850" end="1855" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$utilityRoom">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </param>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="utilityRoom" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="isWaterfront" start="1860" end="1863" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="setWaterfront" start="1870" end="1875" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$waterfront">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </param>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="waterfront" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="hasWoodFloors" start="1880" end="1883" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="object">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="setWoodFloors" start="1890" end="1895" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$woodFloors">
+        <type full="ZpgRtf\Objects\bool" namespace="ZpgRtf\Objects" name="bool"/>
+      </param>
+      <return type="object">
+        <type full="ZpgRtf\Objects\ListingObject" namespace="ZpgRtf\Objects" name="ListingObject"/>
+      </return>
+    </docblock>
+    <parameter name="woodFloors" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="jsonSerialize" start="1898" end="1972" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="{@inheritDoc}"/>
+    </docblock>
+  </method>
+  <interface full="JsonSerializable" namespace="" name="JsonSerializable">
+    <method name="jsonSerialize" abstract="false" static="false" visibility="public" final="false">
+    <docblock>
+      <description compact="Specify data which should be serialized to JSON"/>
+      <return type="mixed"/>
+    </docblock>
+  </method>
+  </interface>
+</class>

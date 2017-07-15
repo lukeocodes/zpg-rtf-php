@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<source xmlns="http://xml.phpdox.net/token">
+  <file xmlns="http://xml.phpdox.net/src" path="/home/luke/personal/zpg-rtf-php/src/Objects" file="EpcRatingsObject.php" realpath="/home/luke/personal/zpg-rtf-php/src/Objects/EpcRatingsObject.php" size="62" time="2017-07-14T22:26:35+00:00" unixtime="1500071195" sha1="ebeb06daacdb17fa89369a956b071f08b64e5bee" relative="Objects/EpcRatingsObject.php"/>
+  <line no="1">
+    <token name="T_OPEN_TAG">&lt;?php</token>
+  </line>
+  <line no="2"/>
+  <line no="3">
+    <token name="T_NAMESPACE">namespace</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">ZpgRtf</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Objects</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="4"/>
+  <line no="5">
+    <token name="T_CLASS">class</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">EpcRatingsObject</token>
+  </line>
+  <line no="6">
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="7"/>
+  <line no="8">
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+  </line>
+  <line no="9"/>
+</source>

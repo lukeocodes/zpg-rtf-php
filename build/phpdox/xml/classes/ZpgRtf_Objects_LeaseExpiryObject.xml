@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="ZpgRtf\Objects\LeaseExpiryObject" namespace="ZpgRtf\Objects" name="LeaseExpiryObject" abstract="false" final="false" start="5" end="8">
+  <file path="/home/luke/personal/zpg-rtf-php/src/Objects" file="LeaseExpiryObject.php" realpath="/home/luke/personal/zpg-rtf-php/src/Objects/LeaseExpiryObject.php" size="63" time="2017-07-14T22:26:28+00:00" unixtime="1500071188" sha1="98b38e0b3edc4f6e442a44763a0f001c5ae04976" relative="Objects/LeaseExpiryObject.php"/>
+</class>

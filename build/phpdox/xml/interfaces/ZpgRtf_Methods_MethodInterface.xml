@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface xmlns="http://xml.phpdox.net/src" full="ZpgRtf\Methods\MethodInterface" namespace="ZpgRtf\Methods" name="MethodInterface" abstract="false" final="false" start="9" end="11">
+  <file path="/home/luke/personal/zpg-rtf-php/src/Methods" file="MethodInterface.php" realpath="/home/luke/personal/zpg-rtf-php/src/Methods/MethodInterface.php" size="177" time="2017-07-14T22:31:16+00:00" unixtime="1500071476" sha1="2685d28dbb5743dfd149656c20a5b2e8f7607b05" relative="Methods/MethodInterface.php"/>
+  <docblock>
+    <description compact="An interface to make sure all methods to send data over to Zpg have the relevant methods to do so."/>
+  </docblock>
+  <implementors>
+    <class full="ZpgRtf\Methods\ListingMethod" namespace="ZpgRtf\Methods" name="ListingMethod"/>
+    <class full="ZpgRtf\Methods\BranchMethod" namespace="ZpgRtf\Methods" name="BranchMethod"/>
+  </implementors>
+</interface>

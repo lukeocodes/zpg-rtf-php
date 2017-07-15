@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="ZpgRtf\Objects\PricingObject" namespace="ZpgRtf\Objects" name="PricingObject" abstract="false" final="false" start="5" end="8">
+  <file path="/home/luke/personal/zpg-rtf-php/src/Objects" file="PricingObject.php" realpath="/home/luke/personal/zpg-rtf-php/src/Objects/PricingObject.php" size="59" time="2017-07-14T22:26:14+00:00" unixtime="1500071174" sha1="071b6f833a4ebbb8f18cfb8725c0d37b6f3a45b2" relative="Objects/PricingObject.php"/>
+</class>

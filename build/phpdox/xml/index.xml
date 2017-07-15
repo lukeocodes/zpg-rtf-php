@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<index xmlns="http://xml.phpdox.net/src" basedir="/home/luke/personal/zpg-rtf-php/src">
+  <namespace name="ZpgRtf\Objects">
+    <class name="TenantEligibilityObject" src="Objects/TenantEligibilityObject.php" xml="classes/ZpgRtf_Objects_TenantEligibilityObject.xml"/>
+    <class name="ListingObject" src="Objects/ListingObject.php" description="The listing object structures the listing payload." xml="classes/ZpgRtf_Objects_ListingObject.xml"/>
+    <class name="PricePerUnitAreaObject" src="Objects/PricePerUnitAreaObject.php" xml="classes/ZpgRtf_Objects_PricePerUnitAreaObject.xml"/>
+    <class name="CoordinatesObject" src="Objects/CoordinatesObject.php" xml="classes/ZpgRtf_Objects_CoordinatesObject.xml"/>
+    <class name="MinimumContractLengthObject" src="Objects/MinimumContractLengthObject.php" xml="classes/ZpgRtf_Objects_MinimumContractLengthObject.xml"/>
+    <class name="LeaseExpiryObject" src="Objects/LeaseExpiryObject.php" xml="classes/ZpgRtf_Objects_LeaseExpiryObject.xml"/>
+    <class name="BranchObject" src="Objects/BranchObject.php" description="The branch object structures the branch payload." xml="classes/ZpgRtf_Objects_BranchObject.xml"/>
+    <class name="DescriptionObject" src="Objects/DescriptionObject.php" xml="classes/ZpgRtf_Objects_DescriptionObject.xml"/>
+    <class name="DimensionsObject" src="Objects/DimensionsObject.php" xml="classes/ZpgRtf_Objects_DimensionsObject.xml"/>
+    <class name="EpcRatingsObject" src="Objects/EpcRatingsObject.php" xml="classes/ZpgRtf_Objects_EpcRatingsObject.xml"/>
+    <class name="MinMaxAreaObject" src="Objects/MinMaxAreaObject.php" xml="classes/ZpgRtf_Objects_MinMaxAreaObject.xml"/>
+    <class name="ServiceChargeObject" src="Objects/ServiceChargeObject.php" xml="classes/ZpgRtf_Objects_ServiceChargeObject.xml"/>
+    <class name="LocationObject" src="Objects/LocationObject.php" xml="classes/ZpgRtf_Objects_LocationObject.xml"/>
+    <class name="GoogleStreetViewObject" src="Objects/GoogleStreetViewObject.php" xml="classes/ZpgRtf_Objects_GoogleStreetViewObject.xml"/>
+    <class name="AreaObject" src="Objects/AreaObject.php" xml="classes/ZpgRtf_Objects_AreaObject.xml"/>
+    <class name="PricingObject" src="Objects/PricingObject.php" xml="classes/ZpgRtf_Objects_PricingObject.xml"/>
+    <class name="ContentObject" src="Objects/ContentObject.php" xml="classes/ZpgRtf_Objects_ContentObject.xml"/>
+    <class name="PafAddressObject" src="Objects/PafAddressObject.php" xml="classes/ZpgRtf_Objects_PafAddressObject.xml"/>
+    <class name="AreasObject" src="Objects/AreasObject.php" xml="classes/ZpgRtf_Objects_AreasObject.xml"/>
+  </namespace>
+  <namespace name="ZpgRtf\Methods">
+    <interface name="MethodInterface" src="Methods/MethodInterface.php" description="An interface to make sure all methods to send data over to Zpg have the relevant methods to do so." xml="interfaces/ZpgRtf_Methods_MethodInterface.xml"/>
+    <class name="AbstractMethod" src="Methods/AbstractMethod.php" description="The listing method allows you to list, update or delete listings on the ZPG rtf." xml="classes/ZpgRtf_Methods_AbstractMethod.xml"/>
+    <class name="ListingMethod" src="Methods/ListingMethod.php" description="The listing method allows you to list, update or delete listings on the ZPG rtf." xml="classes/ZpgRtf_Methods_ListingMethod.xml"/>
+    <class name="BranchMethod" src="Methods/BranchMethod.php" description="The branch method allows you to update a branch." xml="classes/ZpgRtf_Methods_BranchMethod.xml"/>
+  </namespace>
+  <namespace name="">
+    <interface name="JsonSerializable" xml="interfaces/JsonSerializable.xml"/>
+  </namespace>
+</index>

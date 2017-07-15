@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<source xmlns="http://xml.phpdox.net/token">
+  <file xmlns="http://xml.phpdox.net/src" path="/home/luke/personal/zpg-rtf-php/src/Methods" file="AbstractMethod.php" realpath="/home/luke/personal/zpg-rtf-php/src/Methods/AbstractMethod.php" size="160" time="2017-07-14T08:01:28+00:00" unixtime="1500019288" sha1="38db4cee989a1eb902b275a133628900fc68cd16" relative="Methods/AbstractMethod.php"/>
+  <line no="1">
+    <token name="T_OPEN_TAG">&lt;?php</token>
+  </line>
+  <line no="2"/>
+  <line no="3">
+    <token name="T_NAMESPACE">namespace</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">ZpgRtf</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Methods</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="4"/>
+  <line no="5">
+    <token name="T_DOC_COMMENT">/**</token>
+  </line>
+  <line no="6">
+    <token name="T_DOC_COMMENT"> * The listing method allows you to list, update or delete listings on the ZPG rtf.</token>
+  </line>
+  <line no="7">
+    <token name="T_DOC_COMMENT"> */</token>
+  </line>
+  <line no="8">
+    <token name="T_ABSTRACT">abstract</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CLASS">class</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">AbstractMethod</token>
+  </line>
+  <line no="9">
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="10">
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+  </line>
+  <line no="11"/>
+</source>

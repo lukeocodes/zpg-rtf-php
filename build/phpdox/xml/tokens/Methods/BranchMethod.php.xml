@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<source xmlns="http://xml.phpdox.net/token">
+  <file xmlns="http://xml.phpdox.net/src" path="/home/luke/personal/zpg-rtf-php/src/Methods" file="BranchMethod.php" realpath="/home/luke/personal/zpg-rtf-php/src/Methods/BranchMethod.php" size="287" time="2017-07-13T15:34:20+00:00" unixtime="1499960060" sha1="e3cb95a32b5e892e21aacc007a0388a38438dab9" relative="Methods/BranchMethod.php"/>
+  <line no="1">
+    <token name="T_OPEN_TAG">&lt;?php</token>
+  </line>
+  <line no="2"/>
+  <line no="3">
+    <token name="T_NAMESPACE">namespace</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">ZpgRtf</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Methods</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="4"/>
+  <line no="5">
+    <token name="T_DOC_COMMENT">/**</token>
+  </line>
+  <line no="6">
+    <token name="T_DOC_COMMENT"> * The branch method allows you to update a branch.</token>
+  </line>
+  <line no="7">
+    <token name="T_DOC_COMMENT"> */</token>
+  </line>
+  <line no="8">
+    <token name="T_CLASS">class</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">BranchMethod</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_EXTENDS">extends</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">AbstractMethod</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_IMPLEMENTS">implements</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">MethodInterface</token>
+  </line>
+  <line no="9">
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="10">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_DOC_COMMENT">/**</token>
+  </line>
+  <line no="11">
+    <token name="T_DOC_COMMENT">     * @return array</token>
+  </line>
+  <line no="12">
+    <token name="T_DOC_COMMENT">     */</token>
+  </line>
+  <line no="13">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PUBLIC">public</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_FUNCTION">function</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">update</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+  </line>
+  <line no="14">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="15">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_COMMENT">// TODO: Build an update request.</token>
+  </line>
+  <line no="16">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+  </line>
+  <line no="17">
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+  </line>
+  <line no="18"/>
+</source>

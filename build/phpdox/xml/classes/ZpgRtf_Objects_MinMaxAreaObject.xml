@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="ZpgRtf\Objects\MinMaxAreaObject" namespace="ZpgRtf\Objects" name="MinMaxAreaObject" abstract="false" final="false" start="5" end="8">
+  <file path="/home/luke/personal/zpg-rtf-php/src/Objects" file="MinMaxAreaObject.php" realpath="/home/luke/personal/zpg-rtf-php/src/Objects/MinMaxAreaObject.php" size="62" time="2017-07-14T22:26:19+00:00" unixtime="1500071179" sha1="3e27cd27b7f4dfd6e459c77c274bc658eed34dbb" relative="Objects/MinMaxAreaObject.php"/>
+</class>

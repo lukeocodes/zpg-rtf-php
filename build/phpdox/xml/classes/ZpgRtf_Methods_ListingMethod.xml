@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="ZpgRtf\Methods\ListingMethod" namespace="ZpgRtf\Methods" name="ListingMethod" abstract="false" final="false" start="8" end="33">
+  <file path="/home/luke/personal/zpg-rtf-php/src/Methods" file="ListingMethod.php" realpath="/home/luke/personal/zpg-rtf-php/src/Methods/ListingMethod.php" size="556" time="2017-07-13T15:34:34+00:00" unixtime="1499960074" sha1="2a8bd7c804a94461ed2f4114398ccd6560b69ac5" relative="Methods/ListingMethod.php"/>
+  <docblock>
+    <description compact="The listing method allows you to list, update or delete listings on the ZPG rtf."/>
+  </docblock>
+  <extends full="ZpgRtf\Methods\AbstractMethod" namespace="ZpgRtf\Methods" name="AbstractMethod"/>
+  <implements full="ZpgRtf\Methods\MethodInterface" namespace="ZpgRtf\Methods" name="MethodInterface"/>
+  <method name="list" start="13" end="16" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="array"/>
+    </docblock>
+    <inline>
+      <todo value="Build a list request." line="15"/>
+    </inline>
+  </method>
+  <method name="update" start="21" end="24" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="array"/>
+    </docblock>
+    <inline>
+      <todo value="Build an update request." line="23"/>
+    </inline>
+  </method>
+  <method name="delete" start="29" end="32" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="array"/>
+    </docblock>
+    <inline>
+      <todo value="Build a delete request." line="31"/>
+    </inline>
+  </method>
+  <parent full="ZpgRtf\Methods\AbstractMethod" namespace="ZpgRtf\Methods" name="AbstractMethod"/>
+  <interface full="ZpgRtf\Methods\MethodInterface" namespace="ZpgRtf\Methods" name="MethodInterface"/>
+</class>

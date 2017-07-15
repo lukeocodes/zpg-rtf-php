@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="ZpgRtf\Objects\GoogleStreetViewObject" namespace="ZpgRtf\Objects" name="GoogleStreetViewObject" abstract="false" final="false" start="5" end="8">
+  <file path="/home/luke/personal/zpg-rtf-php/src/Objects" file="GoogleStreetViewObject.php" realpath="/home/luke/personal/zpg-rtf-php/src/Objects/GoogleStreetViewObject.php" size="68" time="2017-07-14T22:26:32+00:00" unixtime="1500071192" sha1="5622f1a6aa27e52ed659c788ead273b3cc497e89" relative="Objects/GoogleStreetViewObject.php"/>
+</class>

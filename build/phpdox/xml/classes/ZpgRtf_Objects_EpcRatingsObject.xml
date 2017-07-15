@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="ZpgRtf\Objects\EpcRatingsObject" namespace="ZpgRtf\Objects" name="EpcRatingsObject" abstract="false" final="false" start="5" end="8">
+  <file path="/home/luke/personal/zpg-rtf-php/src/Objects" file="EpcRatingsObject.php" realpath="/home/luke/personal/zpg-rtf-php/src/Objects/EpcRatingsObject.php" size="62" time="2017-07-14T22:26:35+00:00" unixtime="1500071195" sha1="ebeb06daacdb17fa89369a956b071f08b64e5bee" relative="Objects/EpcRatingsObject.php"/>
+</class>

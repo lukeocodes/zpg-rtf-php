@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="ZpgRtf\Methods\AbstractMethod" namespace="ZpgRtf\Methods" name="AbstractMethod" abstract="true" final="false" start="8" end="10">
+  <file path="/home/luke/personal/zpg-rtf-php/src/Methods" file="AbstractMethod.php" realpath="/home/luke/personal/zpg-rtf-php/src/Methods/AbstractMethod.php" size="160" time="2017-07-14T08:01:28+00:00" unixtime="1500019288" sha1="38db4cee989a1eb902b275a133628900fc68cd16" relative="Methods/AbstractMethod.php"/>
+  <docblock>
+    <description compact="The listing method allows you to list, update or delete listings on the ZPG rtf."/>
+  </docblock>
+  <extenders>
+    <extender full="ZpgRtf\Methods\ListingMethod" namespace="ZpgRtf\Methods" name="ListingMethod"/>
+    <extender full="ZpgRtf\Methods\BranchMethod" namespace="ZpgRtf\Methods" name="BranchMethod"/>
+  </extenders>
+</class>

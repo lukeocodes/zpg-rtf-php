@@ -1,0 +1,1217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - ZpgRtf\Objects\ListingObject</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#ZpgRtf_Objects">ZpgRtf\Objects</a>
+          </li>
+          <li class="separator">ListingObject</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#tasks">Tasks</a>
+          </li>
+          <li>
+            <a href="#constants">Constants</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/Objects/ListingObject.php.xhtml#line8">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>ZpgRtf\Objects\</small>ListingObject</h1>
+        <h4>The listing object structures the listing payload.</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class ListingObject
+                implements
+                <a title="JsonSerializable" href="../interfaces/JsonSerializable.xhtml">JsonSerializable</a>
+            {<br/><ul class="none"><li>// constants</li><li>const PROPERTY_TYPES = ;</li><li>const BARN_CONVERSION = 'barn_conversion';</li><li>const BLOCK_OF_FLATS = 'block_of_flats';</li><li>const BUNGALOW = 'bungalow';</li><li>const BUSINESS_PARK = 'business_park';</li><li>const CHALET = 'chalet';</li><li>const CHATEAU = 'chateau';</li><li>const COTTAGE = 'cottage';</li><li>const COUNTRY_HOUSE = 'country_house';</li><li>const DETACHED = 'detached';</li><li>const DETACHED_BUNGALOW = 'detached_bungalow';</li><li>const END_TERRACE = 'end_terrace';</li><li>const EQUESTRIAN = 'equestrian';</li><li>const FARM = 'farm';</li><li>const FARMHOUSE = 'farmhouse';</li><li>const FINCA = 'finca';</li><li>const FLAT = 'flat';</li><li>const HOTEL = 'hotel';</li><li>const HOUSEBOAT = 'houseboat';</li><li>const INDUSTRIAL = 'industrial';</li><li>const LAND = 'land';</li><li>const LEISURE = 'leisure';</li><li>const LIGHT_INDUSTRIAL = 'light_industrial';</li><li>const LINK_DETACHED = 'link_detached';</li><li>const LODGE = 'lodge';</li><li>const LONGERE = 'longere';</li><li>const MAISONETTE = 'maisonette';</li><li>const MEWS = 'mews';</li><li>const OFFICE = 'office';</li><li>const PARK_HOME = 'park_home';</li><li>const PARKING = 'parking';</li><li>const PUB_BAR = 'pub_bar';</li><li>const RESTAURANT = 'restaurant';</li><li>const RETAIL = 'retail';</li><li>const RIAD = 'riad';</li><li>const SEMI_DETACHED = 'semi_detached';</li><li>const SEMI_DETACHED_BUNGALOW = 'semi_detached_bungalow';</li><li>const STUDIO = 'studio';</li><li>const TERRACED = 'terraced';</li><li>const TERRACED_BUNGALOW = 'terraced_bungalow';</li><li>const TOWN_HOUSE = 'town_house';</li><li>const VILLA = 'villa';</li><li>const WAREHOUSE = 'warehouse';</li></ul><ul class="none"><li>// members</li><li>private <span title="ZpgRtf\Objects\bool">bool</span> <a href="#members">$accessibility</a>;
+                    </li><li>private  <a href="#members">$administrationFees</a>;
+                    </li><li>private  <a href="#members">$annualBusinessRates</a>;
+                    </li><li>private <span title="ZpgRtf\Objects\AreasObject">AreasObject</span> <a href="#members">$areas</a>;
+                    </li><li>private  <a href="#members">$availableBedrooms</a>;
+                    </li><li>private <span title="\DateTime">DateTime</span> <a href="#members">$availableFromDate</a>;
+                    </li><li>private <span title="ZpgRtf\Objects\bool">bool</span> <a href="#members">$basement</a>;
+                    </li><li>private  <a href="#members">$bathrooms</a>;
+                    </li><li>private  <a href="#members">$billsIncluded</a>;
+                    </li><li>private  <a href="#members">$branchReference</a>;
+                    </li><li>private <span title="ZpgRtf\Objects\bool">bool</span> <a href="#members">$burglarAlarm</a>;
+                    </li><li>private <span title="ZpgRtf\Objects\bool">bool</span> <a href="#members">$businessForSale</a>;
+                    </li><li>private  <a href="#members">$buyerIncentives</a>;
+                    </li><li>private  <a href="#members">$category</a>;
+                    </li><li>private  <a href="#members">$centralHeating</a>;
+                    </li><li>private <span title="ZpgRtf\Objects\bool">bool</span> <a href="#members">$chainFree</a>;
+                    </li><li>private  <a href="#members">$commercialUseClasses</a>;
+                    </li><li>private  <a href="#members">$connectedUtilities</a>;
+                    </li><li>private <span title="ZpgRtf\Objects\bool">bool</span> <a href="#members">$conservatory</a>;
+                    </li><li>private  <a href="#members">$constructionYear</a>;
+                    </li><li>private  <a href="#members">$content</a>;
+                    </li><li>private  <a href="#members">$councilTaxBand</a>;
+                    </li><li>private  <a href="#members">$decorativeCondition</a>;
+                    </li><li>private  <a href="#members">$deposit</a>;
+                    </li><li>private  <a href="#members">$detailedDescription</a>;
+                    </li><li>private  <a href="#members">$displayAddress</a>;
+                    </li><li>private <span title="ZpgRtf\Objects\bool">bool</span> <a href="#members">$doubleGlazing</a>;
+                    </li><li>private <span title="ZpgRtf\Objects\EpcRatingsObject">EpcRatingsObject</span> <a href="#members">$epcRatings</a>;
+                    </li><li>private  <a href="#members">$featureList</a>;
+                    </li><li>private <span title="ZpgRtf\Objects\bool">bool</span> <a href="#members">$fireplace</a>;
+                    </li><li>private <span title="ZpgRtf\Objects\bool">bool</span> <a href="#members">$fishingRights</a>;
+                    </li><li>private  <a href="#members">$floorLevels</a>;
+                    </li><li>private  <a href="#members">$floors</a>;
+                    </li><li>private  <a href="#members">$furnishedState</a>;
+                    </li><li>private <span title="ZpgRtf\Objects\GoogleStreetViewObject">GoogleStreetViewObject</span> <a href="#members">$googleStreetView</a>;
+                    </li><li>private  <a href="#members">$groundRent</a>;
+                    </li><li>private <span title="ZpgRtf\Objects\bool">bool</span> <a href="#members">$gym</a>;
+                    </li><li>private <span title="ZpgRtf\Objects\LeaseExpiryObject">LeaseExpiryObject</span> <a href="#members">$leaseExpiry</a>;
+                    </li><li>private  <a href="#members">$lifeCycleStatus</a>;
+                    </li><li>private  <a href="#members">$listedBuildingGrade</a>;
+                    </li><li>private  <a href="#members">$listingReference</a>;
+                    </li><li>private  <a href="#members">$livingRooms</a>;
+                    </li><li>private <span title="ZpgRtf\Objects\LocationObject">LocationObject</span> <a href="#members">$location</a>;
+                    </li><li>private <span title="ZpgRtf\Objects\bool">bool</span> <a href="#members">$loft</a>;
+                    </li><li>private <span title="ZpgRtf\Objects\bool">bool</span> <a href="#members">$newHome</a>;
+                    </li><li>private <span title="\DateTime">DateTime</span> <a href="#members">$openDay</a>;
+                    </li><li>private <span title="ZpgRtf\Objects\bool">bool</span> <a href="#members">$outbuildings</a>;
+                    </li><li>private  <a href="#members">$outsideSpace</a>;
+                    </li><li>private  <a href="#members">$parking</a>;
+                    </li><li>private <span title="ZpgRtf\Objects\bool">bool</span> <a href="#members">$petsAllowed</a>;
+                    </li><li>private <span title="ZpgRtf\Objects\bool">bool</span> <a href="#members">$porterSecurity</a>;
+                    </li><li>private <span title="ZpgRtf\Objects\PricingObject">PricingObject</span> <a href="#members">$pricing</a>;
+                    </li><li>private  <a href="#members">$propertyType</a>;
+                    </li><li>private  <a href="#members">$rateableValue</a>;
+                    </li><li>private <span title="ZpgRtf\Objects\MinimumContractLengthObject">MinimumContractLengthObject</span> <a href="#members">$rentalTerm</a>;
+                    </li><li>private <span title="ZpgRtf\Objects\bool">bool</span> <a href="#members">$repossession</a>;
+                    </li><li>private <span title="ZpgRtf\Objects\bool">bool</span> <a href="#members">$retirement</a>;
+                    </li><li>private  <a href="#members">$sapRating</a>;
+                    </li><li>private <span title="ZpgRtf\Objects\ServiceChargeObject">ServiceChargeObject</span> <a href="#members">$serviceCharge</a>;
+                    </li><li>private <span title="ZpgRtf\Objects\bool">bool</span> <a href="#members">$serviced</a>;
+                    </li><li>private <span title="ZpgRtf\Objects\bool">bool</span> <a href="#members">$sharedAccommodation</a>;
+                    </li><li>private  <a href="#members">$summaryDescription</a>;
+                    </li><li>private <span title="ZpgRtf\Objects\bool">bool</span> <a href="#members">$swimmingPool</a>;
+                    </li><li>private <span title="ZpgRtf\Objects\bool">bool</span> <a href="#members">$tenanted</a>;
+                    </li><li>private <span title="ZpgRtf\Objects\TenantEligibilityObject">TenantEligibilityObject</span> <a href="#members">$tenantEligibility</a>;
+                    </li><li>private <span title="ZpgRtf\Objects\bool">bool</span> <a href="#members">$tennisCourt</a>;
+                    </li><li>private  <a href="#members">$tenure</a>;
+                    </li><li>private  <a href="#members">$totalBedrooms</a>;
+                    </li><li>private <span title="ZpgRtf\Objects\bool">bool</span> <a href="#members">$utilityRoom</a>;
+                    </li><li>private <span title="ZpgRtf\Objects\bool">bool</span> <a href="#members">$waterfront</a>;
+                    </li><li>private <span title="ZpgRtf\Objects\bool">bool</span> <a href="#members">$woodFloors</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>public bool <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/hasAccessibility.xhtml">hasAccessibility</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setAccessibility.xhtml">setAccessibility</a>()
+                    </li><li>public string <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getAdministrationFees.xhtml">getAdministrationFees</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setAdministrationFees.xhtml">setAdministrationFees</a>()
+                    </li><li>public float <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getAnnualBusinessRates.xhtml">getAnnualBusinessRates</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setAnnualBusinessRates.xhtml">setAnnualBusinessRates</a>()
+                    </li><li>public AreasObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getAreas.xhtml">getAreas</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setAreas.xhtml">setAreas</a>()
+                    </li><li>public int <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getAvailableBedrooms.xhtml">getAvailableBedrooms</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setAvailableBedrooms.xhtml">setAvailableBedrooms</a>()
+                    </li><li>public DateTime <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getAvailableFromDate.xhtml">getAvailableFromDate</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setAvailableFromDate.xhtml">setAvailableFromDate</a>()
+                    </li><li>public bool <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/hasBasement.xhtml">hasBasement</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setBasement.xhtml">setBasement</a>()
+                    </li><li>public int <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getBathrooms.xhtml">getBathrooms</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setBathrooms.xhtml">setBathrooms</a>()
+                    </li><li>public array <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getBillsIncluded.xhtml">getBillsIncluded</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setBillsIncluded.xhtml">setBillsIncluded</a>()
+                    </li><li>public string <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getBranchReference.xhtml">getBranchReference</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setBranchReference.xhtml">setBranchReference</a>()
+                    </li><li>public bool <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/hasBurglarAlarm.xhtml">hasBurglarAlarm</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setBurglarAlarm.xhtml">setBurglarAlarm</a>()
+                    </li><li>public bool <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/isBusinessForSale.xhtml">isBusinessForSale</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setBusinessForSale.xhtml">setBusinessForSale</a>()
+                    </li><li>public array <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getBuyerIncentives.xhtml">getBuyerIncentives</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setBuyerIncentives.xhtml">setBuyerIncentives</a>()
+                    </li><li>public string <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getCategory.xhtml">getCategory</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setCategory.xhtml">setCategory</a>()
+                    </li><li>public string <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getCentralHeating.xhtml">getCentralHeating</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setCentralHeating.xhtml">setCentralHeating</a>()
+                    </li><li>public bool <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/isChainFree.xhtml">isChainFree</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setChainFree.xhtml">setChainFree</a>()
+                    </li><li>public array <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getCommercialUseClasses.xhtml">getCommercialUseClasses</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setCommercialUseClasses.xhtml">setCommercialUseClasses</a>()
+                    </li><li>public array <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getConnectedUtilities.xhtml">getConnectedUtilities</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setConnectedUtilities.xhtml">setConnectedUtilities</a>()
+                    </li><li>public bool <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/hasConservatory.xhtml">hasConservatory</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setConservatory.xhtml">setConservatory</a>()
+                    </li><li>public int <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getConstructionYear.xhtml">getConstructionYear</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setConstructionYear.xhtml">setConstructionYear</a>()
+                    </li><li>public array <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getContent.xhtml">getContent</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setContent.xhtml">setContent</a>()
+                    </li><li>public string <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getCouncilTaxBand.xhtml">getCouncilTaxBand</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setCouncilTaxBand.xhtml">setCouncilTaxBand</a>()
+                    </li><li>public string <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getDecorativeCondition.xhtml">getDecorativeCondition</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setDecorativeCondition.xhtml">setDecorativeCondition</a>()
+                    </li><li>public float <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getDeposit.xhtml">getDeposit</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setDeposit.xhtml">setDeposit</a>()
+                    </li><li>public array <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getDetailedDescription.xhtml">getDetailedDescription</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setDetailedDescription.xhtml">setDetailedDescription</a>()
+                    </li><li>public string <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getDisplayAddress.xhtml">getDisplayAddress</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setDisplayAddress.xhtml">setDisplayAddress</a>()
+                    </li><li>public bool <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/hasDoubleGlazing.xhtml">hasDoubleGlazing</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setDoubleGlazing.xhtml">setDoubleGlazing</a>()
+                    </li><li>public EpcRatingsObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getEpcRatings.xhtml">getEpcRatings</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setEpcRatings.xhtml">setEpcRatings</a>()
+                    </li><li>public array <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getFeatureList.xhtml">getFeatureList</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setFeatureList.xhtml">setFeatureList</a>()
+                    </li><li>public bool <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/hasFireplace.xhtml">hasFireplace</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setFireplace.xhtml">setFireplace</a>()
+                    </li><li>public bool <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/hasFishingRights.xhtml">hasFishingRights</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setFishingRights.xhtml">setFishingRights</a>()
+                    </li><li>public array <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getFloorLevels.xhtml">getFloorLevels</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setFloorLevels.xhtml">setFloorLevels</a>()
+                    </li><li>public int <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getFloors.xhtml">getFloors</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setFloors.xhtml">setFloors</a>()
+                    </li><li>public string <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getFurnishedState.xhtml">getFurnishedState</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setFurnishedState.xhtml">setFurnishedState</a>()
+                    </li><li>public GoogleStreetViewObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getGoogleStreetView.xhtml">getGoogleStreetView</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setGoogleStreetView.xhtml">setGoogleStreetView</a>()
+                    </li><li>public float <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getGroundRent.xhtml">getGroundRent</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setGroundRent.xhtml">setGroundRent</a>()
+                    </li><li>public bool <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/hasGym.xhtml">hasGym</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setGym.xhtml">setGym</a>()
+                    </li><li>public LeaseExpiryObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getLeaseExpiry.xhtml">getLeaseExpiry</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setLeaseExpiry.xhtml">setLeaseExpiry</a>()
+                    </li><li>public string <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getLifeCycleStatus.xhtml">getLifeCycleStatus</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setLifeCycleStatus.xhtml">setLifeCycleStatus</a>()
+                    </li><li>public string <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getListedBuildingGrade.xhtml">getListedBuildingGrade</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setListedBuildingGrade.xhtml">setListedBuildingGrade</a>()
+                    </li><li>public string <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getListingReference.xhtml">getListingReference</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setListingReference.xhtml">setListingReference</a>()
+                    </li><li>public int <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getLivingRooms.xhtml">getLivingRooms</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setLivingRooms.xhtml">setLivingRooms</a>()
+                    </li><li>public LocationObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getLocation.xhtml">getLocation</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setLocation.xhtml">setLocation</a>()
+                    </li><li>public bool <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/hasLoft.xhtml">hasLoft</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setLoft.xhtml">setLoft</a>()
+                    </li><li>public bool <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/isNewHome.xhtml">isNewHome</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setNewHome.xhtml">setNewHome</a>()
+                    </li><li>public DateTime <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getOpenDay.xhtml">getOpenDay</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setOpenDay.xhtml">setOpenDay</a>()
+                    </li><li>public bool <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/hasOutbuildings.xhtml">hasOutbuildings</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setOutbuildings.xhtml">setOutbuildings</a>()
+                    </li><li>public array <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getOutsideSpace.xhtml">getOutsideSpace</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setOutsideSpace.xhtml">setOutsideSpace</a>()
+                    </li><li>public array <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getParking.xhtml">getParking</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setParking.xhtml">setParking</a>()
+                    </li><li>public bool <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/isPetsAllowed.xhtml">isPetsAllowed</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setPetsAllowed.xhtml">setPetsAllowed</a>()
+                    </li><li>public bool <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/hasPorterSecurity.xhtml">hasPorterSecurity</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setPorterSecurity.xhtml">setPorterSecurity</a>()
+                    </li><li>public PricingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getPricing.xhtml">getPricing</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setPricing.xhtml">setPricing</a>()
+                    </li><li>public string <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getPropertyType.xhtml">getPropertyType</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setPropertyType.xhtml">setPropertyType</a>()
+                    </li><li>public float <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getRateableValue.xhtml">getRateableValue</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setRateableValue.xhtml">setRateableValue</a>()
+                    </li><li>public MinimumContractLengthObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getRentalTerm.xhtml">getRentalTerm</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setRentalTerm.xhtml">setRentalTerm</a>()
+                    </li><li>public bool <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/isRepossession.xhtml">isRepossession</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setRepossession.xhtml">setRepossession</a>()
+                    </li><li>public bool <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/isRetirement.xhtml">isRetirement</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setRetirement.xhtml">setRetirement</a>()
+                    </li><li>public int <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getSapRating.xhtml">getSapRating</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setSapRating.xhtml">setSapRating</a>()
+                    </li><li>public ServiceChargeObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getServiceCharge.xhtml">getServiceCharge</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setServiceCharge.xhtml">setServiceCharge</a>()
+                    </li><li>public bool <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/isServiced.xhtml">isServiced</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setServiced.xhtml">setServiced</a>()
+                    </li><li>public bool <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/isSharedAccommodation.xhtml">isSharedAccommodation</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setSharedAccommodation.xhtml">setSharedAccommodation</a>()
+                    </li><li>public string <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getSummaryDescription.xhtml">getSummaryDescription</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setSummaryDescription.xhtml">setSummaryDescription</a>()
+                    </li><li>public bool <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/hasSwimmingPool.xhtml">hasSwimmingPool</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setSwimmingPool.xhtml">setSwimmingPool</a>()
+                    </li><li>public bool <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/isTenanted.xhtml">isTenanted</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setTenanted.xhtml">setTenanted</a>()
+                    </li><li>public TenantEligibilityObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getTenantEligibility.xhtml">getTenantEligibility</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setTenantEligibility.xhtml">setTenantEligibility</a>()
+                    </li><li>public bool <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/hasTennisCourt.xhtml">hasTennisCourt</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setTennisCourt.xhtml">setTennisCourt</a>()
+                    </li><li>public string <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getTenure.xhtml">getTenure</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setTenure.xhtml">setTenure</a>()
+                    </li><li>public int <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getTotalBedrooms.xhtml">getTotalBedrooms</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setTotalBedrooms.xhtml">setTotalBedrooms</a>()
+                    </li><li>public bool <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/hasUtilityRoom.xhtml">hasUtilityRoom</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setUtilityRoom.xhtml">setUtilityRoom</a>()
+                    </li><li>public bool <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/isWaterfront.xhtml">isWaterfront</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setWaterfront.xhtml">setWaterfront</a>()
+                    </li><li>public bool <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/hasWoodFloors.xhtml">hasWoodFloors</a>()
+                    </li><li>public ListingObject <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setWoodFloors.xhtml">setWoodFloors</a>()
+                    </li><li>public void <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/jsonSerialize.xhtml">jsonSerialize</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Implements</h4>
+          <ul>
+            <li>
+              <a title="JsonSerializable" href="../interfaces/JsonSerializable.xhtml">JsonSerializable</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="tasks">Tasks</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th style="width:3em;">Line</th>
+              <th>Task</th>
+            </tr>
+          </thead>
+          <tr>
+            <td class="nummeric">+</td>
+            <td>Make these constants.</td>
+          </tr>
+          <tr>
+            <td class="nummeric">+</td>
+            <td>Make these constants.</td>
+          </tr>
+          <tr>
+            <td class="nummeric">+</td>
+            <td>Make these constants.</td>
+          </tr>
+          <tr>
+            <td class="nummeric">+</td>
+            <td>Make these constants.</td>
+          </tr>
+          <tr>
+            <td class="nummeric">+</td>
+            <td>Make these constants.</td>
+          </tr>
+          <tr>
+            <td class="nummeric">+</td>
+            <td>Make these constants.</td>
+          </tr>
+          <tr>
+            <td class="nummeric">+</td>
+            <td>Make these constants.</td>
+          </tr>
+          <tr>
+            <td class="nummeric">+</td>
+            <td>Make these constants.</td>
+          </tr>
+          <tr>
+            <td class="nummeric">+</td>
+            <td>Make some of these constants.</td>
+          </tr>
+          <tr>
+            <td class="nummeric">+</td>
+            <td>Make these constants.</td>
+          </tr>
+          <tr>
+            <td class="nummeric">+</td>
+            <td>Make these constants.</td>
+          </tr>
+          <tr>
+            <td class="nummeric">+</td>
+            <td>Make these constants.</td>
+          </tr>
+          <tr>
+            <td class="nummeric">+</td>
+            <td>Make these constants.</td>
+          </tr>
+          <tr>
+            <td class="nummeric">+</td>
+            <td>Make these constants.</td>
+          </tr>
+        </table>
+        <h2 id="constants">Constants</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="PROPERTY_TYPES">PROPERTY_TYPES</td>
+              <td/>
+            </tr>
+            <tr>
+              <td id="BARN_CONVERSION">BARN_CONVERSION</td>
+              <td>'barn_conversion'</td>
+            </tr>
+            <tr>
+              <td id="BLOCK_OF_FLATS">BLOCK_OF_FLATS</td>
+              <td>'block_of_flats'</td>
+            </tr>
+            <tr>
+              <td id="BUNGALOW">BUNGALOW</td>
+              <td>'bungalow'</td>
+            </tr>
+            <tr>
+              <td id="BUSINESS_PARK">BUSINESS_PARK</td>
+              <td>'business_park'</td>
+            </tr>
+            <tr>
+              <td id="CHALET">CHALET</td>
+              <td>'chalet'</td>
+            </tr>
+            <tr>
+              <td id="CHATEAU">CHATEAU</td>
+              <td>'chateau'</td>
+            </tr>
+            <tr>
+              <td id="COTTAGE">COTTAGE</td>
+              <td>'cottage'</td>
+            </tr>
+            <tr>
+              <td id="COUNTRY_HOUSE">COUNTRY_HOUSE</td>
+              <td>'country_house'</td>
+            </tr>
+            <tr>
+              <td id="DETACHED">DETACHED</td>
+              <td>'detached'</td>
+            </tr>
+            <tr>
+              <td id="DETACHED_BUNGALOW">DETACHED_BUNGALOW</td>
+              <td>'detached_bungalow'</td>
+            </tr>
+            <tr>
+              <td id="END_TERRACE">END_TERRACE</td>
+              <td>'end_terrace'</td>
+            </tr>
+            <tr>
+              <td id="EQUESTRIAN">EQUESTRIAN</td>
+              <td>'equestrian'</td>
+            </tr>
+            <tr>
+              <td id="FARM">FARM</td>
+              <td>'farm'</td>
+            </tr>
+            <tr>
+              <td id="FARMHOUSE">FARMHOUSE</td>
+              <td>'farmhouse'</td>
+            </tr>
+            <tr>
+              <td id="FINCA">FINCA</td>
+              <td>'finca'</td>
+            </tr>
+            <tr>
+              <td id="FLAT">FLAT</td>
+              <td>'flat'</td>
+            </tr>
+            <tr>
+              <td id="HOTEL">HOTEL</td>
+              <td>'hotel'</td>
+            </tr>
+            <tr>
+              <td id="HOUSEBOAT">HOUSEBOAT</td>
+              <td>'houseboat'</td>
+            </tr>
+            <tr>
+              <td id="INDUSTRIAL">INDUSTRIAL</td>
+              <td>'industrial'</td>
+            </tr>
+            <tr>
+              <td id="LAND">LAND</td>
+              <td>'land'</td>
+            </tr>
+            <tr>
+              <td id="LEISURE">LEISURE</td>
+              <td>'leisure'</td>
+            </tr>
+            <tr>
+              <td id="LIGHT_INDUSTRIAL">LIGHT_INDUSTRIAL</td>
+              <td>'light_industrial'</td>
+            </tr>
+            <tr>
+              <td id="LINK_DETACHED">LINK_DETACHED</td>
+              <td>'link_detached'</td>
+            </tr>
+            <tr>
+              <td id="LODGE">LODGE</td>
+              <td>'lodge'</td>
+            </tr>
+            <tr>
+              <td id="LONGERE">LONGERE</td>
+              <td>'longere'</td>
+            </tr>
+            <tr>
+              <td id="MAISONETTE">MAISONETTE</td>
+              <td>'maisonette'</td>
+            </tr>
+            <tr>
+              <td id="MEWS">MEWS</td>
+              <td>'mews'</td>
+            </tr>
+            <tr>
+              <td id="OFFICE">OFFICE</td>
+              <td>'office'</td>
+            </tr>
+            <tr>
+              <td id="PARK_HOME">PARK_HOME</td>
+              <td>'park_home'</td>
+            </tr>
+            <tr>
+              <td id="PARKING">PARKING</td>
+              <td>'parking'</td>
+            </tr>
+            <tr>
+              <td id="PUB_BAR">PUB_BAR</td>
+              <td>'pub_bar'</td>
+            </tr>
+            <tr>
+              <td id="RESTAURANT">RESTAURANT</td>
+              <td>'restaurant'</td>
+            </tr>
+            <tr>
+              <td id="RETAIL">RETAIL</td>
+              <td>'retail'</td>
+            </tr>
+            <tr>
+              <td id="RIAD">RIAD</td>
+              <td>'riad'</td>
+            </tr>
+            <tr>
+              <td id="SEMI_DETACHED">SEMI_DETACHED</td>
+              <td>'semi_detached'</td>
+            </tr>
+            <tr>
+              <td id="SEMI_DETACHED_BUNGALOW">SEMI_DETACHED_BUNGALOW</td>
+              <td>'semi_detached_bungalow'</td>
+            </tr>
+            <tr>
+              <td id="STUDIO">STUDIO</td>
+              <td>'studio'</td>
+            </tr>
+            <tr>
+              <td id="TERRACED">TERRACED</td>
+              <td>'terraced'</td>
+            </tr>
+            <tr>
+              <td id="TERRACED_BUNGALOW">TERRACED_BUNGALOW</td>
+              <td>'terraced_bungalow'</td>
+            </tr>
+            <tr>
+              <td id="TOWN_HOUSE">TOWN_HOUSE</td>
+              <td>'town_house'</td>
+            </tr>
+            <tr>
+              <td id="VILLA">VILLA</td>
+              <td>'villa'</td>
+            </tr>
+            <tr>
+              <td id="WAREHOUSE">WAREHOUSE</td>
+              <td>'warehouse'</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="accessibility"><strong>$accessibility</strong>
+                —
+                <a title="ZpgRtf\Objects\bool" href="../classes/ZpgRtf_Objects_bool.xhtml">ZpgRtf\Objects\bool</a></li>
+            <li id="administrationFees"><strong>$administrationFees</strong>
+                —
+                string</li>
+            <li id="annualBusinessRates"><strong>$annualBusinessRates</strong>
+                —
+                float</li>
+            <li id="areas"><strong>$areas</strong>
+                —
+                <a title="ZpgRtf\Objects\AreasObject" href="../classes/ZpgRtf_Objects_AreasObject.xhtml">ZpgRtf\Objects\AreasObject</a></li>
+            <li id="availableBedrooms"><strong>$availableBedrooms</strong>
+                —
+                int</li>
+            <li id="availableFromDate"><strong>$availableFromDate</strong>
+                —
+                <a title="\DateTime" href="../classes/_DateTime.xhtml">\DateTime</a></li>
+            <li id="basement"><strong>$basement</strong>
+                —
+                <a title="ZpgRtf\Objects\bool" href="../classes/ZpgRtf_Objects_bool.xhtml">ZpgRtf\Objects\bool</a></li>
+            <li id="bathrooms"><strong>$bathrooms</strong>
+                —
+                int</li>
+            <li id="billsIncluded"><strong>$billsIncluded</strong>
+                —
+                array<br/><span class="indent">Array of enum (electricity, gas, internet, satellite_cable_tv, telephone, tv_licence, water)</span></li>
+            <li id="branchReference"><strong>$branchReference</strong>
+                —
+                string</li>
+            <li id="burglarAlarm"><strong>$burglarAlarm</strong>
+                —
+                <a title="ZpgRtf\Objects\bool" href="../classes/ZpgRtf_Objects_bool.xhtml">ZpgRtf\Objects\bool</a></li>
+            <li id="businessForSale"><strong>$businessForSale</strong>
+                —
+                <a title="ZpgRtf\Objects\bool" href="../classes/ZpgRtf_Objects_bool.xhtml">ZpgRtf\Objects\bool</a></li>
+            <li id="buyerIncentives"><strong>$buyerIncentives</strong>
+                —
+                array<br/><span class="indent">Array of enum (equity_loan, help_to_buy, mi_new_home, new_buy, part_buy_part_rent, shared_equity, shared_ownership)</span></li>
+            <li id="category"><strong>$category</strong>
+                —
+                string<br/><span class="indent">Enum (commercial, residential)</span></li>
+            <li id="centralHeating"><strong>$centralHeating</strong>
+                —
+                string<br/><span class="indent">Enum (full, partial, none)</span></li>
+            <li id="chainFree"><strong>$chainFree</strong>
+                —
+                <a title="ZpgRtf\Objects\bool" href="../classes/ZpgRtf_Objects_bool.xhtml">ZpgRtf\Objects\bool</a></li>
+            <li id="commercialUseClasses"><strong>$commercialUseClasses</strong>
+                —
+                array</li>
+            <li id="connectedUtilities"><strong>$connectedUtilities</strong>
+                —
+                array<br/><span class="indent">Enum (electricity, fibre_optic, gas, satellite_cable_tv, telephone, water)</span></li>
+            <li id="conservatory"><strong>$conservatory</strong>
+                —
+                <a title="ZpgRtf\Objects\bool" href="../classes/ZpgRtf_Objects_bool.xhtml">ZpgRtf\Objects\bool</a></li>
+            <li id="constructionYear"><strong>$constructionYear</strong>
+                —
+                int</li>
+            <li id="content"><strong>$content</strong>
+                —
+                array</li>
+            <li id="councilTaxBand"><strong>$councilTaxBand</strong>
+                —
+                string<br/><span class="indent">Enum (A, B, C, D, E, F, G, H, I)</span></li>
+            <li id="decorativeCondition"><strong>$decorativeCondition</strong>
+                —
+                string<br/><span class="indent">Enum (excellent, good, average, needs_modernisation)</span></li>
+            <li id="deposit"><strong>$deposit</strong>
+                —
+                float</li>
+            <li id="detailedDescription"><strong>$detailedDescription</strong>
+                —
+                array</li>
+            <li id="displayAddress"><strong>$displayAddress</strong>
+                —
+                string</li>
+            <li id="doubleGlazing"><strong>$doubleGlazing</strong>
+                —
+                <a title="ZpgRtf\Objects\bool" href="../classes/ZpgRtf_Objects_bool.xhtml">ZpgRtf\Objects\bool</a></li>
+            <li id="epcRatings"><strong>$epcRatings</strong>
+                —
+                <a title="ZpgRtf\Objects\EpcRatingsObject" href="../classes/ZpgRtf_Objects_EpcRatingsObject.xhtml">ZpgRtf\Objects\EpcRatingsObject</a></li>
+            <li id="featureList"><strong>$featureList</strong>
+                —
+                array</li>
+            <li id="fireplace"><strong>$fireplace</strong>
+                —
+                <a title="ZpgRtf\Objects\bool" href="../classes/ZpgRtf_Objects_bool.xhtml">ZpgRtf\Objects\bool</a></li>
+            <li id="fishingRights"><strong>$fishingRights</strong>
+                —
+                <a title="ZpgRtf\Objects\bool" href="../classes/ZpgRtf_Objects_bool.xhtml">ZpgRtf\Objects\bool</a></li>
+            <li id="floorLevels"><strong>$floorLevels</strong>
+                —
+                array<br/><span class="indent">Enum (penthouse, &lt;integers greater than zero&gt;, ground, basement)</span></li>
+            <li id="floors"><strong>$floors</strong>
+                —
+                int</li>
+            <li id="furnishedState"><strong>$furnishedState</strong>
+                —
+                string<br/><span class="indent">Emum (furnished, furnished_or_unfurnished, part_furnished, unfurnished)</span></li>
+            <li id="googleStreetView"><strong>$googleStreetView</strong>
+                —
+                <a title="ZpgRtf\Objects\GoogleStreetViewObject" href="../classes/ZpgRtf_Objects_GoogleStreetViewObject.xhtml">ZpgRtf\Objects\GoogleStreetViewObject</a></li>
+            <li id="groundRent"><strong>$groundRent</strong>
+                —
+                float</li>
+            <li id="gym"><strong>$gym</strong>
+                —
+                <a title="ZpgRtf\Objects\bool" href="../classes/ZpgRtf_Objects_bool.xhtml">ZpgRtf\Objects\bool</a></li>
+            <li id="leaseExpiry"><strong>$leaseExpiry</strong>
+                —
+                <a title="ZpgRtf\Objects\LeaseExpiryObject" href="../classes/ZpgRtf_Objects_LeaseExpiryObject.xhtml">ZpgRtf\Objects\LeaseExpiryObject</a></li>
+            <li id="lifeCycleStatus"><strong>$lifeCycleStatus</strong>
+                —
+                string<br/><span class="indent">Enum (available, under_offer, sold_subject_to_contract, sold, let_agreed, let)</span></li>
+            <li id="listedBuildingGrade"><strong>$listedBuildingGrade</strong>
+                —
+                string<br/><span class="indent">Enum(category_a, category_b, category_c, grade_a, grade_b, grade_b_plus, grade_one, grade_two, grade_two_star, locally_listed)</span></li>
+            <li id="listingReference"><strong>$listingReference</strong>
+                —
+                string</li>
+            <li id="livingRooms"><strong>$livingRooms</strong>
+                —
+                int</li>
+            <li id="location"><strong>$location</strong>
+                —
+                <a title="ZpgRtf\Objects\LocationObject" href="../classes/ZpgRtf_Objects_LocationObject.xhtml">ZpgRtf\Objects\LocationObject</a></li>
+            <li id="loft"><strong>$loft</strong>
+                —
+                <a title="ZpgRtf\Objects\bool" href="../classes/ZpgRtf_Objects_bool.xhtml">ZpgRtf\Objects\bool</a></li>
+            <li id="newHome"><strong>$newHome</strong>
+                —
+                <a title="ZpgRtf\Objects\bool" href="../classes/ZpgRtf_Objects_bool.xhtml">ZpgRtf\Objects\bool</a></li>
+            <li id="openDay"><strong>$openDay</strong>
+                —
+                <a title="\DateTime" href="../classes/_DateTime.xhtml">\DateTime</a></li>
+            <li id="outbuildings"><strong>$outbuildings</strong>
+                —
+                <a title="ZpgRtf\Objects\bool" href="../classes/ZpgRtf_Objects_bool.xhtml">ZpgRtf\Objects\bool</a></li>
+            <li id="outsideSpace"><strong>$outsideSpace</strong>
+                —
+                array<br/><span class="indent">Enum (balcony, communal_garden, private_garden, roof_terrace, terrace)</span></li>
+            <li id="parking"><strong>$parking</strong>
+                —
+                array<br/><span class="indent">Enum (double_garage, off_street_parking, residents_parking, single_garage, underground)</span></li>
+            <li id="petsAllowed"><strong>$petsAllowed</strong>
+                —
+                <a title="ZpgRtf\Objects\bool" href="../classes/ZpgRtf_Objects_bool.xhtml">ZpgRtf\Objects\bool</a></li>
+            <li id="porterSecurity"><strong>$porterSecurity</strong>
+                —
+                <a title="ZpgRtf\Objects\bool" href="../classes/ZpgRtf_Objects_bool.xhtml">ZpgRtf\Objects\bool</a></li>
+            <li id="pricing"><strong>$pricing</strong>
+                —
+                <a title="ZpgRtf\Objects\PricingObject" href="../classes/ZpgRtf_Objects_PricingObject.xhtml">ZpgRtf\Objects\PricingObject</a></li>
+            <li id="propertyType"><strong>$propertyType</strong>
+                —
+                string</li>
+            <li id="rateableValue"><strong>$rateableValue</strong>
+                —
+                float</li>
+            <li id="rentalTerm"><strong>$rentalTerm</strong>
+                —
+                <a title="ZpgRtf\Objects\MinimumContractLengthObject" href="../classes/ZpgRtf_Objects_MinimumContractLengthObject.xhtml">ZpgRtf\Objects\MinimumContractLengthObject</a></li>
+            <li id="repossession"><strong>$repossession</strong>
+                —
+                <a title="ZpgRtf\Objects\bool" href="../classes/ZpgRtf_Objects_bool.xhtml">ZpgRtf\Objects\bool</a></li>
+            <li id="retirement"><strong>$retirement</strong>
+                —
+                <a title="ZpgRtf\Objects\bool" href="../classes/ZpgRtf_Objects_bool.xhtml">ZpgRtf\Objects\bool</a></li>
+            <li id="sapRating"><strong>$sapRating</strong>
+                —
+                int</li>
+            <li id="serviceCharge"><strong>$serviceCharge</strong>
+                —
+                <a title="ZpgRtf\Objects\ServiceChargeObject" href="../classes/ZpgRtf_Objects_ServiceChargeObject.xhtml">ZpgRtf\Objects\ServiceChargeObject</a></li>
+            <li id="serviced"><strong>$serviced</strong>
+                —
+                <a title="ZpgRtf\Objects\bool" href="../classes/ZpgRtf_Objects_bool.xhtml">ZpgRtf\Objects\bool</a></li>
+            <li id="sharedAccommodation"><strong>$sharedAccommodation</strong>
+                —
+                <a title="ZpgRtf\Objects\bool" href="../classes/ZpgRtf_Objects_bool.xhtml">ZpgRtf\Objects\bool</a></li>
+            <li id="summaryDescription"><strong>$summaryDescription</strong>
+                —
+                string</li>
+            <li id="swimmingPool"><strong>$swimmingPool</strong>
+                —
+                <a title="ZpgRtf\Objects\bool" href="../classes/ZpgRtf_Objects_bool.xhtml">ZpgRtf\Objects\bool</a></li>
+            <li id="tenantEligibility"><strong>$tenantEligibility</strong>
+                —
+                <a title="ZpgRtf\Objects\TenantEligibilityObject" href="../classes/ZpgRtf_Objects_TenantEligibilityObject.xhtml">ZpgRtf\Objects\TenantEligibilityObject</a></li>
+            <li id="tenanted"><strong>$tenanted</strong>
+                —
+                <a title="ZpgRtf\Objects\bool" href="../classes/ZpgRtf_Objects_bool.xhtml">ZpgRtf\Objects\bool</a></li>
+            <li id="tennisCourt"><strong>$tennisCourt</strong>
+                —
+                <a title="ZpgRtf\Objects\bool" href="../classes/ZpgRtf_Objects_bool.xhtml">ZpgRtf\Objects\bool</a></li>
+            <li id="tenure"><strong>$tenure</strong>
+                —
+                string<br/><span class="indent">Enum (feudal, freehold, leasehold, share_of_freehold)</span></li>
+            <li id="totalBedrooms"><strong>$totalBedrooms</strong>
+                —
+                int</li>
+            <li id="utilityRoom"><strong>$utilityRoom</strong>
+                —
+                <a title="ZpgRtf\Objects\bool" href="../classes/ZpgRtf_Objects_bool.xhtml">ZpgRtf\Objects\bool</a></li>
+            <li id="waterfront"><strong>$waterfront</strong>
+                —
+                <a title="ZpgRtf\Objects\bool" href="../classes/ZpgRtf_Objects_bool.xhtml">ZpgRtf\Objects\bool</a></li>
+            <li id="woodFloors"><strong>$woodFloors</strong>
+                —
+                <a title="ZpgRtf\Objects\bool" href="../classes/ZpgRtf_Objects_bool.xhtml">ZpgRtf\Objects\bool</a></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="getAdministrationFees">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getAdministrationFees.xhtml">getAdministrationFees()</a>
+            </li>
+            <li id="getAnnualBusinessRates">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getAnnualBusinessRates.xhtml">getAnnualBusinessRates()</a>
+            </li>
+            <li id="getAreas">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getAreas.xhtml">getAreas()</a>
+            </li>
+            <li id="getAvailableBedrooms">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getAvailableBedrooms.xhtml">getAvailableBedrooms()</a>
+            </li>
+            <li id="getAvailableFromDate">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getAvailableFromDate.xhtml">getAvailableFromDate()</a>
+            </li>
+            <li id="getBathrooms">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getBathrooms.xhtml">getBathrooms()</a>
+            </li>
+            <li id="getBillsIncluded">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getBillsIncluded.xhtml">getBillsIncluded()</a>
+            </li>
+            <li id="getBranchReference">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getBranchReference.xhtml">getBranchReference()</a>
+            </li>
+            <li id="getBuyerIncentives">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getBuyerIncentives.xhtml">getBuyerIncentives()</a>
+            </li>
+            <li id="getCategory">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getCategory.xhtml">getCategory()</a>
+            </li>
+            <li id="getCentralHeating">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getCentralHeating.xhtml">getCentralHeating()</a>
+            </li>
+            <li id="getCommercialUseClasses">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getCommercialUseClasses.xhtml">getCommercialUseClasses()</a>
+            </li>
+            <li id="getConnectedUtilities">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getConnectedUtilities.xhtml">getConnectedUtilities()</a>
+            </li>
+            <li id="getConstructionYear">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getConstructionYear.xhtml">getConstructionYear()</a>
+            </li>
+            <li id="getContent">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getContent.xhtml">getContent()</a>
+            </li>
+            <li id="getCouncilTaxBand">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getCouncilTaxBand.xhtml">getCouncilTaxBand()</a>
+            </li>
+            <li id="getDecorativeCondition">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getDecorativeCondition.xhtml">getDecorativeCondition()</a>
+            </li>
+            <li id="getDeposit">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getDeposit.xhtml">getDeposit()</a>
+            </li>
+            <li id="getDetailedDescription">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getDetailedDescription.xhtml">getDetailedDescription()</a>
+            </li>
+            <li id="getDisplayAddress">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getDisplayAddress.xhtml">getDisplayAddress()</a>
+            </li>
+            <li id="getEpcRatings">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getEpcRatings.xhtml">getEpcRatings()</a>
+            </li>
+            <li id="getFeatureList">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getFeatureList.xhtml">getFeatureList()</a>
+            </li>
+            <li id="getFloorLevels">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getFloorLevels.xhtml">getFloorLevels()</a>
+            </li>
+            <li id="getFloors">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getFloors.xhtml">getFloors()</a>
+            </li>
+            <li id="getFurnishedState">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getFurnishedState.xhtml">getFurnishedState()</a>
+            </li>
+            <li id="getGoogleStreetView">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getGoogleStreetView.xhtml">getGoogleStreetView()</a>
+            </li>
+            <li id="getGroundRent">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getGroundRent.xhtml">getGroundRent()</a>
+            </li>
+            <li id="getLeaseExpiry">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getLeaseExpiry.xhtml">getLeaseExpiry()</a>
+            </li>
+            <li id="getLifeCycleStatus">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getLifeCycleStatus.xhtml">getLifeCycleStatus()</a>
+            </li>
+            <li id="getListedBuildingGrade">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getListedBuildingGrade.xhtml">getListedBuildingGrade()</a>
+            </li>
+            <li id="getListingReference">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getListingReference.xhtml">getListingReference()</a>
+            </li>
+            <li id="getLivingRooms">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getLivingRooms.xhtml">getLivingRooms()</a>
+            </li>
+            <li id="getLocation">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getLocation.xhtml">getLocation()</a>
+            </li>
+            <li id="getOpenDay">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getOpenDay.xhtml">getOpenDay()</a>
+            </li>
+            <li id="getOutsideSpace">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getOutsideSpace.xhtml">getOutsideSpace()</a>
+            </li>
+            <li id="getParking">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getParking.xhtml">getParking()</a>
+            </li>
+            <li id="getPricing">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getPricing.xhtml">getPricing()</a>
+            </li>
+            <li id="getPropertyType">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getPropertyType.xhtml">getPropertyType()</a>
+            </li>
+            <li id="getRateableValue">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getRateableValue.xhtml">getRateableValue()</a>
+            </li>
+            <li id="getRentalTerm">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getRentalTerm.xhtml">getRentalTerm()</a>
+            </li>
+            <li id="getSapRating">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getSapRating.xhtml">getSapRating()</a>
+            </li>
+            <li id="getServiceCharge">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getServiceCharge.xhtml">getServiceCharge()</a>
+            </li>
+            <li id="getSummaryDescription">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getSummaryDescription.xhtml">getSummaryDescription()</a>
+            </li>
+            <li id="getTenantEligibility">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getTenantEligibility.xhtml">getTenantEligibility()</a>
+            </li>
+            <li id="getTenure">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getTenure.xhtml">getTenure()</a>
+            </li>
+            <li id="getTotalBedrooms">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/getTotalBedrooms.xhtml">getTotalBedrooms()</a>
+            </li>
+            <li id="hasAccessibility">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/hasAccessibility.xhtml">hasAccessibility()</a>
+            </li>
+            <li id="hasBasement">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/hasBasement.xhtml">hasBasement()</a>
+            </li>
+            <li id="hasBurglarAlarm">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/hasBurglarAlarm.xhtml">hasBurglarAlarm()</a>
+            </li>
+            <li id="hasConservatory">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/hasConservatory.xhtml">hasConservatory()</a>
+            </li>
+            <li id="hasDoubleGlazing">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/hasDoubleGlazing.xhtml">hasDoubleGlazing()</a>
+            </li>
+            <li id="hasFireplace">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/hasFireplace.xhtml">hasFireplace()</a>
+            </li>
+            <li id="hasFishingRights">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/hasFishingRights.xhtml">hasFishingRights()</a>
+            </li>
+            <li id="hasGym">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/hasGym.xhtml">hasGym()</a>
+            </li>
+            <li id="hasLoft">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/hasLoft.xhtml">hasLoft()</a>
+            </li>
+            <li id="hasOutbuildings">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/hasOutbuildings.xhtml">hasOutbuildings()</a>
+            </li>
+            <li id="hasPorterSecurity">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/hasPorterSecurity.xhtml">hasPorterSecurity()</a>
+            </li>
+            <li id="hasSwimmingPool">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/hasSwimmingPool.xhtml">hasSwimmingPool()</a>
+            </li>
+            <li id="hasTennisCourt">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/hasTennisCourt.xhtml">hasTennisCourt()</a>
+            </li>
+            <li id="hasUtilityRoom">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/hasUtilityRoom.xhtml">hasUtilityRoom()</a>
+            </li>
+            <li id="hasWoodFloors">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/hasWoodFloors.xhtml">hasWoodFloors()</a>
+            </li>
+            <li id="isBusinessForSale">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/isBusinessForSale.xhtml">isBusinessForSale()</a>
+            </li>
+            <li id="isChainFree">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/isChainFree.xhtml">isChainFree()</a>
+            </li>
+            <li id="isNewHome">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/isNewHome.xhtml">isNewHome()</a>
+            </li>
+            <li id="isPetsAllowed">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/isPetsAllowed.xhtml">isPetsAllowed()</a>
+            </li>
+            <li id="isRepossession">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/isRepossession.xhtml">isRepossession()</a>
+            </li>
+            <li id="isRetirement">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/isRetirement.xhtml">isRetirement()</a>
+            </li>
+            <li id="isServiced">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/isServiced.xhtml">isServiced()</a>
+            </li>
+            <li id="isSharedAccommodation">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/isSharedAccommodation.xhtml">isSharedAccommodation()</a>
+            </li>
+            <li id="isTenanted">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/isTenanted.xhtml">isTenanted()</a>
+            </li>
+            <li id="isWaterfront">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/isWaterfront.xhtml">isWaterfront()</a>
+            </li>
+            <li id="jsonSerialize"><a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/jsonSerialize.xhtml">jsonSerialize()</a>
+                — {@inheritDoc}</li>
+            <li id="setAccessibility">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setAccessibility.xhtml">setAccessibility()</a>
+            </li>
+            <li id="setAdministrationFees">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setAdministrationFees.xhtml">setAdministrationFees()</a>
+            </li>
+            <li id="setAnnualBusinessRates">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setAnnualBusinessRates.xhtml">setAnnualBusinessRates()</a>
+            </li>
+            <li id="setAreas">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setAreas.xhtml">setAreas()</a>
+            </li>
+            <li id="setAvailableBedrooms">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setAvailableBedrooms.xhtml">setAvailableBedrooms()</a>
+            </li>
+            <li id="setAvailableFromDate">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setAvailableFromDate.xhtml">setAvailableFromDate()</a>
+            </li>
+            <li id="setBasement">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setBasement.xhtml">setBasement()</a>
+            </li>
+            <li id="setBathrooms">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setBathrooms.xhtml">setBathrooms()</a>
+            </li>
+            <li id="setBillsIncluded">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setBillsIncluded.xhtml">setBillsIncluded()</a>
+            </li>
+            <li id="setBranchReference">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setBranchReference.xhtml">setBranchReference()</a>
+            </li>
+            <li id="setBurglarAlarm">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setBurglarAlarm.xhtml">setBurglarAlarm()</a>
+            </li>
+            <li id="setBusinessForSale">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setBusinessForSale.xhtml">setBusinessForSale()</a>
+            </li>
+            <li id="setBuyerIncentives">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setBuyerIncentives.xhtml">setBuyerIncentives()</a>
+            </li>
+            <li id="setCategory">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setCategory.xhtml">setCategory()</a>
+            </li>
+            <li id="setCentralHeating">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setCentralHeating.xhtml">setCentralHeating()</a>
+            </li>
+            <li id="setChainFree">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setChainFree.xhtml">setChainFree()</a>
+            </li>
+            <li id="setCommercialUseClasses">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setCommercialUseClasses.xhtml">setCommercialUseClasses()</a>
+            </li>
+            <li id="setConnectedUtilities">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setConnectedUtilities.xhtml">setConnectedUtilities()</a>
+            </li>
+            <li id="setConservatory">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setConservatory.xhtml">setConservatory()</a>
+            </li>
+            <li id="setConstructionYear">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setConstructionYear.xhtml">setConstructionYear()</a>
+            </li>
+            <li id="setContent">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setContent.xhtml">setContent()</a>
+            </li>
+            <li id="setCouncilTaxBand">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setCouncilTaxBand.xhtml">setCouncilTaxBand()</a>
+            </li>
+            <li id="setDecorativeCondition">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setDecorativeCondition.xhtml">setDecorativeCondition()</a>
+            </li>
+            <li id="setDeposit">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setDeposit.xhtml">setDeposit()</a>
+            </li>
+            <li id="setDetailedDescription">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setDetailedDescription.xhtml">setDetailedDescription()</a>
+            </li>
+            <li id="setDisplayAddress">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setDisplayAddress.xhtml">setDisplayAddress()</a>
+            </li>
+            <li id="setDoubleGlazing">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setDoubleGlazing.xhtml">setDoubleGlazing()</a>
+            </li>
+            <li id="setEpcRatings">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setEpcRatings.xhtml">setEpcRatings()</a>
+            </li>
+            <li id="setFeatureList">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setFeatureList.xhtml">setFeatureList()</a>
+            </li>
+            <li id="setFireplace">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setFireplace.xhtml">setFireplace()</a>
+            </li>
+            <li id="setFishingRights">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setFishingRights.xhtml">setFishingRights()</a>
+            </li>
+            <li id="setFloorLevels">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setFloorLevels.xhtml">setFloorLevels()</a>
+            </li>
+            <li id="setFloors">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setFloors.xhtml">setFloors()</a>
+            </li>
+            <li id="setFurnishedState">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setFurnishedState.xhtml">setFurnishedState()</a>
+            </li>
+            <li id="setGoogleStreetView">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setGoogleStreetView.xhtml">setGoogleStreetView()</a>
+            </li>
+            <li id="setGroundRent">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setGroundRent.xhtml">setGroundRent()</a>
+            </li>
+            <li id="setGym">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setGym.xhtml">setGym()</a>
+            </li>
+            <li id="setLeaseExpiry">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setLeaseExpiry.xhtml">setLeaseExpiry()</a>
+            </li>
+            <li id="setLifeCycleStatus">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setLifeCycleStatus.xhtml">setLifeCycleStatus()</a>
+            </li>
+            <li id="setListedBuildingGrade">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setListedBuildingGrade.xhtml">setListedBuildingGrade()</a>
+            </li>
+            <li id="setListingReference">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setListingReference.xhtml">setListingReference()</a>
+            </li>
+            <li id="setLivingRooms">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setLivingRooms.xhtml">setLivingRooms()</a>
+            </li>
+            <li id="setLocation">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setLocation.xhtml">setLocation()</a>
+            </li>
+            <li id="setLoft">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setLoft.xhtml">setLoft()</a>
+            </li>
+            <li id="setNewHome">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setNewHome.xhtml">setNewHome()</a>
+            </li>
+            <li id="setOpenDay">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setOpenDay.xhtml">setOpenDay()</a>
+            </li>
+            <li id="setOutbuildings">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setOutbuildings.xhtml">setOutbuildings()</a>
+            </li>
+            <li id="setOutsideSpace">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setOutsideSpace.xhtml">setOutsideSpace()</a>
+            </li>
+            <li id="setParking">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setParking.xhtml">setParking()</a>
+            </li>
+            <li id="setPetsAllowed">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setPetsAllowed.xhtml">setPetsAllowed()</a>
+            </li>
+            <li id="setPorterSecurity">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setPorterSecurity.xhtml">setPorterSecurity()</a>
+            </li>
+            <li id="setPricing">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setPricing.xhtml">setPricing()</a>
+            </li>
+            <li id="setPropertyType">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setPropertyType.xhtml">setPropertyType()</a>
+            </li>
+            <li id="setRateableValue">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setRateableValue.xhtml">setRateableValue()</a>
+            </li>
+            <li id="setRentalTerm">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setRentalTerm.xhtml">setRentalTerm()</a>
+            </li>
+            <li id="setRepossession">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setRepossession.xhtml">setRepossession()</a>
+            </li>
+            <li id="setRetirement">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setRetirement.xhtml">setRetirement()</a>
+            </li>
+            <li id="setSapRating">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setSapRating.xhtml">setSapRating()</a>
+            </li>
+            <li id="setServiceCharge">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setServiceCharge.xhtml">setServiceCharge()</a>
+            </li>
+            <li id="setServiced">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setServiced.xhtml">setServiced()</a>
+            </li>
+            <li id="setSharedAccommodation">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setSharedAccommodation.xhtml">setSharedAccommodation()</a>
+            </li>
+            <li id="setSummaryDescription">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setSummaryDescription.xhtml">setSummaryDescription()</a>
+            </li>
+            <li id="setSwimmingPool">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setSwimmingPool.xhtml">setSwimmingPool()</a>
+            </li>
+            <li id="setTenantEligibility">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setTenantEligibility.xhtml">setTenantEligibility()</a>
+            </li>
+            <li id="setTenanted">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setTenanted.xhtml">setTenanted()</a>
+            </li>
+            <li id="setTennisCourt">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setTennisCourt.xhtml">setTennisCourt()</a>
+            </li>
+            <li id="setTenure">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setTenure.xhtml">setTenure()</a>
+            </li>
+            <li id="setTotalBedrooms">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setTotalBedrooms.xhtml">setTotalBedrooms()</a>
+            </li>
+            <li id="setUtilityRoom">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setUtilityRoom.xhtml">setUtilityRoom()</a>
+            </li>
+            <li id="setWaterfront">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setWaterfront.xhtml">setWaterfront()</a>
+            </li>
+            <li id="setWoodFloors">
+              <a title="ZpgRtf\Objects\ListingObject" href="../classes/ZpgRtf_Objects_ListingObject/setWoodFloors.xhtml">setWoodFloors()</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.10.1 - Copyright (C) 2010 - 2017 by Arne Blankerts and Contributors</span>
+    </footer>
+  </body>
+</html>

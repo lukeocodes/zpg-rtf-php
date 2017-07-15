@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="ZpgRtf\Objects\ContentObject" namespace="ZpgRtf\Objects" name="ContentObject" abstract="false" final="false" start="5" end="8">
+  <file path="/home/luke/personal/zpg-rtf-php/src/Objects" file="ContentObject.php" realpath="/home/luke/personal/zpg-rtf-php/src/Objects/ContentObject.php" size="59" time="2017-07-14T22:26:43+00:00" unixtime="1500071203" sha1="31900b4faa6a96e49b36aa19467fca1308783c3f" relative="Objects/ContentObject.php"/>
+</class>
