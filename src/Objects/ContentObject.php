@@ -16,7 +16,6 @@ class ContentObject implements \JsonSerializable
      * Enum(audio_tour, brochure, document, epc_graph, epc_report, floor_plan, home_pack, image, site_plan, virtual_tour)
      *
      * @var string
-     * @todo Make these constants.
      */
     private $type;
 

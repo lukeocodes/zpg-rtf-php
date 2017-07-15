@@ -12,6 +12,5 @@ class BranchMethod extends AbstractMethod implements MethodInterface
      */
     public function update()
     {
-        // TODO: Build an update request.
     }
 }

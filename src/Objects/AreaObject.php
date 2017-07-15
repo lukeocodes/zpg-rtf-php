@@ -15,7 +15,6 @@ class AreaObject implements \JsonSerializable
      * Array of enum (sq_feet, sq_yards, sq_metres, acres, hectares)
      *
      * @var string e.g. sq_metres
-     * @todo Make these constants.
      */
     private $units;
 

@@ -12,7 +12,6 @@ class ListingMethod extends AbstractMethod implements MethodInterface
      */
     public function list()
     {
-        // TODO: Build a list request.
     }
 
     /**
@@ -20,7 +19,6 @@ class ListingMethod extends AbstractMethod implements MethodInterface
      */
     public function update()
     {
-        // TODO: Build an update request.
     }
 
     /**
@@ -28,6 +26,5 @@ class ListingMethod extends AbstractMethod implements MethodInterface
      */
     public function delete()
     {
-        // TODO: Build a delete request.
     }
 }

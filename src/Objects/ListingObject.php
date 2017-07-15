@@ -35,7 +35,6 @@ class ListingObject implements \JsonSerializable
      * Array of enum (electricity, gas, internet, satellite_cable_tv, telephone, tv_licence, water)
      *
      * @var array ['water', 'tv_licence']
-     * @todo Make these constants.
      */
     private $billsIncluded;
 
@@ -52,7 +51,6 @@ class ListingObject implements \JsonSerializable
      * Array of enum (equity_loan, help_to_buy, mi_new_home, new_buy, part_buy_part_rent, shared_equity, shared_ownership)
      *
      * @var array e.g. ['equity_loan', 'help_to_buy']
-     * @todo Make these constants.
      */
     private $buyerIncentives;
 
@@ -60,7 +58,6 @@ class ListingObject implements \JsonSerializable
      * Enum (commercial, residential)
      *
      * @var string e.g. 'residential'
-     * @todo Make these constants.
      */
     private $category;
 
@@ -68,7 +65,6 @@ class ListingObject implements \JsonSerializable
      * Enum (full, partial, none)
      *
      * @var string e.g. 'full'
-     * @todo Make these constants.
      **/
     private $centralHeating;
 
@@ -79,7 +75,6 @@ class ListingObject implements \JsonSerializable
      * @see http://www.planningportal.gov.uk/permission/commonprojects/changeofuse
      *
      * @var array e.g. ['A3', 'D2']
-     * @todo Make these constants.
      */
     private $commercialUseClasses;
 
@@ -87,7 +82,6 @@ class ListingObject implements \JsonSerializable
      * Enum (electricity, fibre_optic, gas, satellite_cable_tv, telephone, water)
      *
      * @var array e.g. ['electricity', 'gas']
-     * @todo Make these constants.
      */
     private $connectedUtilities;
 
@@ -104,7 +98,6 @@ class ListingObject implements \JsonSerializable
      * Enum (A, B, C, D, E, F, G, H, I)
      *
      * @var string
-     * @todo Make these constants.
      */
     private $councilTaxBand;
 
@@ -112,7 +105,6 @@ class ListingObject implements \JsonSerializable
      * Enum (excellent, good, average, needs_modernisation)
      *
      * @var string
-     * @todo Make these constants.
      */
     private $decorativeCondition;
 
@@ -144,7 +136,6 @@ class ListingObject implements \JsonSerializable
      * Enum (penthouse, <integers greater than zero>, ground, basement)
      *
      * @var array e.g. ['basement', 'ground', 1, 2]
-     * @todo Make some of these constants.
      */
     private $floorLevels;
 
@@ -155,7 +146,6 @@ class ListingObject implements \JsonSerializable
      * Emum (furnished, furnished_or_unfurnished, part_furnished, unfurnished)
      *
      * @var string e.g. 'furnished'
-     * @todo Make these constants.
      */
     private $furnishedState;
 
@@ -175,7 +165,6 @@ class ListingObject implements \JsonSerializable
      * Enum (available, under_offer, sold_subject_to_contract, sold, let_agreed, let)
      *
      * @var string e.g. 'available'
-     * @todo Make these constants.
      */
     private $lifeCycleStatus;
 
@@ -183,7 +172,6 @@ class ListingObject implements \JsonSerializable
      * Enum(category_a, category_b, category_c, grade_a, grade_b, grade_b_plus, grade_one, grade_two, grade_two_star, locally_listed)
      *
      * @var string
-     * @todo Make these constants.
      */
     private $listedBuildingGrade;
 
@@ -212,7 +200,6 @@ class ListingObject implements \JsonSerializable
      * Enum (balcony, communal_garden, private_garden, roof_terrace, terrace)
      *
      * @var array
-     * @todo Make these constants.
      */
     private $outsideSpace;
 
@@ -220,7 +207,6 @@ class ListingObject implements \JsonSerializable
      * Enum (double_garage, off_street_parking, residents_parking, single_garage, underground)
      *
      * @var array
-     * @todo Make these constants.
      */
     private $parking;
 
