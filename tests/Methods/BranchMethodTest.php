@@ -2,6 +2,10 @@
 
 namespace ZpgRtf\Tests\Helpers;
 
+use GuzzleHttp\Client;
+use GuzzleHttp\Handler\MockHandler;
+use GuzzleHttp\HandlerStack;
+use GuzzleHttp\Psr7\Response;
 use PHPUnit\Framework\TestCase;
 use ZpgRtf\Methods\BranchMethod;
 use ZpgRtf\Objects\BranchObject;
@@ -11,7 +15,24 @@ use ZpgRtf\Objects\PafAddressObject;
 
 class BranchMethodTest extends TestCase
 {
-    public function testUpdateBranchValidationPasses()
+    /**
+     * @var Client
+     */
+    private $mockClient;
+
+    public function setUp()
+    {
+        $mock = new MockHandler([
+            new Response(200, [
+                'Content-type' => 'application/json'
+            ], file_get_contents(__DIR__.'/../Mocks/update_branch_200_response.json'))
+        ]);
+
+        $handler = HandlerStack::create($mock);
+        $this->mockClient = new Client(['handler' => $handler]);
+    }
+
+    public function testUpdateBranchValidationPassesFailsAuth()
     {
         $branch = new BranchObject();
         $branch->setWebsite('https://www.testagent.com/branch-name')
@@ -45,20 +66,24 @@ class BranchMethodTest extends TestCase
 
         $branch->setLocation($branchLocation);
 
-        $method = new BranchMethod();
-        $result = $method->update($branch);
+        $method = new BranchMethod(__DIR__.'/../Mocks/certificate.pem');
+        $response = $method->setClient($this->mockClient)->update($branch);
 
-        $this->assertTrue($result);
+        $this->assertInstanceOf(
+            Response::class,
+            $response
+        );
     }
+
 
     public function testUpdateBranchValidationFails()
     {
-        $this->expectException(\Exception::class);
-
         $branch = new BranchObject();
         $branch->setWebsite('https://www.testagent.com/invalid-branch-name');
+        $method = new BranchMethod(__DIR__.'/../Mocks/certificate.pem');
 
-        $method = new BranchMethod();
-        $method->update($branch);
+        $this->expectException(\Exception::class);
+
+        $method->setClient($this->mockClient)->update($branch);
     }
 }

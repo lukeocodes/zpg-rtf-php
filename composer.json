@@ -5,7 +5,8 @@
     "require": {
         "php": "~7",
         "league/json-guard": "^1.0",
-        "league/json-reference": "^1.0"
+        "league/json-reference": "^1.0",
+        "guzzlehttp/guzzle": "^6"
     },
     "autoload": {
         "psr-4": {

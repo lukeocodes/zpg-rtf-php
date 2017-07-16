@@ -14,6 +14,9 @@ class BranchMethod extends AbstractMethod implements MethodInterface
     /** @var string */
     const UPDATE_SCHEMA = 'http://realtime-listings.webservices.zpg.co.uk/docs/v1.2/schemas/branch/update.json';
 
+    /** @var string */
+    const UPDATE_URI = 'branch/update';
+
     /**
      * @return bool
      *
@@ -29,8 +32,10 @@ class BranchMethod extends AbstractMethod implements MethodInterface
             throw new \Exception('Fails validation');
         }
 
-        // Do a guzzle thing.
+        $result = $this->getClient()->request('POST', self::UPDATE_URI, [
+            'body' => $payload
+        ]);
 
-        return true;
+        return $result;
     }
 }
