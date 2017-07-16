@@ -2,6 +2,7 @@
 
 namespace ZpgRtf\Tests\Objects;
 
+use ZpgRtf\Helpers\DateTimeHelper;
 use ZpgRtf\Objects\AreasObject;
 use ZpgRtf\Objects\ContentObject;
 use ZpgRtf\Objects\DescriptionObject;
@@ -104,11 +105,11 @@ class ListingObjectTest extends TestCase
     {
         $this->assertInstanceOf(
             ListingObject::class,
-            $this->object->setAvailableFromDate(new \DateTime('+6 month', new \DateTimeZone('UTC')))
+            $this->object->setAvailableFromDate(new DateTimeHelper('+6 month', new \DateTimeZone('UTC')))
         );
 
         $this->assertInstanceOf(
-            \DateTime::class,
+            DateTimeHelper::class,
             $this->object->getAvailableFromDate()
         );
     }
@@ -613,11 +614,11 @@ class ListingObjectTest extends TestCase
     {
         $this->assertInstanceOf(
             ListingObject::class,
-            $this->object->setOpenDay(new \DateTime('+1 month', new \DateTimeZone('UTC')))
+            $this->object->setOpenDay(new DateTimeHelper('+1 month', new \DateTimeZone('UTC')))
         );
 
         $this->assertInstanceOf(
-            \DateTime::class,
+            DateTimeHelper::class,
             $this->object->getOpenDay()
         );
     }

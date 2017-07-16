@@ -2,6 +2,8 @@
 
 namespace ZpgRtf\Objects;
 
+use ZpgRtf\Helpers\DateTimeHelper;
+
 /**
  * The listing object structures the listing payload.
  */
@@ -22,7 +24,7 @@ class ListingObject implements \JsonSerializable
     /** @var int **/
     private $availableBedrooms;
 
-    /** @var \DateTime **/
+    /** @var DateTimeHelper **/
     private $availableFromDate;
 
     /** @var bool **/
@@ -192,7 +194,7 @@ class ListingObject implements \JsonSerializable
     /** @var bool **/
     private $newHome;
 
-    /** @var \DateTime **/
+    /** @var DateTimeHelper **/
     private $openDay;
 
     /** @var bool **/
@@ -563,7 +565,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return \DateTime
+     * @return DateTimeHelper
      */
     public function getAvailableFromDate()
     {
@@ -571,11 +573,11 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @param \DateTime $availableFromDate
+     * @param DateTimeHelper $availableFromDate
      *
      * @return ListingObject
      */
-    public function setAvailableFromDate(\DateTime $availableFromDate)
+    public function setAvailableFromDate(DateTimeHelper $availableFromDate)
     {
         $this->availableFromDate = $availableFromDate;
 
@@ -1363,7 +1365,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return \DateTime
+     * @return DateTimeHelper
      */
     public function getOpenDay()
     {
@@ -1371,11 +1373,11 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @param \DateTime $openDay
+     * @param DateTimeHelper $openDay
      *
      * @return ListingObject
      */
-    public function setOpenDay(\DateTime $openDay)
+    public function setOpenDay(DateTimeHelper $openDay)
     {
         $this->openDay = $openDay;
 
