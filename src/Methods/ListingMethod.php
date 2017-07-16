@@ -5,7 +5,7 @@ namespace ZpgRtf\Methods;
 /**
  * The listing method allows you to list, update or delete listings on the ZPG rtf.
  */
-class ListingMethod extends AbstractMethod implements MethodInterface
+class ListingMethod extends AbstractMethod
 {
     /**
      * @return array
