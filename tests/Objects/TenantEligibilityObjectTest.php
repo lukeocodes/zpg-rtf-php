@@ -25,7 +25,7 @@ class TenantEligibilityObjectTest extends TestCase
         );
     }
 
-    public function setDss()
+    public function testCanSetDss()
     {
         $this->assertInstanceOf(
             TenantEligibilityObject::class,
@@ -38,7 +38,7 @@ class TenantEligibilityObjectTest extends TestCase
         );
     }
 
-    public function setStudents()
+    public function testCanSetStudents()
     {
         $this->assertInstanceOf(
             TenantEligibilityObject::class,
