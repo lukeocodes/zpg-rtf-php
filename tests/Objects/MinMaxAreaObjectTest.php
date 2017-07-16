@@ -38,7 +38,7 @@ class MinMaxAreaObjectTest extends TestCase
             $this->object->getMinimum()
         );
     }
-    
+
     public function testCanSetMaximum()
     {
         $this->assertInstanceOf(
