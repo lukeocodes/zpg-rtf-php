@@ -32,7 +32,7 @@ class BranchMethodTest extends TestCase
         $this->mockClient = new Client(['handler' => $handler]);
     }
 
-    public function testUpdateBranchValidationPassesFailsAuth()
+    public function testUpdateBranchValidationPasses()
     {
         $branch = new BranchObject();
         $branch->setWebsite('https://www.testagent.com/branch-name')
