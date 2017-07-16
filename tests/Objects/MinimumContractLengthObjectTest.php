@@ -51,7 +51,6 @@ class MinimumContractLengthObjectTest extends TestCase
         );
     }
 
-
     public function testCanJsonSerialize()
     {
         $this->assertJson(

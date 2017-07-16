@@ -157,7 +157,6 @@ class LocationObjectTest extends TestCase
         );
     }
 
-
     public function testCanJsonSerialize()
     {
         $this->assertJson(
