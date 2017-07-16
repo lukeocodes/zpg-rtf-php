@@ -43,11 +43,11 @@ class BranchMethodTest extends TestCase
 
         $branchLocation = new LocationObject();
         $branchLocation->setPropertyNameOrNumber(9)
-            ->setStreetName('Churchfield Road')
-            ->setLocality('Churchfield')
-            ->setTownOrCity('Sudbury')
-            ->setCounty('Suffolk')
-            ->setPostalCode('CO10 2YA')
+            ->setStreetName('Some Road')
+            ->setLocality('Somefield')
+            ->setTownOrCity('Somebury')
+            ->setCounty('Somefolk')
+            ->setPostalCode('SO10 2YA')
             ->setCountryCode('GB');
 
         $branchCoordinates = new CoordinatesObject();
