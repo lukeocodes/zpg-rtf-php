@@ -7,6 +7,10 @@
 [![Code Climate][ico-climate]][link-climate]
 [![Code Quality][ico-scrutinizer]][link-scrutinizer]
 
+## Contributing
+
+Please see [code of conduct](CODE_OF_CONDUCT.md) and [contributing guide](CONTRIBUTING.md) if interested in contributing.
+
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
