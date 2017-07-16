@@ -48,7 +48,8 @@ class ListingObject implements \JsonSerializable
     private $businessForSale;
 
     /**
-     * Array of enum (equity_loan, help_to_buy, mi_new_home, new_buy, part_buy_part_rent, shared_equity, shared_ownership)
+     * Array of enum (equity_loan, help_to_buy, mi_new_home, new_buy, part_buy_part_rent, shared_equity,
+     * shared_ownership)
      *
      * @var array e.g. ['equity_loan', 'help_to_buy']
      */
@@ -169,7 +170,8 @@ class ListingObject implements \JsonSerializable
     private $lifeCycleStatus;
 
     /**
-     * Enum(category_a, category_b, category_c, grade_a, grade_b, grade_b_plus, grade_one, grade_two, grade_two_star, locally_listed)
+     * Enum(category_a, category_b, category_c, grade_a, grade_b, grade_b_plus, grade_one, grade_two, grade_two_star,
+     * locally_listed)
      *
      * @var string
      */
@@ -1881,7 +1883,8 @@ class ListingObject implements \JsonSerializable
     }
 
     /** {@inheritDoc} */
-    public function jsonSerialize() {
+    public function jsonSerialize()
+    {
         return [
             'accessibility' => $this->hasAccessibility(),
             'administration_fees' => $this->getAdministrationFees(),
