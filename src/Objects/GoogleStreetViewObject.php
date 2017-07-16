@@ -2,6 +2,11 @@
 
 namespace ZpgRtf\Objects;
 
+/**
+ * Google Street View provides users with the ability to virtually explore outdoor areas. This is becoming increasingly
+ * valuable to users, who are able to, for example: plan routes to bus stops; see which services are provided by local
+ * shops.
+ */
 class GoogleStreetViewObject implements \JsonSerializable
 {
     /** @var CoordinatesObject */

@@ -2,6 +2,10 @@
 
 namespace ZpgRtf\Objects;
 
+/**
+ * The Energy Performance Certificate (EPC) provides information about the energy efficiency and environmental impact
+ * of the property.
+ */
 class EpcRatingsObject implements \JsonSerializable
 {
     /** @var int */
