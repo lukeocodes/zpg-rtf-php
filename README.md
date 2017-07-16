@@ -7,6 +7,57 @@
 [![Code Climate][ico-climate]][link-climate]
 [![Code Quality][ico-scrutinizer]][link-scrutinizer]
 
+## Install
+
+`composer require to-be/confirmed`
+
+:)
+
+## Update/Create a branch
+
+```php
+        use ZpgRtf\Methods\BranchMethod;
+        use ZpgRtf\Objects\BranchObject;
+        use ZpgRtf\Objects\CoordinatesObject;
+        use ZpgRtf\Objects\LocationObject;
+        use ZpgRtf\Objects\PafAddressObject;
+
+        $branch = new BranchObject();
+        $branch->setWebsite('https://www.testagent.com/branch-name')
+            ->setTelephone('02081111121')
+            ->setBranchReference('branch-001')
+            ->setBranchName('branch-name')
+            ->setEmail('branch-name@testagent.com');
+
+        $branchLocation = new LocationObject();
+        $branchLocation->setPropertyNameOrNumber(9)
+            ->setStreetName('Some Road')
+            ->setLocality('Somefield')
+            ->setTownOrCity('Somebury')
+            ->setCounty('Somefolk')
+            ->setPostalCode('SO10 2YA')
+            ->setCountryCode('GB');
+
+        $branchCoordinates = new CoordinatesObject();
+        $branchCoordinates->setLatitude(52.0451852)
+            ->setLongitude(0.7523342);
+
+        $branchLocation->setCoordinates($branchCoordinates);
+
+        $branchPaf = new PafAddressObject();
+        $branchPaf->setAddressKey('02341509')
+            ->setOrganisationKey('00001150')
+            ->setPostcodeType('S');
+
+        $branchLocation->setPafAddress($branchPaf)
+            ->setPafUdprn('00001234');
+
+        $branch->setLocation($branchLocation);
+
+        $method = new BranchMethod($pathToZpgCert);
+        $response = $method->update($branch);
+```
+
 ## Contributing
 
 Please see [code of conduct](CODE_OF_CONDUCT.md) and [contributing guide](CONTRIBUTING.md) if interested in contributing.
