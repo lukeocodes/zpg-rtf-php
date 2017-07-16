@@ -54,6 +54,8 @@
 
         $branch->setLocation($branchLocation);
 
+        $pathToZpgCert = '../local/cert/file.pem';
+
         $method = new BranchMethod($pathToZpgCert);
         $response = $method->update($branch);
 ```
