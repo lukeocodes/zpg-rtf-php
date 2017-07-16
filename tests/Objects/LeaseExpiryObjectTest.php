@@ -4,7 +4,6 @@ namespace ZpgRtf\Tests\Objects;
 
 use PHPUnit\Framework\TestCase;
 use ZpgRtf\Helpers\DateTimeHelper;
-use ZpgRtf\Objects\CoordinatesObject;
 use ZpgRtf\Objects\LeaseExpiryObject;
 
 class LeaseExpiryObjectTest extends TestCase
