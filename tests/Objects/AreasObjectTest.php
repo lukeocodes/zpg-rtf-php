@@ -57,5 +57,10 @@ class AreasObjectTest extends TestCase
         $this->assertJson(
             json_encode($this->object)
         );
+
+        $this->assertInstanceOf(
+            \JsonSerializable::class,
+            $this->object
+        );
     }
 }
