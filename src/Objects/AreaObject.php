@@ -59,7 +59,8 @@ class AreaObject implements \JsonSerializable
     }
 
     /** {@inheritDoc} */
-    public function jsonSerialize() {
+    public function jsonSerialize()
+    {
         return [
             'units' => $this->getUnits(),
             'value' => $this->getValue(),

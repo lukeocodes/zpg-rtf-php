@@ -77,7 +77,8 @@ class DescriptionObject implements \JsonSerializable
     }
 
     /** {@inheritDoc} */
-    public function jsonSerialize() {
+    public function jsonSerialize()
+    {
         return [
             'heading' => $this->getHeading(),
             'dimensions' => $this->getDimensions(),

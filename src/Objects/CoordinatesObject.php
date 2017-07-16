@@ -56,7 +56,8 @@ class CoordinatesObject implements \JsonSerializable
     }
 
     /** {@inheritDoc} */
-    public function jsonSerialize() {
+    public function jsonSerialize()
+    {
         return [
             'latitude' => $this->getLatitude(),
             'longitude' => $this->getLongitude(),

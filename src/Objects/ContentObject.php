@@ -13,7 +13,8 @@ class ContentObject implements \JsonSerializable
     private $url;
 
     /**
-     * Enum(audio_tour, brochure, document, epc_graph, epc_report, floor_plan, home_pack, image, site_plan, virtual_tour)
+     * Enum(audio_tour, brochure, document, epc_graph, epc_report, floor_plan, home_pack, image,
+     * site_plan, virtual_tour)
      *
      * @var string
      */
@@ -83,7 +84,8 @@ class ContentObject implements \JsonSerializable
     }
 
     /** {@inheritDoc} */
-    public function jsonSerialize() {
+    public function jsonSerialize()
+    {
         return [
             'url' => $this->getUrl(),
             'type' => $this->getType(),

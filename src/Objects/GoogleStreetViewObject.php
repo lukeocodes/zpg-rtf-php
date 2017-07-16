@@ -74,7 +74,8 @@ class GoogleStreetViewObject implements \JsonSerializable
     }
 
     /** {@inheritDoc} */
-    public function jsonSerialize() {
+    public function jsonSerialize()
+    {
         return [
             'coordinates' => $this->getCoordinates(),
             'heading' => $this->getHeading(),

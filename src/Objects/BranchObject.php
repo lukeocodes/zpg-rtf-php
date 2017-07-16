@@ -146,7 +146,8 @@ class BranchObject implements \JsonSerializable
     }
 
     /** {@inheritDoc} */
-    public function jsonSerialize() {
+    public function jsonSerialize()
+    {
         return [
             'branch_reference' => $this->getBranchReference(),
             'branch_name' => $this->getBranchName(),

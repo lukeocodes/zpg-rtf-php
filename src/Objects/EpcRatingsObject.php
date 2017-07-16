@@ -97,7 +97,8 @@ class EpcRatingsObject implements \JsonSerializable
     }
 
     /** {@inheritDoc} */
-    public function jsonSerialize() {
+    public function jsonSerialize()
+    {
         return [
             'eer_current_rating' => $this->getEerCurrentRating(),
             'eer_potential_rating' => $this->getEerPotentialRating(),
