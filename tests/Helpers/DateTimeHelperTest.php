@@ -28,4 +28,16 @@ class DateTimeHelperTest extends TestCase
             $timestamp
         );
     }
+
+    public function testCanJsonSerialize()
+    {
+        $this->assertJson(
+            json_encode(new DateTimeHelper())
+        );
+
+        $this->assertInstanceOf(
+            \JsonSerializable::class,
+            new DateTimeHelper()
+        );
+    }
 }
