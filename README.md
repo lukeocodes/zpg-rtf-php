@@ -1,6 +1,6 @@
 # ZPG Realtime Feed integration for PHP
 
-[![Software License][ico-license]](LICENSE)
+[![Software License][ico-license]](LICENSE.md)
 [![Build Status][ico-travis]][link-travis]
 [![Coverage Status][ico-coverage]][link-scrutinizer]
 [![SensioLabs Insight][ico-sensio]][link-sensio]
@@ -9,7 +9,7 @@
 
 ## License
 
-The MIT License (MIT). Please see [License File](LICENSE) for more information.
+The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
 [link-travis]: https://travis-ci.org/lukeoliff/zpg-rtf-php
 [link-sensio]: https://insight.sensiolabs.com/projects/db952452-4122-40db-82c3-26d495842dd6
