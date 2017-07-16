@@ -1,10 +1,9 @@
-language: php
+language: phpt
 
 php:
   - 7.0
 
 before_install:
-  - composer require satooshi/php-coveralls:dev-master
   - composer install
 
 script:
@@ -12,6 +11,5 @@ script:
   - phpunit --coverage-clover tests/logs/clover.xml
 
 after_script:
-  - php vendor/bin/coveralls -v
   - wget https://scrutinizer-ci.com/ocular.phar
   - php ocular.phar code-coverage:upload --format=php-clover tests/logs/clover.xml
