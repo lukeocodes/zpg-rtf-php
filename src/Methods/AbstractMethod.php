@@ -67,6 +67,7 @@ abstract class AbstractMethod
             throw new \Exception('Fails validation');
         }
 
+        
         return $this->getClient()->request('POST', $uri, [
             'body' => $payload
         ]);
