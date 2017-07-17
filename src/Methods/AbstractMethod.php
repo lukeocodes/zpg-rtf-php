@@ -45,4 +45,28 @@ abstract class AbstractMethod
 
         return $this;
     }
+
+    /**
+     * @param string $schemaUri
+     * @param string $uri
+     * @param \JsonSerializable $object
+     *
+     * @return \GuzzleHttp\Psr7\Response
+     *
+     * @throws \Exception If validation fails. Needs a custom exception type.
+     */
+    protected function validateAndSend($schemaUri, $uri, \JsonSerializable $object)
+    {
+        $payload = json_encode($object);
+        $schema = Dereferencer::draft4()->dereference($schemaUri);
+        $validator = new Validator(json_decode($payload), $schema);
+
+        if ($validator->fails()) {
+            throw new \Exception('Fails validation');
+        }
+
+        return $this->getClient()->request('POST', $uri, [
+            'body' => $payload
+        ]);
+    }
 }
