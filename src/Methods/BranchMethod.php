@@ -14,28 +14,11 @@ class BranchMethod extends AbstractMethod
     /** @var string */
     const UPDATE_SCHEMA = 'http://realtime-listings.webservices.zpg.co.uk/docs/v1.2/schemas/branch/update.json';
 
-    /** @var string */
-    const UPDATE_URI = 'branch/update';
-
     /**
-     * @return bool
-     *
-     * @throws \Exception If validation fails. Needs a custom exception type.
+     * @return \GuzzleHttp\Psr7\Response
      */
     public function update(BranchObject $branchObject)
     {
-        $payload = json_encode($branchObject);
-        $schema = Dereferencer::draft4()->dereference(self::UPDATE_SCHEMA);
-        $validator = new Validator(json_decode($payload), $schema);
-
-        if ($validator->fails()) {
-            throw new \Exception('Fails validation');
-        }
-
-        $result = $this->getClient()->request('POST', self::UPDATE_URI, [
-            'body' => $payload
-        ]);
-
-        return $result;
+        return $this->validateAndSend(self::UPDATE_SCHEMA, 'branch/update', $branchObject);
     }
 }
