@@ -19,7 +19,7 @@ class AreaObjectTest extends TestCase
 
     public function testCanInstantiate()
     {
-        $this->assertTrue(false);
+        $this->assertTrue(null);
         $this->assertInstanceOf(
             AreaObject::class,
             $this->object
