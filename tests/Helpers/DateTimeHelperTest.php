@@ -17,6 +17,7 @@ class DateTimeHelperTest extends TestCase
 
     public function testCanEncodeCustomFormat()
     {
+        $this->assertTrue(false);
         $format = 'c';
         $timestamp = date($format);
 
