@@ -2,6 +2,7 @@
 
 namespace ZpgRtf\Methods;
 
+use GuzzleHttp\Exception\ClientException;
 use GuzzleHttp\Client;
 use League\JsonGuard\Validator;
 use League\JsonReference\Dereferencer;
@@ -11,20 +12,29 @@ use League\JsonReference\Dereferencer;
  */
 abstract class AbstractMethod
 {
-    /** @var string */
-    const BASE_URI = 'https://realtime-listings-api.webservices.zpg.co.uk/sandbox/v1/';
+    /** @var array */
+    private $baseUri = [
+        'sandbox' => 'https://realtime-listings-api.webservices.zpg.co.uk/sandbox/v1/',
+        'live' => 'https://realtime-listings-api.webservices.zpg.co.uk/live/v1/',
+    ];
 
     /** @var Client */
     private $client;
 
     /**
      * @param string $certificate
+     *
+     * @throws \Exception You will get an exception if you use an invalid environment variable.
      */
-    public function __construct($certificate)
+    public function __construct($certificate, $env = 'sandbox')
     {
+        if (!in_array($env,['sandbox', 'live'])) {
+            throw new \Exception(sprintf('Invalid environment. %s is not in [sandbox, live]', $env));
+        }
+
         $this->client = new Client([
-            'base_uri' => self::BASE_URI,
-            'cert' => $certificate,
+            'base_uri' => $this->baseUri[$env],
+            'cert' => $certificate
         ]);
     }
 
@@ -63,12 +73,30 @@ abstract class AbstractMethod
         $schema = Dereferencer::draft4()->dereference($schemaUri);
         $validator = new Validator(json_decode($payload), $schema);
 
+        // Let's improve this with some sort of factory method to handle the response into a custom response type
+        // whether it's a normal response, validation error or guzzle exception.
         if ($validator->fails()) {
             throw new \Exception('Fails validation');
         }
 
-        return $this->getClient()->request('POST', $uri, [
-            'body' => $payload
-        ]);
+        try{
+            $response = $this->getClient()->request('POST', $uri, [
+                'body' => $payload,
+                'headers' => [
+                    'Content-Type' => 'application/json; profile=' . $schemaUri,
+                ],
+            ]);
+
+            return $response;
+        } catch (ClientException $e) {
+            $statusCode = $e->getResponse()->getStatusCode();
+            $responseContents = json_decode($e->getResponse()->getBody(true)->getContents());
+
+            if (false !== $responseContents && !empty($responseContents['error_advice'])) {
+                throw new \Exception($responseContents['error_advice']);
+            }
+
+            throw new \Exception($e->getMessage());
+        }
     }
 }

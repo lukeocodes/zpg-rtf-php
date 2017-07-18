@@ -15,25 +15,9 @@ use ZpgRtf\Objects\PafAddressObject;
 
 class BranchMethodTest extends TestCase
 {
-    /**
-     * @var Client
-     */
-    private $mockClient;
-
-    public function setUp()
-    {
-        $mock = new MockHandler([
-            new Response(200, [
-                'Content-type' => 'application/json'
-            ], file_get_contents(__DIR__.'/../Mocks/update_branch_200_response.json'))
-        ]);
-
-        $handler = HandlerStack::create($mock);
-        $this->mockClient = new Client(['handler' => $handler]);
-    }
-
     public function testUpdateBranchValidationPasses()
     {
+        // Prepare the payload to send.
         $branch = new BranchObject();
         $branch->setWebsite('https://www.testagent.com/branch-name')
             ->setTelephone('02081111121')
@@ -66,8 +50,25 @@ class BranchMethodTest extends TestCase
 
         $branch->setLocation($branchLocation);
 
+        // Start the method to handle the payload with the certificate supplied by ZPG.
         $method = new BranchMethod(__DIR__.'/../Mocks/certificate.pem');
-        $response = $method->setClient($this->mockClient)->update($branch);
+
+        // We need a mock response so our tests don't actually spam ZPG.
+        $mock = new MockHandler([
+            new Response(200, [
+                'Content-type' => 'application/json'
+            ], file_get_contents(__DIR__.'/../Mocks/update_branch_200_response.json'))
+        ]);
+
+        // The mock is given to a handler stack that the client knows what to do with.
+        $handler = HandlerStack::create($mock);
+
+        // Now create a client to the method for us to send it.
+        $mockClient = new Client(['handler' => $handler]);
+        $method->setClient($mockClient);
+
+        // Send the payload off to the api.
+        $response = $method->update($branch);
 
         $this->assertInstanceOf(
             Response::class,
@@ -78,12 +79,29 @@ class BranchMethodTest extends TestCase
 
     public function testUpdateBranchValidationFails()
     {
+        // Prepare the payload to send.
         $branch = new BranchObject();
-        $branch->setWebsite('https://www.testagent.com/invalid-branch-name');
+
+        // Start the method to handle the payload with the certificate supplied by ZPG.
         $method = new BranchMethod(__DIR__.'/../Mocks/certificate.pem');
+
+        // We need a mock response so our tests don't actually spam ZPG.
+        $mock = new MockHandler([
+            new Response(400, [
+                'Content-type' => 'application/json'
+            ], file_get_contents(__DIR__.'/../Mocks/update_branch_400_response.json'))
+        ]);
+
+        // The mock is given to a handler stack that the client knows what to do with.
+        $handler = HandlerStack::create($mock);
+
+        // Now create a client to the method for us to send it.
+        $mockClient = new Client(['handler' => $handler]);
+        $method->setClient($mockClient);
 
         $this->expectException(\Exception::class);
 
-        $method->setClient($this->mockClient)->update($branch);
+        // Send the payload off to the api.
+        $method->update($branch);
     }
 }
