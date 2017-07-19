@@ -10,7 +10,7 @@ class DateTimeHelper extends \DateTime implements \JsonSerializable
     /**
      * @return string
      */
-    public function getHelperFormat()
+    public function getHelperFormat(): string
     {
         return $this->helperFormat;
     }
@@ -18,15 +18,17 @@ class DateTimeHelper extends \DateTime implements \JsonSerializable
     /**
      * @param string $helperFormat
      */
-    public function setHelperFormat($helperFormat)
+    public function setHelperFormat(string $helperFormat): self
     {
         $this->helperFormat = $helperFormat;
+
+        return $this;
     }
 
     /**
      * {@inheritDoc}
      */
-    public function jsonSerialize()
+    public function jsonSerialize(): string
     {
         return $this->format($this->getHelperFormat());
     }
