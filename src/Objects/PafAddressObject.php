@@ -82,10 +82,10 @@ class PafAddressObject implements \JsonSerializable
     /** {@inheritDoc} */
     public function jsonSerialize()
     {
-        return [
+        return array_filter([
             'address_key' => $this->getAddressKey(),
             'organisation_key' => $this->getOrganisationKey(),
             'postcode_type' => $this->getPostcodeType(),
-        ];
+        ]);
     }
 }

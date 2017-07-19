@@ -79,10 +79,10 @@ class DescriptionObject implements \JsonSerializable
     /** {@inheritDoc} */
     public function jsonSerialize()
     {
-        return [
+        return array_filter([
             'heading' => $this->getHeading(),
             'dimensions' => $this->getDimensions(),
             'text' => $this->getText(),
-        ];
+        ]);
     }
 }

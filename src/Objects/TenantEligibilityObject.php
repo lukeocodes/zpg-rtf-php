@@ -65,9 +65,9 @@ class TenantEligibilityObject implements \JsonSerializable
     /** {@inheritDoc} */
     public function jsonSerialize()
     {
-        return [
+        return array_filter([
             'dss' => $this->getDss(),
             'students' => $this->getStudents(),
-        ];
+        ]);
     }
 }

@@ -56,9 +56,9 @@ class AreasObject implements \JsonSerializable
     /** {@inheritDoc} */
     public function jsonSerialize()
     {
-        return [
+        return array_filter([
             'external' => $this->getExternal(),
             'internal' => $this->getInternal(),
-        ];
+        ]);
     }
 }

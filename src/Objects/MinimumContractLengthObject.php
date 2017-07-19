@@ -61,9 +61,9 @@ class MinimumContractLengthObject implements \JsonSerializable
     /** {@inheritDoc} */
     public function jsonSerialize()
     {
-        return [
+        return array_filter([
             'minimum_length' => $this->getMinimumLength(),
             'units' => $this->getUnits(),
-        ];
+        ]);
     }
 }

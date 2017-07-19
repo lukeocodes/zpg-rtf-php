@@ -60,9 +60,9 @@ class PricePerUnitAreaObject implements \JsonSerializable
     /** {@inheritDoc} */
     public function jsonSerialize()
     {
-        return [
+        return array_filter([
             'price' => $this->getPrice(),
             'units' => $this->getUnits(),
-        ];
+        ]);
     }
 }

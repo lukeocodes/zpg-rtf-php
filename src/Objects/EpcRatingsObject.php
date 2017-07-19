@@ -103,11 +103,11 @@ class EpcRatingsObject implements \JsonSerializable
     /** {@inheritDoc} */
     public function jsonSerialize()
     {
-        return [
+        return array_filter([
             'eer_current_rating' => $this->getEerCurrentRating(),
             'eer_potential_rating' => $this->getEerPotentialRating(),
             'eir_current_rating' => $this->getEirCurrentRating(),
             'eir_potential_rating' => $this->getEirPotentialRating(),
-        ];
+        ]);
     }
 }

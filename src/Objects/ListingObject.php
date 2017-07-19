@@ -1887,7 +1887,7 @@ class ListingObject implements \JsonSerializable
     /** {@inheritDoc} */
     public function jsonSerialize()
     {
-        return [
+        return array_filter([
             'accessibility' => $this->hasAccessibility(),
             'administration_fees' => $this->getAdministrationFees(),
             'annual_business_rates' => $this->getAnnualBusinessRates(),
@@ -1959,6 +1959,6 @@ class ListingObject implements \JsonSerializable
             'utility_room' => $this->hasUtilityRoom(),
             'waterfront' => $this->isWaterfront(),
             'wood_floors' => $this->hasWoodFloors()
-        ];
+        ]);
     }
 }

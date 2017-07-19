@@ -243,7 +243,7 @@ class LocationObject implements \JsonSerializable
     /** {@inheritDoc} */
     public function jsonSerialize()
     {
-        return [
+        return array_filter([
             'property_number_or_name' => $this->getPropertyNameOrNumber(),
             'street_name' => $this->getStreetName(),
             'locality' => $this->getLocality(),
@@ -254,6 +254,6 @@ class LocationObject implements \JsonSerializable
             'coordinates' => $this->getCoordinates(),
             'paf_address' => $this->getPafAddress(),
             'paf_udprn' => $this->getPafUdprn(),
-        ];
+        ]);
     }
 }

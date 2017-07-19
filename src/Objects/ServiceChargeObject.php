@@ -88,10 +88,10 @@ class ServiceChargeObject implements \JsonSerializable
     /** {@inheritDoc} */
     public function jsonSerialize()
     {
-        return [
+        return array_filter([
             'charge' => $this->getCharge(),
             'per_unit_area_units' => $this->getPerUnitAreaUnits(),
             'frequency' => $this->getFrequency(),
-        ];
+        ]);
     }
 }

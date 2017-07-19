@@ -83,10 +83,10 @@ class DimensionsObject implements \JsonSerializable
     /** {@inheritDoc} */
     public function jsonSerialize()
     {
-        return [
+        return array_filter([
             'length' => $this->getLength(),
             'width' => $this->getWidth(),
             'units' => $this->getUnits(),
-        ];
+        ]);
     }
 }

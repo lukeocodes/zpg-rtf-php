@@ -56,9 +56,9 @@ class ListingDeleteObject implements \JsonSerializable
     /** {@inheritDoc} */
     public function jsonSerialize()
     {
-        return [
+        return array_filter([
             'listing_reference' => $this->getListingReference(),
             'deletion_reason' => $this->getDeletionReason(),
-        ];
+        ]);
     }
 }

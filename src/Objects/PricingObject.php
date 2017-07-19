@@ -188,7 +188,7 @@ class PricingObject implements \JsonSerializable
     /** {@inheritDoc} */
     public function jsonSerialize()
     {
-        return [
+        return array_filter([
             'transaction_type' => $this->getTransactionType(),
             'currency_code' => $this->getCurrencyCode(),
             'price' => $this->getPrice(),
@@ -196,6 +196,6 @@ class PricingObject implements \JsonSerializable
             'rent_frequency' => $this->getRentFrequency(),
             'price_qualifier' => $this->getPriceQualifier(),
             'auction' => $this->isAuction(),
-        ];
+        ]);
     }
 }

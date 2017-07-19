@@ -36,8 +36,8 @@ class LeaseExpiryObject implements \JsonSerializable
     /** {@inheritDoc} */
     public function jsonSerialize()
     {
-        return [
+        return array_filter([
             'expiry_date' => $this->getExpiryDate()
-        ];
+        ]);
     }
 }

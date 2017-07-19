@@ -86,10 +86,10 @@ class ContentObject implements \JsonSerializable
     /** {@inheritDoc} */
     public function jsonSerialize()
     {
-        return [
+        return array_filter([
             'url' => $this->getUrl(),
             'type' => $this->getType(),
             'caption' => $this->getCaption(),
-        ];
+        ]);
     }
 }

@@ -148,13 +148,13 @@ class BranchObject implements \JsonSerializable
     /** {@inheritDoc} */
     public function jsonSerialize()
     {
-        return [
+        return array_filter([
             'branch_reference' => $this->getBranchReference(),
             'branch_name' => $this->getBranchName(),
             'location' => $this->getLocation(),
             'telephone' => $this->getTelephone(),
             'email' => $this->getEmail(),
             'website' => $this->getWebsite(),
-        ];
+        ]);
     }
 }

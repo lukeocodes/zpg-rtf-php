@@ -57,9 +57,9 @@ class MinMaxAreaObject implements \JsonSerializable
     /** {@inheritDoc} */
     public function jsonSerialize()
     {
-        return [
+        return array_filter([
             'minimum' => $this->getMinimum(),
             'maximum' => $this->getMaximum(),
-        ];
+        ]);
     }
 }
