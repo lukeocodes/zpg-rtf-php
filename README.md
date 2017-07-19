@@ -1,4 +1,4 @@
-# ZPG Realtime Feed integration for PHP
+# ZPG Real-time Listings Service for PHP
 
 [![Software License][ico-license]](LICENSE.md)
 [![Build Status][ico-travis]][link-travis]
