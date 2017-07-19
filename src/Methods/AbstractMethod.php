@@ -89,8 +89,7 @@ abstract class AbstractMethod
 
             return $response;
         } catch (ClientException $e) {
-            $statusCode = $e->getResponse()->getStatusCode();
-            $responseContents = json_decode($e->getResponse()->getBody(true)->getContents());
+            $responseContents = json_decode($e->getResponse()->getBody(true)->getContents(), true);
 
             if (false !== $responseContents && !empty($responseContents['error_advice'])) {
                 throw new \Exception($responseContents['error_advice']);

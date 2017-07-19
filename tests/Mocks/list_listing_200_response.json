@@ -1,0 +1,16 @@
+{
+    "status" : "OK",
+    "branch_reference" : "branch-001",
+    "listings" : [
+        {
+            "listing_reference" : "<listing_reference 1>",
+            "listing_etag" : "<ZPG-Listing-ETag 1>",
+            "url" : "<URL for this listing>"
+        },
+        {
+            "listing_reference" : "<listing_reference 2>",
+            "listing_etag" : "<ZPG-Listing-ETag 2>",
+            "url" : "<URL for this listing>"
+        }
+    ]
+}

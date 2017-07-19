@@ -8,6 +8,7 @@ use GuzzleHttp\HandlerStack;
 use GuzzleHttp\Psr7\Response;
 use PHPUnit\Framework\TestCase;
 use ZpgRtf\Methods\ListingMethod;
+use ZpgRtf\Objects\BranchObject;
 use ZpgRtf\Objects\ContentObject;
 use ZpgRtf\Objects\CoordinatesObject;
 use ZpgRtf\Objects\DescriptionObject;
@@ -179,5 +180,93 @@ Mauris posuere quam nec erat accumsan, at sodales diam bibendum. Fusce vitae tor
             Response::class,
             $response
         );
+    }
+
+    public function testUpdateBranchValidationFails()
+    {
+        // Prepare the payload to send.
+        $listing = new ListingObject();
+
+        // Start the method to handle the payload with the certificate supplied by ZPG.
+        $method = new ListingMethod(__DIR__.'/../Mocks/certificate.pem');
+
+        // We need a mock response so our tests don't actually spam ZPG.
+        $mock = new MockHandler([
+            new Response(400, [
+                'Content-type' => 'application/json'
+            ], file_get_contents(__DIR__.'/../Mocks/update_listing_400_response.json'))
+        ]);
+
+        // The mock is given to a handler stack that the client knows what to do with.
+        $handler = HandlerStack::create($mock);
+
+        // Now create a client to the method for us to send it.
+        $mockClient = new Client(['handler' => $handler]);
+        $method->setClient($mockClient);
+
+        $this->expectException(\Exception::class);
+
+        // Send the payload off to the api.
+        $method->sendUpdate($listing);
+    }
+
+    public function testListListingsValidationPasses()
+    {
+        // Prepare the payload to send.
+        $branch = new BranchObject();
+        $branch->setBranchReference('branch-001');
+
+        // Start the method to handle the payload with the certificate supplied by ZPG.
+        $method = new ListingMethod(__DIR__.'/../Mocks/certificate.pem');
+
+        // We need a mock response so our tests don't actually spam ZPG.
+        $mock = new MockHandler([
+            new Response(200, [
+                'Content-type' => 'application/json'
+            ], file_get_contents(__DIR__.'/../Mocks/list_listing_200_response.json'))
+        ]);
+
+        // The mock is given to a handler stack that the client knows what to do with.
+        $handler = HandlerStack::create($mock);
+
+        // Now create a client to the method for us to send it.
+        $mockClient = new Client(['handler' => $handler]);
+        $method->setClient($mockClient);
+
+        // Send the payload off to the api.
+        $response = $method->getList($branch);
+
+        $this->assertInstanceOf(
+            Response::class,
+            $response
+        );
+    }
+
+    public function testListListingsValidationFails()
+    {
+        // Prepare the payload to send.
+        $branch = new BranchObject();
+
+        // Start the method to handle the payload with the certificate supplied by ZPG.
+        $method = new ListingMethod(__DIR__.'/../Mocks/certificate.pem');
+
+        // We need a mock response so our tests don't actually spam ZPG.
+        $mock = new MockHandler([
+            new Response(400, [
+                'Content-type' => 'application/json'
+            ], file_get_contents(__DIR__.'/../Mocks/list_listing_400_response.json'))
+        ]);
+
+        // The mock is given to a handler stack that the client knows what to do with.
+        $handler = HandlerStack::create($mock);
+
+        // Now create a client to the method for us to send it.
+        $mockClient = new Client(['handler' => $handler]);
+        $method->setClient($mockClient);
+
+        $this->expectException(\Exception::class);
+
+        // Send the payload off to the api.
+        $method->getList($branch);
     }
 }

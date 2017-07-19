@@ -1,0 +1,13 @@
+{
+    "error_advice" : "The JSON message does not conform with the schema. Please check the 'errors' array for details.",
+    "error_name" : "json_does_not_validate",
+    "errors" : [
+        {
+            "message" : "Validation error details",
+            "path" : "#/path"
+        }
+
+    ],
+    "schema" : "http://realtime-listings.webservices.zpg.co.uk/docs/v1.2/schemas/branch/update.json",
+    "status" : "FAILURE"
+}
