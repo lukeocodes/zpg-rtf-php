@@ -3,8 +3,6 @@
 [![Software License][ico-license]](LICENSE.md)
 [![Build Status][ico-travis]][link-travis]
 [![Coverage Status][ico-coverage]][link-scrutinizer]
-[![SensioLabs Insight][ico-sensio]][link-sensio]
-[![Code Climate][ico-climate]][link-climate]
 [![Code Quality][ico-scrutinizer]][link-scrutinizer]
 
 ## Install
@@ -12,6 +10,165 @@
 `composer require to-be/confirmed`
 
 :)
+
+## Update/Create a listing
+
+```php
+        use ZpgRtf\Methods\ListingMethod;
+        use ZpgRtf\Objects\BranchObject;
+        use ZpgRtf\Objects\ContentObject;
+        use ZpgRtf\Objects\CoordinatesObject;
+        use ZpgRtf\Objects\DescriptionObject;
+        use ZpgRtf\Objects\EpcRatingsObject;
+        use ZpgRtf\Objects\GoogleStreetViewObject;
+        use ZpgRtf\Objects\ListingObject;
+        use ZpgRtf\Objects\LocationObject;
+        use ZpgRtf\Objects\PricingObject;
+
+        $listing = new ListingObject();
+        $listing->setAccessibility(false)
+            ->setBasement(false)
+            ->setBathrooms(4)
+            ->setBranchReference('branch-001')
+            ->setBurglarAlarm(true)
+            ->setCategory('residential')
+            ->setCentralHeating('full')
+            ->setChainFree(true)
+            ->setConnectedUtilities(['electricity', 'fibre_optic', 'gas', 'satellite_cable_tv', 'water'])
+            ->setConservatory(false)
+            ->setConstructionYear(2015)
+            ->setCouncilTaxBand('D')
+            ->setDecorativeCondition('excellent')
+            ->setDisplayAddress('Some Parade, Essex')
+            ->setDoubleGlazing(true)
+            ->setFeatureList(['Feature 1', 'Feature 2', 'Feature 3', 'Feature 4', 'Feature 5'])
+            ->setFireplace(true)
+            ->setFloorLevels(['ground', 1, 2])
+            ->setFloors(3)
+            ->setGroundRent(99.99)
+            ->setLifeCycleStatus('available')
+            ->setListingReference('listing-000001')
+            ->setLivingRooms(1)
+            ->setLoft(true)
+            ->setOutsideSpace(['private_garden', 'terrace'])
+            ->setParking(['single_garage', 'off_street_parking'])
+            ->setPropertyType('town_house')
+            ->setRateableValue(12000)
+            ->setSummaryDescription('A well decorated house.')
+            ->setTenure('freehold')
+            ->setTotalBedrooms(3)
+            ->setUtilityRoom(true);
+
+        $contentsImages = [
+            'http://via.placeholder.com/800x600',
+            'http://via.placeholder.com/800x600/ffffff',
+            'http://via.placeholder.com/800x600/000000',
+        ];
+
+        $contents = [];
+
+        foreach ($contentsImages as $key => $image) {
+            $content = new ContentObject();
+            $content->setUrl($image)
+                ->setCaption('image: ' . $key)
+                ->setType('image');
+
+            $contents[] = $content;
+        }
+
+        $listing->setContent($contents);
+
+        $descriptionTexts = [
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut fermentum justo. Sed id magna eu ante 
+mattis semper. Vivamus purus lectus, sollicitudin vitae velit feugiat, porttitor rhoncus elit.',
+            'Integer rhoncus nulla quis nibh malesuada interdum. Nulla fermentum neque nec lacus ullamcorper fringilla. 
+Mauris posuere quam nec erat accumsan, at sodales diam bibendum. Fusce vitae tortor purus.',
+        ];
+
+        $descriptions = [];
+
+        foreach ($descriptionTexts as $text) {
+            $description = new DescriptionObject();
+            $description->setText($text);
+
+            $descriptions[] = $description;
+        }
+
+        $listing->setDetailedDescription($descriptions);
+
+        $epcRatings = new EpcRatingsObject();
+        $epcRatings->setEerCurrentRating(84)
+            ->setEerPotentialRating(92);
+
+        $listing->setEpcRatings($epcRatings);
+
+        $coordinates = new CoordinatesObject();
+        $coordinates->setLatitude(52.0453067)
+            ->setLongitude(0.7534206);
+
+        $googleStreetView = new GoogleStreetViewObject();
+        $googleStreetView->setCoordinates($coordinates)
+            ->setHeading(25.84)
+            ->setPitch(76.92);
+
+        $listing->setGoogleStreetView($googleStreetView);
+
+        $location = new LocationObject();
+        $location->setPropertyNameOrNumber(9)
+            ->setStreetName('Some Road')
+            ->setLocality('Somefield')
+            ->setTownOrCity('Somebury')
+            ->setCounty('Somefolk')
+            ->setPostalCode('SO10 2YA')
+            ->setCountryCode('GB')
+            ->setCoordinates($coordinates);
+
+        $listing->setLocation($location);
+
+        $pricing = new PricingObject();
+        $pricing->setCurrencyCode('GBP')
+            ->setPrice(289995)
+            ->setPriceQualifier('from')
+            ->setTransactionType('sale');
+
+        $listing->setPricing($pricing);
+
+        $pathToZpgCert = '../local/cert/file.pem';
+
+        $method = new ListingMethod($pathToZpgCert);
+        $response = $method->sendUpdate($listing);
+```
+
+## Delete a listing
+
+```php
+        use ZpgRtf\Methods\ListingMethod;
+        use ZpgRtf\Objects\ListingDeleteObject;
+        
+        $listingDelete = new ListingDeleteObject();
+        $listingDelete->setListingReference('listing-000001')
+            ->setDeletionReason('withdrawn');
+
+        $pathToZpgCert = '../local/cert/file.pem';
+
+        $method = new ListingMethod($pathToZpgCert);
+        $response = $method->sendDelete($listingDelete);
+```
+
+## List all listings
+
+```php
+        use ZpgRtf\Methods\ListingMethod;
+        use ZpgRtf\Objects\BranchObject;
+        
+        $branch = new BranchObject();
+        $branch->setBranchReference('branch-001');
+
+        $pathToZpgCert = '../local/cert/file.pem';
+
+        $method = new ListingMethod($pathToZpgCert);
+        $response = $method->getList($branch);
+```
 
 ## Update/Create a branch
 
@@ -69,13 +226,9 @@ Please see [code of conduct](CODE_OF_CONDUCT.md) and [contributing guide](CONTRI
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
 [link-travis]: https://travis-ci.org/lukeoliff/zpg-rtf-php
-[link-sensio]: https://insight.sensiolabs.com/projects/db952452-4122-40db-82c3-26d495842dd6
-[link-climate]: https://codeclimate.com/github/lukeoliff/zpg-rtf-php
 [link-scrutinizer]: https://scrutinizer-ci.com/g/lukeoliff/zpg-rtf-php/?branch=master
 
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat
 [ico-travis]: https://img.shields.io/travis/lukeoliff/zpg-rtf-php/master.svg?style=flat
 [ico-coverage]: https://img.shields.io/scrutinizer/coverage/g/lukeoliff/zpg-rtf-php.svg?style=flat
-[ico-sensio]: https://img.shields.io/sensiolabs/i/db952452-4122-40db-82c3-26d495842dd6.svg?style=flat
-[ico-climate]: https://img.shields.io/codeclimate/github/lukeoliff/zpg-rtf-php.svg?style=flat
 [ico-scrutinizer]: https://img.shields.io/scrutinizer/g/lukeoliff/zpg-rtf-php/master.svg?style=flat
