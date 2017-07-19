@@ -16,7 +16,11 @@
 
 ## Install
 
-`composer require to-be/confirmed`
+### Via Composer
+
+```bash
+composer require lukeoliff/zpg-rtf-php
+```
 
 ## Update/Create a listing
 
