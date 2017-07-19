@@ -42,11 +42,11 @@ class ListingDeleteObjectTest extends TestCase
     {
         $this->assertInstanceOf(
             ListingDeleteObject::class,
-            $this->object->setDeletionReason('Blah blah a reason')
+            $this->object->setDeletionReason('withdrawn')
         );
 
         $this->assertSame(
-            'Blah blah a reason',
+            'withdrawn',
             $this->object->getDeletionReason()
         );
     }

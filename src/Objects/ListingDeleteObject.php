@@ -10,7 +10,11 @@ class ListingDeleteObject implements \JsonSerializable
     /** @var string */
     private $listingReference;
 
-    /** @var string */
+    /**
+     * Enum (withdrawn, offer_accepted, exchanged, completed, let)
+     *
+     * @var string
+     */
     private $deletionReason;
 
     /**

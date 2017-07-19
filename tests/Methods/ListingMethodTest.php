@@ -14,6 +14,7 @@ use ZpgRtf\Objects\CoordinatesObject;
 use ZpgRtf\Objects\DescriptionObject;
 use ZpgRtf\Objects\EpcRatingsObject;
 use ZpgRtf\Objects\GoogleStreetViewObject;
+use ZpgRtf\Objects\ListingDeleteObject;
 use ZpgRtf\Objects\ListingObject;
 use ZpgRtf\Objects\LocationObject;
 use ZpgRtf\Objects\PricingObject;
@@ -268,5 +269,66 @@ Mauris posuere quam nec erat accumsan, at sodales diam bibendum. Fusce vitae tor
 
         // Send the payload off to the api.
         $method->getList($branch);
+    }
+
+    public function testDeleteListingsValidationPasses()
+    {
+        // Prepare the payload to send.
+        $listing = new ListingDeleteObject();
+        $listing->setListingReference('listing-000001')
+            ->setDeletionReason('withdrawn');
+
+        // Start the method to handle the payload with the certificate supplied by ZPG.
+        $method = new ListingMethod(__DIR__.'/../Mocks/certificate.pem');
+
+        // We need a mock response so our tests don't actually spam ZPG.
+        $mock = new MockHandler([
+            new Response(200, [
+                'Content-type' => 'application/json'
+            ], file_get_contents(__DIR__.'/../Mocks/list_listing_200_response.json'))
+        ]);
+
+        // The mock is given to a handler stack that the client knows what to do with.
+        $handler = HandlerStack::create($mock);
+
+        // Now create a client to the method for us to send it.
+        $mockClient = new Client(['handler' => $handler]);
+        $method->setClient($mockClient);
+
+        // Send the payload off to the api.
+        $response = $method->sendDelete($listing);
+
+        $this->assertInstanceOf(
+            Response::class,
+            $response
+        );
+    }
+
+    public function testDeleteListingsValidationFails()
+    {
+        // Prepare the payload to send.
+        $listing = new ListingDeleteObject();
+
+        // Start the method to handle the payload with the certificate supplied by ZPG.
+        $method = new ListingMethod(__DIR__.'/../Mocks/certificate.pem');
+
+        // We need a mock response so our tests don't actually spam ZPG.
+        $mock = new MockHandler([
+            new Response(200, [
+                'Content-type' => 'application/json'
+            ], file_get_contents(__DIR__.'/../Mocks/delete_listing_400_response.json'))
+        ]);
+
+        // The mock is given to a handler stack that the client knows what to do with.
+        $handler = HandlerStack::create($mock);
+
+        // Now create a client to the method for us to send it.
+        $mockClient = new Client(['handler' => $handler]);
+        $method->setClient($mockClient);
+
+        $this->expectException(\Exception::class);
+
+        // Send the payload off to the api.
+        $method->sendDelete($listing);
     }
 }
