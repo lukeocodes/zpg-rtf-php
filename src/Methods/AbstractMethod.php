@@ -28,7 +28,7 @@ abstract class AbstractMethod
      */
     public function __construct($certificate, $env = 'sandbox')
     {
-        if (!in_array($env,['sandbox', 'live'])) {
+        if (!in_array($env, ['sandbox', 'live'])) {
             throw new \Exception(sprintf('Invalid environment. %s is not in [sandbox, live]', $env));
         }
 
@@ -79,7 +79,7 @@ abstract class AbstractMethod
             throw new \Exception('Fails validation');
         }
 
-        try{
+        try {
             $response = $this->getClient()->request('POST', $uri, [
                 'body' => $payload,
                 'headers' => [
