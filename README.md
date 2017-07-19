@@ -5,12 +5,13 @@
 [![Coverage Status][ico-coverage]][link-scrutinizer]
 [![Code Quality][ico-scrutinizer]][link-scrutinizer]
 
-## Todo
+## Todo (in order of priority)
 
-- Use a JSON serialization library to create the request payloads instead of `\JSONSerializable`.
-- Introduce better built in exception types and error handling.
-- Look at a Rightmove RTDF equivalent. 😇
+- Enhance to PHP7 (or downgrade composer requirements).
 - Check enum's for their values on `set` instead of relying on JSON validation.
+- Introduce better built in exception types and error handling.
+- Use a JSON serialization library to create the request payloads instead of `\JSONSerializable`.
+- Look at a Rightmove RTDF equivalent. 😇
 
 ## Install
 
