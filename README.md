@@ -7,7 +7,7 @@
 
 ## Todo
 
-- Use a JSON serialization library to create the request payloads instead of \JSONSerializable.
+- Use a JSON serialization library to create the request payloads instead of `\JSONSerializable`.
 - Introduce better built in exception types and error handling.
 - Look at a Rightmove RTDF equivalent. 😇
 - Check enum's for their values on `set` instead of relying on JSON validation.
@@ -15,8 +15,6 @@
 ## Install
 
 `composer require to-be/confirmed`
-
-:)
 
 ## Update/Create a listing
 
