@@ -26,7 +26,7 @@ class PricingObjectTest extends TestCase
         );
     }
 
-    public function setTransactionType()
+    public function testCanSetTransactionType()
     {
         $this->assertInstanceOf(
             PricingObject::class,
@@ -39,7 +39,7 @@ class PricingObjectTest extends TestCase
         );
     }
 
-    public function setCurrencyCode()
+    public function testCanSetCurrencyCode()
     {
         $this->assertInstanceOf(
             PricingObject::class,
@@ -52,7 +52,7 @@ class PricingObjectTest extends TestCase
         );
     }
 
-    public function setPrice()
+    public function testCanSetPrice()
     {
         $this->assertInstanceOf(
             PricingObject::class,
@@ -65,7 +65,7 @@ class PricingObjectTest extends TestCase
         );
     }
 
-    public function setPricePerUnitArea()
+    public function testCanSetPricePerUnitArea()
     {
         $this->assertInstanceOf(
             PricingObject::class,
@@ -78,7 +78,7 @@ class PricingObjectTest extends TestCase
         );
     }
 
-    public function setRentFrequency()
+    public function testCanSetRentFrequency()
     {
         $this->assertInstanceOf(
             PricingObject::class,
@@ -91,7 +91,7 @@ class PricingObjectTest extends TestCase
         );
     }
 
-    public function setPriceQualifier()
+    public function testCanSetPriceQualifier()
     {
         $this->assertInstanceOf(
             PricingObject::class,
@@ -104,7 +104,7 @@ class PricingObjectTest extends TestCase
         );
     }
 
-    public function setAuction()
+    public function testCanSetAuction()
     {
         $this->assertInstanceOf(
             PricingObject::class,
