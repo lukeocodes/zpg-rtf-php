@@ -15,7 +15,7 @@ class BranchMethod extends AbstractMethod
     /**
      * @return \GuzzleHttp\Psr7\Response
      */
-    public function update(BranchObject $branchObject)
+    public function sendUpdate(BranchObject $branchObject)
     {
         return $this->validateAndSend(self::UPDATE_SCHEMA, 'branch/update', $branchObject);
     }
