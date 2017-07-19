@@ -68,7 +68,7 @@ class BranchMethodTest extends TestCase
         $method->setClient($mockClient);
 
         // Send the payload off to the api.
-        $response = $method->update($branch);
+        $response = $method->sendUpdate($branch);
 
         $this->assertInstanceOf(
             Response::class,
@@ -102,6 +102,6 @@ class BranchMethodTest extends TestCase
         $this->expectException(\Exception::class);
 
         // Send the payload off to the api.
-        $method->update($branch);
+        $method->sendUpdate($branch);
     }
 }
