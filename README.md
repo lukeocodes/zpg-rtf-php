@@ -5,6 +5,13 @@
 [![Coverage Status][ico-coverage]][link-scrutinizer]
 [![Code Quality][ico-scrutinizer]][link-scrutinizer]
 
+## Todo
+
+- Use a JSON serialization library to create the request payloads instead of \JSONSerializable.
+- Introduce better built in exception types and error handling.
+- Look at a Rightmove RTDF equivalent. 😇
+- Check enum's for their values on `set` instead of relying on JSON validation.
+
 ## Install
 
 `composer require to-be/confirmed`
@@ -12,6 +19,8 @@
 :)
 
 ## Update/Create a listing
+
+This method allows you to describe a listing. It is used for both creation and update purposes and, in either case, the listing should be described in its entirety.
 
 ```php
         use ZpgRtf\Methods\ListingMethod;
@@ -141,6 +150,8 @@ Mauris posuere quam nec erat accumsan, at sodales diam bibendum. Fusce vitae tor
 
 ## Delete a listing
 
+This method allows you to remove a listing from a branch's inventory list.
+
 ```php
         use ZpgRtf\Methods\ListingMethod;
         use ZpgRtf\Objects\ListingDeleteObject;
@@ -157,6 +168,8 @@ Mauris posuere quam nec erat accumsan, at sodales diam bibendum. Fusce vitae tor
 
 ## List all listings
 
+Because of the incremental nature of the service it is possible for the data that ZPG has to drift relative to yours (because of network problems or uncaught errors, for example). It is recommended that you periodically check the synchronisation of data between their system and yours. The listing/list method allows you retrieve a summary of the listing inventory for a branch and their state.
+
 ```php
         use ZpgRtf\Methods\ListingMethod;
         use ZpgRtf\Objects\BranchObject;
@@ -171,6 +184,8 @@ Mauris posuere quam nec erat accumsan, at sodales diam bibendum. Fusce vitae tor
 ```
 
 ## Update/Create a branch
+
+This method allows you to describe a branch, to which listings are then associated. The address and other contact details allow ZPG to identify the equivalent branch on our system and map your branch_reference to theirs.
 
 ```php
         use ZpgRtf\Methods\BranchMethod;
@@ -216,6 +231,10 @@ Mauris posuere quam nec erat accumsan, at sodales diam bibendum. Fusce vitae tor
         $method = new BranchMethod($pathToZpgCert);
         $response = $method->update($branch);
 ```
+
+## Credit
+
+It's worth mentioning that for no other reason than consistency that descriptions of methods and objects have been lifted straight from [ZPG's Real-time Listing Service documentation](https://realtime-listings.webservices.zpg.co.uk/docs/latest/documentation.html#methods).
 
 ## Contributing
 
