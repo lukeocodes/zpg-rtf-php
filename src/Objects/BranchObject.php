@@ -7,22 +7,22 @@ namespace ZpgRtf\Objects;
  */
 class BranchObject implements \JsonSerializable
 {
-    /** @var string */
+    /** @var null|string */
     private $branchReference;
 
-    /** @var string */
+    /** @var null|string */
     private $branchName;
 
-    /** @var LocationObject */
+    /** @var null|LocationObject */
     private $location;
 
-    /** @var string */
+    /** @var null|string */
     private $telephone;
 
-    /** @var string */
+    /** @var null|string */
     private $email;
 
-    /** @var string */
+    /** @var null|string */
     private $website;
 
     /**

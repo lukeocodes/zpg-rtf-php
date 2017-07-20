@@ -9,18 +9,18 @@ namespace ZpgRtf\Objects;
  */
 class ContentObject implements \JsonSerializable
 {
-    /** @var string */
+    /** @var null|string */
     private $url;
 
     /**
      * Enum(audio_tour, brochure, document, epc_graph, epc_report, floor_plan, home_pack, image,
      * site_plan, virtual_tour)
      *
-     * @var string
+     * @var null|string
      */
     private $type;
 
-    /** @var string */
+    /** @var null|string */
     private $caption;
 
     /**

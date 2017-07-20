@@ -7,13 +7,13 @@ namespace ZpgRtf\Objects;
  */
 class DescriptionObject implements \JsonSerializable
 {
-    /** @var string */
+    /** @var null|string */
     private $heading;
 
-    /** @var DimensionsObject */
+    /** @var null|DimensionsObject */
     private $dimensions;
 
-    /** @var string */
+    /** @var null|string */
     private $text;
 
     /**

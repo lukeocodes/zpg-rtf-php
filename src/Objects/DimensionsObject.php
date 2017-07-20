@@ -7,16 +7,16 @@ namespace ZpgRtf\Objects;
  */
 class DimensionsObject implements \JsonSerializable
 {
-    /** @var float */
+    /** @var null|float */
     private $length;
 
-    /** @var float */
+    /** @var null|float */
     private $width;
 
     /**
      * Enum (feet, metres)
      *
-     * @var string
+     * @var null|string
      */
     private $units;
 

@@ -8,13 +8,13 @@ namespace ZpgRtf\Objects;
  */
 class AreaObject implements \JsonSerializable
 {
-    /** @var int **/
+    /** @var null|int **/
     private $value;
 
     /**
      * Array of enum (sq_feet, sq_yards, sq_metres, acres, hectares)
      *
-     * @var string e.g. sq_metres
+     * @var null|string
      */
     private $units;
 

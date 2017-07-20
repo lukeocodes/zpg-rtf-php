@@ -7,10 +7,10 @@ namespace ZpgRtf\Objects;
  */
 class AreasObject implements \JsonSerializable
 {
-    /** @var MinMaxAreaObject */
+    /** @var null|MinMaxAreaObject */
     private $external;
 
-    /** @var MinMaxAreaObject */
+    /** @var null|MinMaxAreaObject */
     private $internal;
 
     /**

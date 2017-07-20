@@ -9,10 +9,10 @@ namespace ZpgRtf\Objects;
  */
 class CoordinatesObject implements \JsonSerializable
 {
-    /** @var float */
+    /** @var null|float */
     private $latitude;
 
-    /** @var float */
+    /** @var null|float */
     private $longitude;
 
     /**
