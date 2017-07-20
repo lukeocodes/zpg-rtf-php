@@ -29,11 +29,11 @@ class ServiceChargeObjectTest extends TestCase
     {
         $this->assertInstanceOf(
             ServiceChargeObject::class,
-            $this->object->setCharge(100)
+            $this->object->setCharge(100.0)
         );
 
         $this->assertSame(
-            100,
+            100.0,
             $this->object->getCharge()
         );
     }
