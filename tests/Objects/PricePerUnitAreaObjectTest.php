@@ -29,11 +29,11 @@ class PricePerUnitAreaObjectTest extends TestCase
     {
         $this->assertInstanceOf(
             PricePerUnitAreaObject::class,
-            $this->object->setPrice(250000)
+            $this->object->setPrice(250000.0)
         );
 
         $this->assertSame(
-            250000,
+            250000.0,
             $this->object->getPrice()
         );
     }
