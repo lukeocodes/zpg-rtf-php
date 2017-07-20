@@ -56,11 +56,11 @@ class GoogleStreetViewObjectTest extends TestCase
     {
         $this->assertInstanceOf(
             GoogleStreetViewObject::class,
-            $this->object->setPitch(-90)
+            $this->object->setPitch(-90.0)
         );
 
         $this->assertSame(
-            -90,
+            -90.0,
             $this->object->getPitch()
         );
     }
