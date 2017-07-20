@@ -16,7 +16,7 @@ class CoordinatesObject implements \JsonSerializable
     private $longitude;
 
     /**
-     * @return float
+     * @return null|float
      */
     public function getLatitude()
     {
@@ -28,7 +28,7 @@ class CoordinatesObject implements \JsonSerializable
      *
      * @return CoordinatesObject
      */
-    public function setLatitude($latitude)
+    public function setLatitude($latitude): self
     {
         $this->latitude = $latitude;
 
@@ -36,7 +36,7 @@ class CoordinatesObject implements \JsonSerializable
     }
 
     /**
-     * @return float
+     * @return null|float
      */
     public function getLongitude()
     {
@@ -48,7 +48,7 @@ class CoordinatesObject implements \JsonSerializable
      *
      * @return CoordinatesObject
      */
-    public function setLongitude($longitude)
+    public function setLongitude($longitude): self
     {
         $this->longitude = $longitude;
 
@@ -56,7 +56,7 @@ class CoordinatesObject implements \JsonSerializable
     }
 
     /** {@inheritDoc} */
-    public function jsonSerialize()
+    public function jsonSerialize(): array
     {
         return array_filter([
             'latitude' => $this->getLatitude(),
