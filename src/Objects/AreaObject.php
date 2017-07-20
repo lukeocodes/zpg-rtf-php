@@ -21,7 +21,7 @@ class AreaObject implements \JsonSerializable
     /**
      * @return int
      */
-    public function getValue()
+    public function getValue(): string
     {
         return $this->value;
     }
@@ -31,7 +31,7 @@ class AreaObject implements \JsonSerializable
      *
      * @return AreaObject
      */
-    public function setValue($value)
+    public function setValue(string $value): self
     {
         $this->value = $value;
 
@@ -41,7 +41,7 @@ class AreaObject implements \JsonSerializable
     /**
      * @return string
      */
-    public function getUnits()
+    public function getUnits(): string
     {
         return $this->units;
     }
@@ -51,7 +51,7 @@ class AreaObject implements \JsonSerializable
      *
      * @return AreaObject
      */
-    public function setUnits($units)
+    public function setUnits(string $units): self
     {
         $this->units = $units;
 
@@ -59,7 +59,7 @@ class AreaObject implements \JsonSerializable
     }
 
     /** {@inheritDoc} */
-    public function jsonSerialize()
+    public function jsonSerialize(): array
     {
         return array_filter([
             'units' => $this->getUnits(),
