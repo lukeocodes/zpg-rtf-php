@@ -8,7 +8,7 @@ namespace ZpgRtf\Objects;
  */
 class AreaObject implements \JsonSerializable
 {
-    /** @var null|int **/
+    /** @var null|float **/
     private $value;
 
     /**
@@ -19,7 +19,7 @@ class AreaObject implements \JsonSerializable
     private $units;
 
     /**
-     * @return null|int
+     * @return null|float
      */
     public function getValue()
     {
@@ -27,11 +27,11 @@ class AreaObject implements \JsonSerializable
     }
 
     /**
-     * @param int $value
+     * @param float $value
      *
      * @return AreaObject
      */
-    public function setValue(int $value): self
+    public function setValue(float $value): self
     {
         $this->value = $value;
 

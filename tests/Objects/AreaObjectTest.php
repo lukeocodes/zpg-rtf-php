@@ -29,11 +29,11 @@ class AreaObjectTest extends TestCase
     {
         $this->assertInstanceOf(
             AreaObject::class,
-            $this->object->setValue(54.5)
+            $this->object->setValue(54.6)
         );
 
-        $this->assertGreaterThan(
-            54.4,
+        $this->assertSame(
+            54.6,
             $this->object->getValue()
         );
     }
