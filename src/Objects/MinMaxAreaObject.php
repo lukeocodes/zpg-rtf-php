@@ -8,14 +8,14 @@ namespace ZpgRtf\Objects;
  */
 class MinMaxAreaObject implements \JsonSerializable
 {
-    /** @var AreaObject */
+    /** @var null|AreaObject */
     private $minimum;
 
-    /** @var AreaObject */
+    /** @var null|AreaObject */
     private $maximum;
 
     /**
-     * @return AreaObject
+     * @return null|AreaObject
      */
     public function getMinimum()
     {
@@ -27,7 +27,7 @@ class MinMaxAreaObject implements \JsonSerializable
      *
      * @return MinMaxAreaObject
      */
-    public function setMinimum(AreaObject $minimum)
+    public function setMinimum(AreaObject $minimum): self
     {
         $this->minimum = $minimum;
 
@@ -35,7 +35,7 @@ class MinMaxAreaObject implements \JsonSerializable
     }
 
     /**
-     * @return AreaObject
+     * @return null|AreaObject
      */
     public function getMaximum()
     {
@@ -47,7 +47,7 @@ class MinMaxAreaObject implements \JsonSerializable
      *
      * @return MinMaxAreaObject
      */
-    public function setMaximum(AreaObject $maximum)
+    public function setMaximum(AreaObject $maximum): self
     {
         $this->maximum = $maximum;
 
@@ -55,7 +55,7 @@ class MinMaxAreaObject implements \JsonSerializable
     }
 
     /** {@inheritDoc} */
-    public function jsonSerialize()
+    public function jsonSerialize(): array
     {
         return array_filter([
             'minimum' => $this->getMinimum(),
