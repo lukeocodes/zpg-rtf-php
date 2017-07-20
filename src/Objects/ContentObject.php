@@ -24,7 +24,7 @@ class ContentObject implements \JsonSerializable
     private $caption;
 
     /**
-     * @return string
+     * @return null|string
      */
     public function getUrl()
     {
@@ -36,7 +36,7 @@ class ContentObject implements \JsonSerializable
      *
      * @return ContentObject
      */
-    public function setUrl($url)
+    public function setUrl($url): self
     {
         $this->url = $url;
 
@@ -44,7 +44,7 @@ class ContentObject implements \JsonSerializable
     }
 
     /**
-     * @return string
+     * @return null|string
      */
     public function getType()
     {
@@ -56,7 +56,7 @@ class ContentObject implements \JsonSerializable
      *
      * @return ContentObject
      */
-    public function setType($type)
+    public function setType($type): self
     {
         $this->type = $type;
 
@@ -64,7 +64,7 @@ class ContentObject implements \JsonSerializable
     }
 
     /**
-     * @return string
+     * @return null|string
      */
     public function getCaption()
     {
@@ -76,7 +76,7 @@ class ContentObject implements \JsonSerializable
      *
      * @return ContentObject
      */
-    public function setCaption($caption)
+    public function setCaption($caption): self
     {
         $this->caption = $caption;
 
@@ -84,7 +84,7 @@ class ContentObject implements \JsonSerializable
     }
 
     /** {@inheritDoc} */
-    public function jsonSerialize()
+    public function jsonSerialize(): array
     {
         return array_filter([
             'url' => $this->getUrl(),
