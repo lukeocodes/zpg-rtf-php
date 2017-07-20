@@ -702,11 +702,11 @@ class ListingObjectTest extends TestCase
     {
         $this->assertInstanceOf(
             ListingObject::class,
-            $this->object->setPropertyType(ListingObject::END_TERRACE)
+            $this->object->setPropertyType('end_terrace')
         );
 
         $this->assertStringStartsWith(
-            ListingObject::END_TERRACE,
+            'end_terrace',
             $this->object->getPropertyType()
         );
     }
