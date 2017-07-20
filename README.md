@@ -7,8 +7,6 @@
 
 ## Todo (in order of priority)
 
-- Enhance to PHP7 (or downgrade composer requirements).
-- Change composer config for phpunit from `requires-dev` to `suggests`.
 - Check enum's for their values on `set` instead of relying on JSON validation.
 - Introduce better built in exception types and error handling.
 - Use a JSON serialization library to create the request payloads instead of `\JSONSerializable`.
