@@ -36,7 +36,7 @@ class ContentObject implements \JsonSerializable
      *
      * @return ContentObject
      */
-    public function setUrl($url): self
+    public function setUrl(string $url): self
     {
         $this->url = $url;
 
@@ -56,7 +56,7 @@ class ContentObject implements \JsonSerializable
      *
      * @return ContentObject
      */
-    public function setType($type): self
+    public function setType(string $type): self
     {
         $this->type = $type;
 
@@ -76,7 +76,7 @@ class ContentObject implements \JsonSerializable
      *
      * @return ContentObject
      */
-    public function setCaption($caption): self
+    public function setCaption(string $caption): self
     {
         $this->caption = $caption;
 

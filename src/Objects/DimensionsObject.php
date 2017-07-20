@@ -21,7 +21,7 @@ class DimensionsObject implements \JsonSerializable
     private $units;
 
     /**
-     * @return float
+     * @return null|float
      */
     public function getLength()
     {
@@ -33,7 +33,7 @@ class DimensionsObject implements \JsonSerializable
      *
      * @return DimensionsObject
      */
-    public function setLength($length)
+    public function setLength(float $length): self
     {
         $this->length = $length;
 
@@ -41,7 +41,7 @@ class DimensionsObject implements \JsonSerializable
     }
 
     /**
-     * @return float
+     * @return null|float
      */
     public function getWidth()
     {
@@ -53,7 +53,7 @@ class DimensionsObject implements \JsonSerializable
      *
      * @return DimensionsObject
      */
-    public function setWidth($width)
+    public function setWidth(float $width): self
     {
         $this->width = $width;
 
@@ -61,7 +61,7 @@ class DimensionsObject implements \JsonSerializable
     }
 
     /**
-     * @return string
+     * @return null|string
      */
     public function getUnits()
     {
@@ -73,7 +73,7 @@ class DimensionsObject implements \JsonSerializable
      *
      * @return DimensionsObject
      */
-    public function setUnits($units)
+    public function setUnits(string $units): self
     {
         $this->units = $units;
 
@@ -81,7 +81,7 @@ class DimensionsObject implements \JsonSerializable
     }
 
     /** {@inheritDoc} */
-    public function jsonSerialize()
+    public function jsonSerialize(): array
     {
         return array_filter([
             'length' => $this->getLength(),

@@ -28,7 +28,7 @@ class CoordinatesObject implements \JsonSerializable
      *
      * @return CoordinatesObject
      */
-    public function setLatitude($latitude): self
+    public function setLatitude(float $latitude): self
     {
         $this->latitude = $latitude;
 
@@ -48,7 +48,7 @@ class CoordinatesObject implements \JsonSerializable
      *
      * @return CoordinatesObject
      */
-    public function setLongitude($longitude): self
+    public function setLongitude(float $longitude): self
     {
         $this->longitude = $longitude;
 

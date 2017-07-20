@@ -29,7 +29,7 @@ class DescriptionObject implements \JsonSerializable
      *
      * @return DescriptionObject
      */
-    public function setHeading($heading): self
+    public function setHeading(string $heading): self
     {
         $this->heading = $heading;
 
@@ -69,7 +69,7 @@ class DescriptionObject implements \JsonSerializable
      *
      * @return DescriptionObject
      */
-    public function setText($text): self
+    public function setText(string $text): self
     {
         $this->text = $text;
 

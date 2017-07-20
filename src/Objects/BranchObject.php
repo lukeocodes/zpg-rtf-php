@@ -38,7 +38,7 @@ class BranchObject implements \JsonSerializable
      *
      * @return BranchObject
      */
-    public function setBranchReference($branchReference)
+    public function setBranchReference(string $branchReference)
     {
         $this->branchReference = $branchReference;
 
@@ -58,7 +58,7 @@ class BranchObject implements \JsonSerializable
      *
      * @return BranchObject
      */
-    public function setBranchName($branchName): self
+    public function setBranchName(string $branchName): self
     {
         $this->branchName = $branchName;
 
@@ -98,7 +98,7 @@ class BranchObject implements \JsonSerializable
      *
      * @return BranchObject
      */
-    public function setTelephone($telephone): self
+    public function setTelephone(string $telephone): self
     {
         $this->telephone = $telephone;
 
@@ -118,7 +118,7 @@ class BranchObject implements \JsonSerializable
      *
      * @return BranchObject
      */
-    public function setEmail($email): self
+    public function setEmail(string $email): self
     {
         $this->email = $email;
 
@@ -138,7 +138,7 @@ class BranchObject implements \JsonSerializable
      *
      * @return BranchObject
      */
-    public function setWebsite($website): self
+    public function setWebsite(string $website): self
     {
         $this->website = $website;
 
