@@ -29,11 +29,11 @@ class DimensionsObjectTest extends TestCase
     {
         $this->assertInstanceOf(
             DimensionsObject::class,
-            $this->object->setLength(12)
+            $this->object->setLength(12.0)
         );
 
         $this->assertSame(
-            12,
+            12.0,
             $this->object->getLength()
         );
     }
@@ -42,11 +42,11 @@ class DimensionsObjectTest extends TestCase
     {
         $this->assertInstanceOf(
             DimensionsObject::class,
-            $this->object->setWidth(8)
+            $this->object->setWidth(8.0)
         );
 
         $this->assertSame(
-            8,
+            8.0,
             $this->object->getWidth()
         );
     }

@@ -11,19 +11,19 @@ class TenantEligibilityObject implements \JsonSerializable
     /**
      * Enum (accepted, excluded, only)
      *
-     * @var string
+     * @var null|string
      */
     private $dss;
 
     /**
      * Enum (accepted, excluded, only)
      *
-     * @var string
+     * @var null|string
      */
     private $students;
 
     /**
-     * @return string
+     * @return null|string
      */
     public function getDss()
     {
@@ -35,7 +35,7 @@ class TenantEligibilityObject implements \JsonSerializable
      *
      * @return TenantEligibilityObject
      */
-    public function setDss($dss)
+    public function setDss(string $dss): self
     {
         $this->dss = $dss;
 
@@ -43,7 +43,7 @@ class TenantEligibilityObject implements \JsonSerializable
     }
 
     /**
-     * @return string
+     * @return null|string
      */
     public function getStudents()
     {
@@ -55,7 +55,7 @@ class TenantEligibilityObject implements \JsonSerializable
      *
      * @return TenantEligibilityObject
      */
-    public function setStudents($students)
+    public function setStudents(string $students): self
     {
         $this->students = $students;
 
@@ -63,7 +63,7 @@ class TenantEligibilityObject implements \JsonSerializable
     }
 
     /** {@inheritDoc} */
-    public function jsonSerialize()
+    public function jsonSerialize(): array
     {
         return array_filter([
             'dss' => $this->getDss(),

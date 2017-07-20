@@ -10,11 +10,11 @@ use ZpgRtf\Helpers\DateTimeHelper;
  */
 class LeaseExpiryObject implements \JsonSerializable
 {
-    /** @var DateTimeHelper */
+    /** @var null|DateTimeHelper */
     private $expiryDate;
 
     /**
-     * @return DateTimeHelper
+     * @return null|DateTimeHelper
      */
     public function getExpiryDate()
     {
@@ -26,7 +26,7 @@ class LeaseExpiryObject implements \JsonSerializable
      *
      * @return LeaseExpiryObject
      */
-    public function setExpiryDate(DateTimeHelper $expiryDate)
+    public function setExpiryDate(DateTimeHelper $expiryDate): self
     {
         $this->expiryDate = $expiryDate;
 
@@ -34,7 +34,7 @@ class LeaseExpiryObject implements \JsonSerializable
     }
 
     /** {@inheritDoc} */
-    public function jsonSerialize()
+    public function jsonSerialize(): array
     {
         return array_filter([
             'expiry_date' => $this->getExpiryDate()

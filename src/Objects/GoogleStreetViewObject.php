@@ -9,17 +9,17 @@ namespace ZpgRtf\Objects;
  */
 class GoogleStreetViewObject implements \JsonSerializable
 {
-    /** @var CoordinatesObject */
+    /** @var null|CoordinatesObject */
     private $coordinates;
 
-    /** @var float */
+    /** @var null|float */
     private $heading;
 
-    /** @var float */
+    /** @var null|float */
     private $pitch;
 
     /**
-     * @return CoordinatesObject
+     * @return null|CoordinatesObject
      */
     public function getCoordinates()
     {
@@ -31,7 +31,7 @@ class GoogleStreetViewObject implements \JsonSerializable
      *
      * @return GoogleStreetViewObject
      */
-    public function setCoordinates(CoordinatesObject $coordinates)
+    public function setCoordinates(CoordinatesObject $coordinates): self
     {
         $this->coordinates = $coordinates;
 
@@ -39,7 +39,7 @@ class GoogleStreetViewObject implements \JsonSerializable
     }
 
     /**
-     * @return float
+     * @return null|float
      */
     public function getHeading()
     {
@@ -51,7 +51,7 @@ class GoogleStreetViewObject implements \JsonSerializable
      *
      * @return GoogleStreetViewObject
      */
-    public function setHeading($heading)
+    public function setHeading(float $heading): self
     {
         $this->heading = $heading;
 
@@ -59,7 +59,7 @@ class GoogleStreetViewObject implements \JsonSerializable
     }
 
     /**
-     * @return float
+     * @return null|float
      */
     public function getPitch()
     {
@@ -71,7 +71,7 @@ class GoogleStreetViewObject implements \JsonSerializable
      *
      * @return GoogleStreetViewObject
      */
-    public function setPitch($pitch)
+    public function setPitch(float $pitch): self
     {
         $this->pitch = $pitch;
 
@@ -79,7 +79,7 @@ class GoogleStreetViewObject implements \JsonSerializable
     }
 
     /** {@inheritDoc} */
-    public function jsonSerialize()
+    public function jsonSerialize(): array
     {
         return array_filter([
             'coordinates' => $this->getCoordinates(),

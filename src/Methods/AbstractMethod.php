@@ -4,6 +4,7 @@ namespace ZpgRtf\Methods;
 
 use GuzzleHttp\Exception\ClientException;
 use GuzzleHttp\Client;
+use GuzzleHttp\Psr7\Response;
 use League\JsonGuard\Validator;
 use League\JsonReference\Dereferencer;
 
@@ -23,10 +24,11 @@ abstract class AbstractMethod
 
     /**
      * @param string $certificate
+     * @param string $env
      *
      * @throws \Exception You will get an exception if you use an invalid environment variable.
      */
-    public function __construct($certificate, $env = 'sandbox')
+    public function __construct(string $certificate, string $env = 'sandbox')
     {
         if (!in_array($env, ['sandbox', 'live'])) {
             throw new \Exception(sprintf('Invalid environment. %s is not in [sandbox, live]', $env));
@@ -41,7 +43,7 @@ abstract class AbstractMethod
     /**
      * @return Client
      */
-    public function getClient()
+    public function getClient(): Client
     {
         return $this->client;
     }
@@ -51,7 +53,7 @@ abstract class AbstractMethod
      *
      * @return static
      */
-    public function setClient(Client $client)
+    public function setClient(Client $client): self
     {
         $this->client = $client;
 
@@ -67,7 +69,7 @@ abstract class AbstractMethod
      *
      * @throws \Exception If validation fails. Needs a custom exception type.
      */
-    protected function validateAndSend($schemaUri, $uri, \JsonSerializable $object)
+    protected function validateAndSend(string $schemaUri, string $uri, \JsonSerializable $object): Response
     {
         $payload = json_encode($object);
         $schema = Dereferencer::draft4()->dereference($schemaUri);

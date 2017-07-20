@@ -7,18 +7,18 @@ namespace ZpgRtf\Objects;
  */
 class ListingDeleteObject implements \JsonSerializable
 {
-    /** @var string */
+    /** @var null|string */
     private $listingReference;
 
     /**
      * Enum (withdrawn, offer_accepted, exchanged, completed, let)
      *
-     * @var string
+     * @var null|string
      */
     private $deletionReason;
 
     /**
-     * @return string
+     * @return null|string
      */
     public function getListingReference()
     {
@@ -30,7 +30,7 @@ class ListingDeleteObject implements \JsonSerializable
      *
      * @return ListingDeleteObject
      */
-    public function setListingReference($listingReference)
+    public function setListingReference(string $listingReference): self
     {
         $this->listingReference = $listingReference;
 
@@ -38,7 +38,7 @@ class ListingDeleteObject implements \JsonSerializable
     }
 
     /**
-     * @return string
+     * @return null|string
      */
     public function getDeletionReason()
     {
@@ -50,7 +50,7 @@ class ListingDeleteObject implements \JsonSerializable
      *
      * @return ListingDeleteObject
      */
-    public function setDeletionReason($deletionReason)
+    public function setDeletionReason(string $deletionReason): self
     {
         $this->deletionReason = $deletionReason;
 
@@ -58,7 +58,7 @@ class ListingDeleteObject implements \JsonSerializable
     }
 
     /** {@inheritDoc} */
-    public function jsonSerialize()
+    public function jsonSerialize(): array
     {
         return array_filter([
             'listing_reference' => $this->getListingReference(),

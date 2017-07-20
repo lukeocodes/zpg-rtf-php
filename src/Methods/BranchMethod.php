@@ -2,6 +2,7 @@
 
 namespace ZpgRtf\Methods;
 
+use GuzzleHttp\Psr7\Response;
 use ZpgRtf\Objects\BranchObject;
 
 /**
@@ -13,9 +14,11 @@ class BranchMethod extends AbstractMethod
     const UPDATE_SCHEMA = 'http://realtime-listings.webservices.zpg.co.uk/docs/v1.2/schemas/branch/update.json';
 
     /**
+     * @param BranchObject $branchObject
+     *
      * @return \GuzzleHttp\Psr7\Response
      */
-    public function sendUpdate(BranchObject $branchObject)
+    public function sendUpdate(BranchObject $branchObject): Response
     {
         return $this->validateAndSend(self::UPDATE_SCHEMA, 'branch/update', $branchObject);
     }

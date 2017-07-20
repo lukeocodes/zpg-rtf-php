@@ -7,17 +7,17 @@ namespace ZpgRtf\Objects;
  */
 class DescriptionObject implements \JsonSerializable
 {
-    /** @var string */
+    /** @var null|string */
     private $heading;
 
-    /** @var DimensionsObject */
+    /** @var null|DimensionsObject */
     private $dimensions;
 
-    /** @var string */
+    /** @var null|string */
     private $text;
 
     /**
-     * @return string
+     * @return null|string
      */
     public function getHeading()
     {
@@ -29,7 +29,7 @@ class DescriptionObject implements \JsonSerializable
      *
      * @return DescriptionObject
      */
-    public function setHeading($heading)
+    public function setHeading(string $heading): self
     {
         $this->heading = $heading;
 
@@ -37,7 +37,7 @@ class DescriptionObject implements \JsonSerializable
     }
 
     /**
-     * @return DimensionsObject
+     * @return null|DimensionsObject
      */
     public function getDimensions()
     {
@@ -49,7 +49,7 @@ class DescriptionObject implements \JsonSerializable
      *
      * @return DescriptionObject
      */
-    public function setDimensions(DimensionsObject $dimensions)
+    public function setDimensions(DimensionsObject $dimensions): self
     {
         $this->dimensions = $dimensions;
 
@@ -57,7 +57,7 @@ class DescriptionObject implements \JsonSerializable
     }
 
     /**
-     * @return string
+     * @return null|string
      */
     public function getText()
     {
@@ -69,7 +69,7 @@ class DescriptionObject implements \JsonSerializable
      *
      * @return DescriptionObject
      */
-    public function setText($text)
+    public function setText(string $text): self
     {
         $this->text = $text;
 
@@ -77,7 +77,7 @@ class DescriptionObject implements \JsonSerializable
     }
 
     /** {@inheritDoc} */
-    public function jsonSerialize()
+    public function jsonSerialize(): array
     {
         return array_filter([
             'heading' => $this->getHeading(),

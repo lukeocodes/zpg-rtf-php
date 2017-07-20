@@ -14,23 +14,23 @@ class PricingObject implements \JsonSerializable
     /**
      * Enum (rent, sale)
      *
-     * @var string
+     * @var null|string
      */
     private $transactionType;
 
-    /** @var string */
+    /** @var null|string */
     private $currencyCode;
 
-    /** @var float */
+    /** @var null|float */
     private $price;
 
-    /** @var PricePerUnitAreaObject */
+    /** @var null|PricePerUnitAreaObject */
     private $pricePerUnitArea;
 
     /**
      * Enum (per_person_per_week, per_week, per_month, per_quarter, per_year)
      *
-     * @var string
+     * @var null|string
      */
     private $rentFrequency;
 
@@ -38,15 +38,15 @@ class PricingObject implements \JsonSerializable
      * Enum (fixed_price, from, guide_price, non_quoting, offers_in_the_region_of, offers_over, price_on_application,
      * sale_by_tender)
      *
-     * @var string
+     * @var null|string
      */
     private $priceQualifier;
 
-    /** @var bool */
+    /** @var null|bool */
     private $auction;
 
     /**
-     * @return string
+     * @return null|string
      */
     public function getTransactionType()
     {
@@ -58,7 +58,7 @@ class PricingObject implements \JsonSerializable
      *
      * @return PricingObject
      */
-    public function setTransactionType($transactionType)
+    public function setTransactionType(string $transactionType): self
     {
         $this->transactionType = $transactionType;
 
@@ -66,7 +66,7 @@ class PricingObject implements \JsonSerializable
     }
 
     /**
-     * @return string
+     * @return null|string
      */
     public function getCurrencyCode()
     {
@@ -78,7 +78,7 @@ class PricingObject implements \JsonSerializable
      *
      * @return PricingObject
      */
-    public function setCurrencyCode($currencyCode)
+    public function setCurrencyCode(string $currencyCode): self
     {
         $this->currencyCode = $currencyCode;
 
@@ -86,7 +86,7 @@ class PricingObject implements \JsonSerializable
     }
 
     /**
-     * @return float
+     * @return null|float
      */
     public function getPrice()
     {
@@ -98,7 +98,7 @@ class PricingObject implements \JsonSerializable
      *
      * @return PricingObject
      */
-    public function setPrice($price)
+    public function setPrice(float $price): self
     {
         $this->price = $price;
 
@@ -106,7 +106,7 @@ class PricingObject implements \JsonSerializable
     }
 
     /**
-     * @return PricePerUnitAreaObject
+     * @return null|PricePerUnitAreaObject
      */
     public function getPricePerUnitArea()
     {
@@ -118,7 +118,7 @@ class PricingObject implements \JsonSerializable
      *
      * @return PricingObject
      */
-    public function setPricePerUnitArea(PricePerUnitAreaObject $pricePerUnitArea)
+    public function setPricePerUnitArea(PricePerUnitAreaObject $pricePerUnitArea): self
     {
         $this->pricePerUnitArea = $pricePerUnitArea;
 
@@ -126,7 +126,7 @@ class PricingObject implements \JsonSerializable
     }
 
     /**
-     * @return string
+     * @return null|string
      */
     public function getRentFrequency()
     {
@@ -138,7 +138,7 @@ class PricingObject implements \JsonSerializable
      *
      * @return PricingObject
      */
-    public function setRentFrequency($rentFrequency)
+    public function setRentFrequency(string $rentFrequency): self
     {
         $this->rentFrequency = $rentFrequency;
 
@@ -146,7 +146,7 @@ class PricingObject implements \JsonSerializable
     }
 
     /**
-     * @return string
+     * @return null|string
      */
     public function getPriceQualifier()
     {
@@ -158,7 +158,7 @@ class PricingObject implements \JsonSerializable
      *
      * @return PricingObject
      */
-    public function setPriceQualifier($priceQualifier)
+    public function setPriceQualifier(string $priceQualifier): self
     {
         $this->priceQualifier = $priceQualifier;
 
@@ -166,7 +166,7 @@ class PricingObject implements \JsonSerializable
     }
 
     /**
-     * @return bool
+     * @return null|bool
      */
     public function isAuction()
     {
@@ -178,7 +178,7 @@ class PricingObject implements \JsonSerializable
      *
      * @return PricingObject
      */
-    public function setAuction($auction)
+    public function setAuction(bool $auction): self
     {
         $this->auction = $auction;
 
@@ -186,7 +186,7 @@ class PricingObject implements \JsonSerializable
     }
 
     /** {@inheritDoc} */
-    public function jsonSerialize()
+    public function jsonSerialize(): array
     {
         return array_filter([
             'transaction_type' => $this->getTransactionType(),

@@ -7,18 +7,18 @@ namespace ZpgRtf\Objects;
  */
 class PricePerUnitAreaObject implements \JsonSerializable
 {
-    /** @var float */
+    /** @var null|float */
     private $price;
 
     /**
      * Enum (sq_feet, sq_yards, sq_metres, acres, hectares)
      *
-     * @var string
+     * @var null|string
      */
     private $units;
 
     /**
-     * @return float
+     * @return null|float
      */
     public function getPrice()
     {
@@ -30,7 +30,7 @@ class PricePerUnitAreaObject implements \JsonSerializable
      *
      * @return PricePerUnitAreaObject
      */
-    public function setPrice($price)
+    public function setPrice(float $price): self
     {
         $this->price = $price;
 
@@ -38,7 +38,7 @@ class PricePerUnitAreaObject implements \JsonSerializable
     }
 
     /**
-     * @return string
+     * @return null|string
      */
     public function getUnits()
     {
@@ -50,7 +50,7 @@ class PricePerUnitAreaObject implements \JsonSerializable
      *
      * @return PricePerUnitAreaObject
      */
-    public function setUnits($units)
+    public function setUnits(string $units): self
     {
         $this->units = $units;
 
@@ -58,7 +58,7 @@ class PricePerUnitAreaObject implements \JsonSerializable
     }
 
     /** {@inheritDoc} */
-    public function jsonSerialize()
+    public function jsonSerialize(): array
     {
         return array_filter([
             'price' => $this->getPrice(),

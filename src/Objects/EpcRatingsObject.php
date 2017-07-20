@@ -21,7 +21,7 @@ class EpcRatingsObject implements \JsonSerializable
     private $eirPotentialRating;
 
     /**
-     * @return int
+     * @return null|int
      */
     public function getEerCurrentRating()
     {
@@ -33,7 +33,7 @@ class EpcRatingsObject implements \JsonSerializable
      *
      * @return EpcRatingsObject
      */
-    public function setEerCurrentRating($eerCurrentRating)
+    public function setEerCurrentRating(int $eerCurrentRating): self
     {
         $this->eerCurrentRating = $eerCurrentRating;
 
@@ -41,7 +41,7 @@ class EpcRatingsObject implements \JsonSerializable
     }
 
     /**
-     * @return int
+     * @return null|int
      */
     public function getEerPotentialRating()
     {
@@ -53,7 +53,7 @@ class EpcRatingsObject implements \JsonSerializable
      *
      * @return EpcRatingsObject
      */
-    public function setEerPotentialRating($eerPotentialRating)
+    public function setEerPotentialRating(int $eerPotentialRating): self
     {
         $this->eerPotentialRating = $eerPotentialRating;
 
@@ -61,7 +61,7 @@ class EpcRatingsObject implements \JsonSerializable
     }
 
     /**
-     * @return int
+     * @return null|int
      */
     public function getEirCurrentRating()
     {
@@ -73,7 +73,7 @@ class EpcRatingsObject implements \JsonSerializable
      *
      * @return EpcRatingsObject
      */
-    public function setEirCurrentRating($eirCurrentRating)
+    public function setEirCurrentRating(int $eirCurrentRating): self
     {
         $this->eirCurrentRating = $eirCurrentRating;
 
@@ -81,7 +81,7 @@ class EpcRatingsObject implements \JsonSerializable
     }
 
     /**
-     * @return int
+     * @return null|int
      */
     public function getEirPotentialRating()
     {
@@ -93,7 +93,7 @@ class EpcRatingsObject implements \JsonSerializable
      *
      * @return EpcRatingsObject
      */
-    public function setEirPotentialRating($eirPotentialRating)
+    public function setEirPotentialRating(int $eirPotentialRating): self
     {
         $this->eirPotentialRating = $eirPotentialRating;
 
@@ -101,7 +101,7 @@ class EpcRatingsObject implements \JsonSerializable
     }
 
     /** {@inheritDoc} */
-    public function jsonSerialize()
+    public function jsonSerialize(): array
     {
         return array_filter([
             'eer_current_rating' => $this->getEerCurrentRating(),

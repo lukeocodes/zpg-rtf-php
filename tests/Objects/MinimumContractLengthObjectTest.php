@@ -29,11 +29,11 @@ class MinimumContractLengthObjectTest extends TestCase
     {
         $this->assertInstanceOf(
             MinimumContractLengthObject::class,
-            $this->object->setMinimumLength('6')
+            $this->object->setMinimumLength(6.0)
         );
 
         $this->assertSame(
-            '6',
+            6.0,
             $this->object->getMinimumLength()
         );
     }

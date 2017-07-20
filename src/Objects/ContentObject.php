@@ -9,22 +9,22 @@ namespace ZpgRtf\Objects;
  */
 class ContentObject implements \JsonSerializable
 {
-    /** @var string */
+    /** @var null|string */
     private $url;
 
     /**
      * Enum(audio_tour, brochure, document, epc_graph, epc_report, floor_plan, home_pack, image,
      * site_plan, virtual_tour)
      *
-     * @var string
+     * @var null|string
      */
     private $type;
 
-    /** @var string */
+    /** @var null|string */
     private $caption;
 
     /**
-     * @return string
+     * @return null|string
      */
     public function getUrl()
     {
@@ -36,7 +36,7 @@ class ContentObject implements \JsonSerializable
      *
      * @return ContentObject
      */
-    public function setUrl($url)
+    public function setUrl(string $url): self
     {
         $this->url = $url;
 
@@ -44,7 +44,7 @@ class ContentObject implements \JsonSerializable
     }
 
     /**
-     * @return string
+     * @return null|string
      */
     public function getType()
     {
@@ -56,7 +56,7 @@ class ContentObject implements \JsonSerializable
      *
      * @return ContentObject
      */
-    public function setType($type)
+    public function setType(string $type): self
     {
         $this->type = $type;
 
@@ -64,7 +64,7 @@ class ContentObject implements \JsonSerializable
     }
 
     /**
-     * @return string
+     * @return null|string
      */
     public function getCaption()
     {
@@ -76,7 +76,7 @@ class ContentObject implements \JsonSerializable
      *
      * @return ContentObject
      */
-    public function setCaption($caption)
+    public function setCaption(string $caption): self
     {
         $this->caption = $caption;
 
@@ -84,7 +84,7 @@ class ContentObject implements \JsonSerializable
     }
 
     /** {@inheritDoc} */
-    public function jsonSerialize()
+    public function jsonSerialize(): array
     {
         return array_filter([
             'url' => $this->getUrl(),

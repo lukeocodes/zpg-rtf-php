@@ -7,14 +7,14 @@ namespace ZpgRtf\Objects;
  */
 class AreasObject implements \JsonSerializable
 {
-    /** @var MinMaxAreaObject */
+    /** @var null|MinMaxAreaObject */
     private $external;
 
-    /** @var MinMaxAreaObject */
+    /** @var null|MinMaxAreaObject */
     private $internal;
 
     /**
-     * @return MinMaxAreaObject
+     * @return null|MinMaxAreaObject
      */
     public function getExternal()
     {
@@ -26,7 +26,7 @@ class AreasObject implements \JsonSerializable
      *
      * @return AreasObject
      */
-    public function setExternal($external)
+    public function setExternal(MinMaxAreaObject $external): self
     {
         $this->external = $external;
 
@@ -34,7 +34,7 @@ class AreasObject implements \JsonSerializable
     }
 
     /**
-     * @return MinMaxAreaObject
+     * @return null|MinMaxAreaObject
      */
     public function getInternal()
     {
@@ -46,7 +46,7 @@ class AreasObject implements \JsonSerializable
      *
      * @return AreasObject
      */
-    public function setInternal($internal)
+    public function setInternal(MinMaxAreaObject $internal): self
     {
         $this->internal = $internal;
 
@@ -54,7 +54,7 @@ class AreasObject implements \JsonSerializable
     }
 
     /** {@inheritDoc} */
-    public function jsonSerialize()
+    public function jsonSerialize(): array
     {
         return array_filter([
             'external' => $this->getExternal(),

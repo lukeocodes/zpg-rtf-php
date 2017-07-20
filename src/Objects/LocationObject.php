@@ -10,38 +10,38 @@ namespace ZpgRtf\Objects;
  */
 class LocationObject implements \JsonSerializable
 {
-    /** @var string */
+    /** @var null|string */
     private $propertyNameOrNumber;
 
-    /** @var string */
+    /** @var null|string */
     private $streetName;
 
-    /** @var string */
+    /** @var null|string */
     private $locality;
 
-    /** @var string */
+    /** @var null|string */
     private $townOrCity;
 
-    /** @var string */
+    /** @var null|string */
     private $county;
 
-    /** @var string */
+    /** @var null|string */
     private $postalCode;
 
-    /** @var string */
+    /** @var null|string */
     private $countryCode;
 
-    /** @var CoordinatesObject */
+    /** @var null|CoordinatesObject */
     private $coordinates;
 
-    /** @var PafAddressObject */
+    /** @var null|PafAddressObject */
     private $pafAddress;
 
-    /** @var string */
+    /** @var null|string */
     private $pafUdprn;
 
     /**
-     * @return string
+     * @return null|string
      */
     public function getPropertyNameOrNumber()
     {
@@ -53,7 +53,7 @@ class LocationObject implements \JsonSerializable
      *
      * @return LocationObject
      */
-    public function setPropertyNameOrNumber($propertyNameOrNumber)
+    public function setPropertyNameOrNumber(string $propertyNameOrNumber): self
     {
         $this->propertyNameOrNumber = $propertyNameOrNumber;
 
@@ -61,7 +61,7 @@ class LocationObject implements \JsonSerializable
     }
 
     /**
-     * @return string
+     * @return null|string
      */
     public function getStreetName()
     {
@@ -73,7 +73,7 @@ class LocationObject implements \JsonSerializable
      *
      * @return LocationObject
      */
-    public function setStreetName($streetName)
+    public function setStreetName(string $streetName): self
     {
         $this->streetName = $streetName;
 
@@ -81,7 +81,7 @@ class LocationObject implements \JsonSerializable
     }
 
     /**
-     * @return string
+     * @return null|string
      */
     public function getLocality()
     {
@@ -93,7 +93,7 @@ class LocationObject implements \JsonSerializable
      *
      * @return LocationObject
      */
-    public function setLocality($locality)
+    public function setLocality(string $locality): self
     {
         $this->locality = $locality;
 
@@ -101,7 +101,7 @@ class LocationObject implements \JsonSerializable
     }
 
     /**
-     * @return string
+     * @return null|string
      */
     public function getTownOrCity()
     {
@@ -113,7 +113,7 @@ class LocationObject implements \JsonSerializable
      *
      * @return LocationObject
      */
-    public function setTownOrCity($townOrCity)
+    public function setTownOrCity(string $townOrCity): self
     {
         $this->townOrCity = $townOrCity;
 
@@ -121,7 +121,7 @@ class LocationObject implements \JsonSerializable
     }
 
     /**
-     * @return string
+     * @return null|string
      */
     public function getCounty()
     {
@@ -133,7 +133,7 @@ class LocationObject implements \JsonSerializable
      *
      * @return LocationObject
      */
-    public function setCounty($county)
+    public function setCounty(string $county): self
     {
         $this->county = $county;
 
@@ -141,7 +141,7 @@ class LocationObject implements \JsonSerializable
     }
 
     /**
-     * @return string
+     * @return null|string
      */
     public function getPostalCode()
     {
@@ -153,7 +153,7 @@ class LocationObject implements \JsonSerializable
      *
      * @return LocationObject
      */
-    public function setPostalCode($postalCode)
+    public function setPostalCode(string $postalCode): self
     {
         $this->postalCode = $postalCode;
 
@@ -161,7 +161,7 @@ class LocationObject implements \JsonSerializable
     }
 
     /**
-     * @return string
+     * @return null|string
      */
     public function getCountryCode()
     {
@@ -173,7 +173,7 @@ class LocationObject implements \JsonSerializable
      *
      * @return LocationObject
      */
-    public function setCountryCode($countryCode)
+    public function setCountryCode(string $countryCode): self
     {
         $this->countryCode = $countryCode;
 
@@ -181,7 +181,7 @@ class LocationObject implements \JsonSerializable
     }
 
     /**
-     * @return CoordinatesObject
+     * @return null|CoordinatesObject
      */
     public function getCoordinates()
     {
@@ -193,7 +193,7 @@ class LocationObject implements \JsonSerializable
      *
      * @return LocationObject
      */
-    public function setCoordinates(CoordinatesObject $coordinates)
+    public function setCoordinates(CoordinatesObject $coordinates): self
     {
         $this->coordinates = $coordinates;
 
@@ -201,7 +201,7 @@ class LocationObject implements \JsonSerializable
     }
 
     /**
-     * @return PafAddressObject
+     * @return null|PafAddressObject
      */
     public function getPafAddress()
     {
@@ -213,7 +213,7 @@ class LocationObject implements \JsonSerializable
      *
      * @return LocationObject
      */
-    public function setPafAddress(PafAddressObject $pafAddress)
+    public function setPafAddress(PafAddressObject $pafAddress): self
     {
         $this->pafAddress = $pafAddress;
 
@@ -221,7 +221,7 @@ class LocationObject implements \JsonSerializable
     }
 
     /**
-     * @return string
+     * @return null|string
      */
     public function getPafUdprn()
     {
@@ -233,7 +233,7 @@ class LocationObject implements \JsonSerializable
      *
      * @return LocationObject
      */
-    public function setPafUdprn($pafUdprn)
+    public function setPafUdprn(string $pafUdprn): self
     {
         $this->pafUdprn = $pafUdprn;
 
@@ -241,7 +241,7 @@ class LocationObject implements \JsonSerializable
     }
 
     /** {@inheritDoc} */
-    public function jsonSerialize()
+    public function jsonSerialize(): array
     {
         return array_filter([
             'property_number_or_name' => $this->getPropertyNameOrNumber(),

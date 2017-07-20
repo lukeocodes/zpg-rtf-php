@@ -8,18 +8,18 @@ namespace ZpgRtf\Objects;
  */
 class AreaObject implements \JsonSerializable
 {
-    /** @var int **/
+    /** @var null|int **/
     private $value;
 
     /**
      * Array of enum (sq_feet, sq_yards, sq_metres, acres, hectares)
      *
-     * @var string e.g. sq_metres
+     * @var null|string
      */
     private $units;
 
     /**
-     * @return int
+     * @return null|int
      */
     public function getValue()
     {
@@ -31,7 +31,7 @@ class AreaObject implements \JsonSerializable
      *
      * @return AreaObject
      */
-    public function setValue($value)
+    public function setValue(string $value): self
     {
         $this->value = $value;
 
@@ -39,7 +39,7 @@ class AreaObject implements \JsonSerializable
     }
 
     /**
-     * @return string
+     * @return null|string
      */
     public function getUnits()
     {
@@ -51,7 +51,7 @@ class AreaObject implements \JsonSerializable
      *
      * @return AreaObject
      */
-    public function setUnits($units)
+    public function setUnits(string $units): self
     {
         $this->units = $units;
 
@@ -59,7 +59,7 @@ class AreaObject implements \JsonSerializable
     }
 
     /** {@inheritDoc} */
-    public function jsonSerialize()
+    public function jsonSerialize(): array
     {
         return array_filter([
             'units' => $this->getUnits(),

@@ -10,17 +10,17 @@ namespace ZpgRtf\Objects;
  */
 class PafAddressObject implements \JsonSerializable
 {
-    /** @var string */
+    /** @var null|string */
     private $addressKey;
 
-    /** @var string */
+    /** @var null|string */
     private $organisationKey;
 
-    /** @var string */
+    /** @var null|string */
     private $postcodeType;
 
     /**
-     * @return string
+     * @return null|string
      */
     public function getAddressKey()
     {
@@ -32,7 +32,7 @@ class PafAddressObject implements \JsonSerializable
      *
      * @return PafAddressObject
      */
-    public function setAddressKey($addressKey)
+    public function setAddressKey(string $addressKey): self
     {
         $this->addressKey = $addressKey;
 
@@ -40,7 +40,7 @@ class PafAddressObject implements \JsonSerializable
     }
 
     /**
-     * @return string
+     * @return null|string
      */
     public function getOrganisationKey()
     {
@@ -52,7 +52,7 @@ class PafAddressObject implements \JsonSerializable
      *
      * @return PafAddressObject
      */
-    public function setOrganisationKey($organisationKey)
+    public function setOrganisationKey(string $organisationKey): self
     {
         $this->organisationKey = $organisationKey;
 
@@ -60,7 +60,7 @@ class PafAddressObject implements \JsonSerializable
     }
 
     /**
-     * @return string
+     * @return null|string
      */
     public function getPostcodeType()
     {
@@ -72,7 +72,7 @@ class PafAddressObject implements \JsonSerializable
      *
      * @return PafAddressObject
      */
-    public function setPostcodeType($postcodeType)
+    public function setPostcodeType(string $postcodeType): self
     {
         $this->postcodeType = $postcodeType;
 
@@ -80,7 +80,7 @@ class PafAddressObject implements \JsonSerializable
     }
 
     /** {@inheritDoc} */
-    public function jsonSerialize()
+    public function jsonSerialize(): array
     {
         return array_filter([
             'address_key' => $this->getAddressKey(),

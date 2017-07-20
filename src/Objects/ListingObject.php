@@ -9,165 +9,165 @@ use ZpgRtf\Helpers\DateTimeHelper;
  */
 class ListingObject implements \JsonSerializable
 {
-    /** @var bool **/
+    /** @var null|bool **/
     private $accessibility;
 
-    /** @var string e.g. '£10 per person' **/
+    /** @var null|string **/
     private $administrationFees;
 
-    /** @var float e.g. 150.00 **/
+    /** @var null|float **/
     private $annualBusinessRates;
 
-    /** @var AreasObject **/
+    /** @var null|AreasObject **/
     private $areas;
 
-    /** @var int **/
+    /** @var null|int **/
     private $availableBedrooms;
 
-    /** @var DateTimeHelper **/
+    /** @var null|DateTimeHelper **/
     private $availableFromDate;
 
-    /** @var bool **/
+    /** @var null|bool **/
     private $basement;
 
-    /** @var int **/
+    /** @var null|int **/
     private $bathrooms;
 
     /**
      * Array of enum (electricity, gas, internet, satellite_cable_tv, telephone, tv_licence, water)
      *
-     * @var array ['water', 'tv_licence']
+     * @var null|array
      */
     private $billsIncluded;
 
-    /** @var string e.g. 'ref-1234' **/
+    /** @var null|string **/
     private $branchReference;
 
-    /** @var bool **/
+    /** @var null|bool **/
     private $burglarAlarm;
 
-    /** @var bool **/
+    /** @var null|bool **/
     private $businessForSale;
 
     /**
      * Array of enum (equity_loan, help_to_buy, mi_new_home, new_buy, part_buy_part_rent, shared_equity,
      * shared_ownership)
      *
-     * @var array e.g. ['equity_loan', 'help_to_buy']
+     * @var null|array
      */
     private $buyerIncentives;
 
     /**
      * Enum (commercial, residential)
      *
-     * @var string e.g. 'residential'
+     * @var null|string
      */
     private $category;
 
     /**
      * Enum (full, partial, none)
      *
-     * @var string e.g. 'full'
+     * @var null|string
      **/
     private $centralHeating;
 
-    /** @var bool **/
+    /** @var null|bool **/
     private $chainFree;
 
     /**
      * @see http://www.planningportal.gov.uk/permission/commonprojects/changeofuse
      *
-     * @var array e.g. ['A3', 'D2']
+     * @var null|array
      */
     private $commercialUseClasses;
 
     /**
      * Enum (electricity, fibre_optic, gas, satellite_cable_tv, telephone, water)
      *
-     * @var array e.g. ['electricity', 'gas']
+     * @var null|array
      */
     private $connectedUtilities;
 
-    /** @var bool **/
+    /** @var null|bool **/
     private $conservatory;
 
-    /** @var int e.g. 1899 **/
+    /** @var null|int **/
     private $constructionYear;
 
-    /** @var array **/
+    /** @var null|array **/
     private $content;
 
     /**
      * Enum (A, B, C, D, E, F, G, H, I)
      *
-     * @var string
+     * @var null|string
      */
     private $councilTaxBand;
 
     /**
      * Enum (excellent, good, average, needs_modernisation)
      *
-     * @var string
+     * @var null|string
      */
     private $decorativeCondition;
 
-    /** @var float **/
+    /** @var null|float **/
     private $deposit;
 
-    /** @var array **/
+    /** @var null|array **/
     private $detailedDescription;
 
-    /** @var string **/
+    /** @var null|string **/
     private $displayAddress;
 
-    /** @var bool **/
+    /** @var null|bool **/
     private $doubleGlazing;
 
-    /** @var EpcRatingsObject **/
+    /** @var null|EpcRatingsObject **/
     private $epcRatings;
 
-    /** @var array **/
+    /** @var null|array **/
     private $featureList;
 
-    /** @var bool **/
+    /** @var null|bool **/
     private $fireplace;
 
-    /** @var bool **/
+    /** @var null|bool **/
     private $fishingRights;
 
     /**
      * Enum (penthouse, <integers greater than zero>, ground, basement)
      *
-     * @var array e.g. ['basement', 'ground', 1, 2]
+     * @var null|array
      */
     private $floorLevels;
 
-    /** @var int **/
+    /** @var null|int **/
     private $floors;
 
     /**
      * Emum (furnished, furnished_or_unfurnished, part_furnished, unfurnished)
      *
-     * @var string e.g. 'furnished'
+     * @var null|string
      */
     private $furnishedState;
 
-    /** @var GoogleStreetViewObject **/
+    /** @var null|GoogleStreetViewObject **/
     private $googleStreetView;
 
-    /** @var float **/
+    /** @var null|float **/
     private $groundRent;
 
-    /** @var bool **/
+    /** @var null|bool **/
     private $gym;
 
-    /** @var LeaseExpiryObject **/
+    /** @var null|LeaseExpiryObject **/
     private $leaseExpiry;
 
     /**
      * Enum (available, under_offer, sold_subject_to_contract, sold, let_agreed, let)
      *
-     * @var string e.g. 'available'
+     * @var null|string
      */
     private $lifeCycleStatus;
 
@@ -175,297 +175,117 @@ class ListingObject implements \JsonSerializable
      * Enum(category_a, category_b, category_c, grade_a, grade_b, grade_b_plus, grade_one, grade_two, grade_two_star,
      * locally_listed)
      *
-     * @var string
+     * @var null|string
      */
     private $listedBuildingGrade;
 
-    /** @var string e.g. 'listing-1234' **/
+    /** @var null|string **/
     private $listingReference;
 
-    /** @var int **/
+    /** @var null|int **/
     private $livingRooms;
 
-    /** @var LocationObject **/
+    /** @var null|LocationObject **/
     private $location;
 
-    /** @var bool **/
+    /** @var null|bool **/
     private $loft;
 
-    /** @var bool **/
+    /** @var null|bool **/
     private $newHome;
 
-    /** @var DateTimeHelper **/
+    /** @var null|DateTimeHelper **/
     private $openDay;
 
-    /** @var bool **/
+    /** @var null|bool **/
     private $outbuildings;
 
     /**
      * Enum (balcony, communal_garden, private_garden, roof_terrace, terrace)
      *
-     * @var array
+     * @var null|array
      */
     private $outsideSpace;
 
     /**
      * Enum (double_garage, off_street_parking, residents_parking, single_garage, underground)
      *
-     * @var array
+     * @var null|array
      */
     private $parking;
 
-    /** @var bool **/
+    /** @var null|bool **/
     private $petsAllowed;
 
-    /** @var bool **/
+    /** @var null|bool **/
     private $porterSecurity;
 
-    /** @var PricingObject **/
+    /** @var null|PricingObject **/
     private $pricing;
 
-    /**
-     * @see self::PROPERTY_TYPES
-     *
-     * @var string
-     */
+    /** @var null|string */
     private $propertyType;
 
-    /**
-     * @see https://www.gov.uk/correct-your-business-rates
-     *
-     * @var float
-     */
+    /** @var null|float */
     private $rateableValue;
 
-    /** @var MinimumContractLengthObject **/
+    /** @var null|MinimumContractLengthObject **/
     private $rentalTerm;
 
-    /** @var bool **/
+    /** @var null|bool **/
     private $repossession;
 
-    /** @var bool **/
+    /** @var null|bool **/
     private $retirement;
 
-    /** @var int **/
+    /** @var null|int **/
     private $sapRating;
 
-    /** @var ServiceChargeObject **/
+    /** @var null|ServiceChargeObject **/
     private $serviceCharge;
 
-    /** @var bool **/
+    /** @var null|bool **/
     private $serviced;
 
-    /** @var bool **/
+    /** @var null|bool **/
     private $sharedAccommodation;
 
-    /** @var string **/
+    /** @var null|string **/
     private $summaryDescription;
 
-    /** @var bool **/
+    /** @var null|bool **/
     private $swimmingPool;
 
-    /** @var bool **/
+    /** @var null|bool **/
     private $tenanted;
 
-    /** @var TenantEligibilityObject **/
+    /** @var null|TenantEligibilityObject **/
     private $tenantEligibility;
 
-    /** @var bool **/
+    /** @var null|bool **/
     private $tennisCourt;
 
     /**
      * Enum (feudal, freehold, leasehold, share_of_freehold)
      *
-     * @var string
+     * @var null|string
      */
     private $tenure;
 
-    /** @var int **/
+    /** @var null|int **/
     private $totalBedrooms;
 
-    /** @var bool **/
+    /** @var null|bool **/
     private $utilityRoom;
 
-    /** @var bool **/
+    /** @var null|bool **/
     private $waterfront;
 
-    /** @var bool **/
+    /** @var null|bool **/
     private $woodFloors;
 
-    /** @var array */
-    const PROPERTY_TYPES = [
-        self::BARN_CONVERSION => 'Barn conversion',
-        self::BLOCK_OF_FLATS => 'Block of flats',
-        self::BUNGALOW => 'Bungalow',
-        self::BUSINESS_PARK => 'Business park',
-        self::CHALET => 'Chalet',
-        self::CHATEAU => 'Chateau',
-        self::COTTAGE => 'Cottage',
-        self::COUNTRY_HOUSE => 'Country house',
-        self::DETACHED => 'Detached',
-        self::DETACHED_BUNGALOW => 'Detached bungalow',
-        self::END_TERRACE => 'End terrace',
-        self::EQUESTRIAN => 'Equestrian',
-        self::FARM => 'Farm',
-        self::FARMHOUSE => 'Farmhouse',
-        self::FINCA => 'Finca',
-        self::FLAT => 'Flat',
-        self::HOTEL => 'Hotel',
-        self::HOUSEBOAT => 'Houseboat',
-        self::INDUSTRIAL => 'Industrial',
-        self::LAND => 'Land',
-        self::LEISURE => 'Leisure',
-        self::LIGHT_INDUSTRIAL => 'Light industrial',
-        self::LINK_DETACHED => 'Link detached',
-        self::LODGE => 'Lodge',
-        self::LONGERE => 'Longere',
-        self::MAISONETTE => 'Maisonette',
-        self::MEWS => 'Mews',
-        self::OFFICE => 'Office',
-        self::PARK_HOME => 'Park home',
-        self::PARKING => 'Parking',
-        self::PUB_BAR => 'Pub bar',
-        self::RESTAURANT => 'Restaurant',
-        self::RETAIL => 'Retail',
-        self::RIAD => 'Riad',
-        self::SEMI_DETACHED => 'Semi detached',
-        self::SEMI_DETACHED_BUNGALOW => 'Semi detached bungalow',
-        self::STUDIO => 'Studio',
-        self::TERRACED => 'Terraced',
-        self::TERRACED_BUNGALOW => 'Terraced bungalow',
-        self::TOWN_HOUSE => 'Town house',
-        self::VILLA => 'Villa',
-        self::WAREHOUSE => 'Warehouse',
-    ];
-
-    /** @var string */
-    const BARN_CONVERSION = 'barn_conversion';
-
-    /** @var string */
-    const BLOCK_OF_FLATS = 'block_of_flats';
-
-    /** @var string */
-    const BUNGALOW = 'bungalow';
-
-    /** @var string */
-    const BUSINESS_PARK = 'business_park';
-
-    /** @var string */
-    const CHALET = 'chalet';
-
-    /** @var string */
-    const CHATEAU = 'chateau';
-
-    /** @var string */
-    const COTTAGE = 'cottage';
-
-    /** @var string */
-    const COUNTRY_HOUSE = 'country_house';
-
-    /** @var string */
-    const DETACHED = 'detached';
-
-    /** @var string */
-    const DETACHED_BUNGALOW = 'detached_bungalow';
-
-    /** @var string */
-    const END_TERRACE = 'end_terrace';
-
-    /** @var string */
-    const EQUESTRIAN = 'equestrian';
-
-    /** @var string */
-    const FARM = 'farm';
-
-    /** @var string */
-    const FARMHOUSE = 'farmhouse';
-
-    /** @var string */
-    const FINCA = 'finca';
-
-    /** @var string */
-    const FLAT = 'flat';
-
-    /** @var string */
-    const HOTEL = 'hotel';
-
-    /** @var string */
-    const HOUSEBOAT = 'houseboat';
-
-    /** @var string */
-    const INDUSTRIAL = 'industrial';
-
-    /** @var string */
-    const LAND = 'land';
-
-    /** @var string */
-    const LEISURE = 'leisure';
-
-    /** @var string */
-    const LIGHT_INDUSTRIAL = 'light_industrial';
-
-    /** @var string */
-    const LINK_DETACHED = 'link_detached';
-
-    /** @var string */
-    const LODGE = 'lodge';
-
-    /** @var string */
-    const LONGERE = 'longere';
-
-    /** @var string */
-    const MAISONETTE = 'maisonette';
-
-    /** @var string */
-    const MEWS = 'mews';
-
-    /** @var string */
-    const OFFICE = 'office';
-
-    /** @var string */
-    const PARK_HOME = 'park_home';
-
-    /** @var string */
-    const PARKING = 'parking';
-
-    /** @var string */
-    const PUB_BAR = 'pub_bar';
-
-    /** @var string */
-    const RESTAURANT = 'restaurant';
-
-    /** @var string */
-    const RETAIL = 'retail';
-
-    /** @var string */
-    const RIAD = 'riad';
-
-    /** @var string */
-    const SEMI_DETACHED = 'semi_detached';
-
-    /** @var string */
-    const SEMI_DETACHED_BUNGALOW = 'semi_detached_bungalow';
-
-    /** @var string */
-    const STUDIO = 'studio';
-
-    /** @var string */
-    const TERRACED = 'terraced';
-
-    /** @var string */
-    const TERRACED_BUNGALOW = 'terraced_bungalow';
-
-    /** @var string */
-    const TOWN_HOUSE = 'town_house';
-
-    /** @var string */
-    const VILLA = 'villa';
-
-    /** @var string */
-    const WAREHOUSE = 'warehouse';
-
     /**
-     * @return bool
+     * @return null|bool
      */
     public function hasAccessibility()
     {
@@ -477,7 +297,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setAccessibility($accessibility)
+    public function setAccessibility(bool $accessibility): self
     {
         $this->accessibility = $accessibility;
 
@@ -485,7 +305,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return string
+     * @return null|string
      */
     public function getAdministrationFees()
     {
@@ -497,7 +317,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setAdministrationFees($administrationFees)
+    public function setAdministrationFees(string $administrationFees): self
     {
         $this->administrationFees = $administrationFees;
 
@@ -505,7 +325,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return float
+     * @return null|float
      */
     public function getAnnualBusinessRates()
     {
@@ -517,7 +337,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setAnnualBusinessRates($annualBusinessRates)
+    public function setAnnualBusinessRates(float $annualBusinessRates): self
     {
         $this->annualBusinessRates = $annualBusinessRates;
 
@@ -525,7 +345,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return AreasObject
+     * @return null|AreasObject
      */
     public function getAreas()
     {
@@ -537,7 +357,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setAreas(AreasObject $areas)
+    public function setAreas(AreasObject $areas): self
     {
         $this->areas = $areas;
 
@@ -545,7 +365,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return int
+     * @return null|int
      */
     public function getAvailableBedrooms()
     {
@@ -557,7 +377,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setAvailableBedrooms($availableBedrooms)
+    public function setAvailableBedrooms(int $availableBedrooms): self
     {
         $this->availableBedrooms = $availableBedrooms;
 
@@ -565,7 +385,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return DateTimeHelper
+     * @return null|DateTimeHelper
      */
     public function getAvailableFromDate()
     {
@@ -577,7 +397,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setAvailableFromDate(DateTimeHelper $availableFromDate)
+    public function setAvailableFromDate(DateTimeHelper $availableFromDate): self
     {
         $this->availableFromDate = $availableFromDate;
 
@@ -585,7 +405,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return bool
+     * @return null|bool
      */
     public function hasBasement()
     {
@@ -597,7 +417,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setBasement($basement)
+    public function setBasement(bool $basement): self
     {
         $this->basement = $basement;
 
@@ -605,7 +425,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return int
+     * @return null|int
      */
     public function getBathrooms()
     {
@@ -617,7 +437,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setBathrooms($bathrooms)
+    public function setBathrooms(int $bathrooms): self
     {
         $this->bathrooms = $bathrooms;
 
@@ -625,7 +445,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return array
+     * @return null|array
      */
     public function getBillsIncluded()
     {
@@ -637,7 +457,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setBillsIncluded($billsIncluded)
+    public function setBillsIncluded(array $billsIncluded): self
     {
         $this->billsIncluded = $billsIncluded;
 
@@ -645,7 +465,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return string
+     * @return null|string
      */
     public function getBranchReference()
     {
@@ -657,7 +477,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setBranchReference($branchReference)
+    public function setBranchReference(string $branchReference): self
     {
         $this->branchReference = $branchReference;
 
@@ -665,7 +485,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return bool
+     * @return null|bool
      */
     public function hasBurglarAlarm()
     {
@@ -677,7 +497,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setBurglarAlarm($burglarAlarm)
+    public function setBurglarAlarm(bool $burglarAlarm): self
     {
         $this->burglarAlarm = $burglarAlarm;
 
@@ -685,7 +505,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return bool
+     * @return null|bool
      */
     public function isBusinessForSale()
     {
@@ -697,7 +517,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setBusinessForSale($businessForSale)
+    public function setBusinessForSale(bool $businessForSale): self
     {
         $this->businessForSale = $businessForSale;
 
@@ -705,7 +525,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return array
+     * @return null|array
      */
     public function getBuyerIncentives()
     {
@@ -717,7 +537,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setBuyerIncentives($buyerIncentives)
+    public function setBuyerIncentives(array $buyerIncentives): self
     {
         $this->buyerIncentives = $buyerIncentives;
 
@@ -725,7 +545,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return string
+     * @return null|string
      */
     public function getCategory()
     {
@@ -737,7 +557,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setCategory($category)
+    public function setCategory(string $category): self
     {
         $this->category = $category;
 
@@ -745,7 +565,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return string
+     * @return null|string
      */
     public function getCentralHeating()
     {
@@ -757,7 +577,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setCentralHeating($centralHeating)
+    public function setCentralHeating(string $centralHeating): self
     {
         $this->centralHeating = $centralHeating;
 
@@ -765,7 +585,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return bool
+     * @return null|bool
      */
     public function isChainFree()
     {
@@ -777,7 +597,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setChainFree($chainFree)
+    public function setChainFree(bool $chainFree): self
     {
         $this->chainFree = $chainFree;
 
@@ -785,7 +605,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return array
+     * @return null|array
      */
     public function getCommercialUseClasses()
     {
@@ -797,7 +617,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setCommercialUseClasses($commercialUseClasses)
+    public function setCommercialUseClasses(array $commercialUseClasses): self
     {
         $this->commercialUseClasses = $commercialUseClasses;
 
@@ -805,7 +625,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return array
+     * @return null|array
      */
     public function getConnectedUtilities()
     {
@@ -817,7 +637,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setConnectedUtilities($connectedUtilities)
+    public function setConnectedUtilities(array $connectedUtilities): self
     {
         $this->connectedUtilities = $connectedUtilities;
 
@@ -825,7 +645,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return bool
+     * @return null|bool
      */
     public function hasConservatory()
     {
@@ -837,7 +657,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setConservatory($conservatory)
+    public function setConservatory(bool $conservatory): self
     {
         $this->conservatory = $conservatory;
 
@@ -845,7 +665,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return int
+     * @return null|int
      */
     public function getConstructionYear()
     {
@@ -857,7 +677,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setConstructionYear($constructionYear)
+    public function setConstructionYear(int $constructionYear): self
     {
         $this->constructionYear = $constructionYear;
 
@@ -865,7 +685,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return array
+     * @return null|array
      */
     public function getContent()
     {
@@ -877,7 +697,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setContent($content)
+    public function setContent(array $content): self
     {
         $this->content = $content;
 
@@ -885,7 +705,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return string
+     * @return null|string
      */
     public function getCouncilTaxBand()
     {
@@ -897,7 +717,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setCouncilTaxBand($councilTaxBand)
+    public function setCouncilTaxBand(string $councilTaxBand): self
     {
         $this->councilTaxBand = $councilTaxBand;
 
@@ -905,7 +725,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return string
+     * @return null|string
      */
     public function getDecorativeCondition()
     {
@@ -917,7 +737,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setDecorativeCondition($decorativeCondition)
+    public function setDecorativeCondition(string $decorativeCondition): self
     {
         $this->decorativeCondition = $decorativeCondition;
 
@@ -925,7 +745,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return float
+     * @return null|float
      */
     public function getDeposit()
     {
@@ -937,7 +757,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setDeposit($deposit)
+    public function setDeposit(float $deposit): self
     {
         $this->deposit = $deposit;
 
@@ -945,7 +765,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return array
+     * @return null|array
      */
     public function getDetailedDescription()
     {
@@ -957,7 +777,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setDetailedDescription($detailedDescription)
+    public function setDetailedDescription(array $detailedDescription): self
     {
         $this->detailedDescription = $detailedDescription;
 
@@ -965,7 +785,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return string
+     * @return null|string
      */
     public function getDisplayAddress()
     {
@@ -977,7 +797,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setDisplayAddress($displayAddress)
+    public function setDisplayAddress(string $displayAddress): self
     {
         $this->displayAddress = $displayAddress;
 
@@ -985,7 +805,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return bool
+     * @return null|bool
      */
     public function hasDoubleGlazing()
     {
@@ -997,7 +817,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setDoubleGlazing($doubleGlazing)
+    public function setDoubleGlazing(bool $doubleGlazing): self
     {
         $this->doubleGlazing = $doubleGlazing;
 
@@ -1005,7 +825,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return EpcRatingsObject
+     * @return null|EpcRatingsObject
      */
     public function getEpcRatings()
     {
@@ -1017,7 +837,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setEpcRatings(EpcRatingsObject $epcRatings)
+    public function setEpcRatings(EpcRatingsObject $epcRatings): self
     {
         $this->epcRatings = $epcRatings;
 
@@ -1025,7 +845,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return array
+     * @return null|array
      */
     public function getFeatureList()
     {
@@ -1037,7 +857,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setFeatureList($featureList)
+    public function setFeatureList(array $featureList): self
     {
         $this->featureList = $featureList;
 
@@ -1045,7 +865,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return bool
+     * @return null|bool
      */
     public function hasFireplace()
     {
@@ -1057,7 +877,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setFireplace($fireplace)
+    public function setFireplace(bool $fireplace): self
     {
         $this->fireplace = $fireplace;
 
@@ -1065,7 +885,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return bool
+     * @return null|bool
      */
     public function hasFishingRights()
     {
@@ -1077,7 +897,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setFishingRights($fishingRights)
+    public function setFishingRights(bool $fishingRights): self
     {
         $this->fishingRights = $fishingRights;
 
@@ -1085,7 +905,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return array
+     * @return null|array
      */
     public function getFloorLevels()
     {
@@ -1097,7 +917,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setFloorLevels($floorLevels)
+    public function setFloorLevels(array $floorLevels): self
     {
         $this->floorLevels = $floorLevels;
 
@@ -1105,7 +925,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return int
+     * @return null|int
      */
     public function getFloors()
     {
@@ -1117,7 +937,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setFloors($floors)
+    public function setFloors(int $floors): self
     {
         $this->floors = $floors;
 
@@ -1125,7 +945,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return string
+     * @return null|string
      */
     public function getFurnishedState()
     {
@@ -1137,7 +957,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setFurnishedState($furnishedState)
+    public function setFurnishedState(string $furnishedState): self
     {
         $this->furnishedState = $furnishedState;
 
@@ -1145,7 +965,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return GoogleStreetViewObject
+     * @return null|GoogleStreetViewObject
      */
     public function getGoogleStreetView()
     {
@@ -1157,7 +977,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setGoogleStreetView(GoogleStreetViewObject $googleStreetView)
+    public function setGoogleStreetView(GoogleStreetViewObject $googleStreetView): self
     {
         $this->googleStreetView = $googleStreetView;
 
@@ -1165,7 +985,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return float
+     * @return null|float
      */
     public function getGroundRent()
     {
@@ -1177,7 +997,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setGroundRent($groundRent)
+    public function setGroundRent(float $groundRent): self
     {
         $this->groundRent = $groundRent;
 
@@ -1185,7 +1005,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return bool
+     * @return null|bool
      */
     public function hasGym()
     {
@@ -1197,7 +1017,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setGym($gym)
+    public function setGym(bool $gym): self
     {
         $this->gym = $gym;
 
@@ -1205,7 +1025,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return LeaseExpiryObject
+     * @return null|LeaseExpiryObject
      */
     public function getLeaseExpiry()
     {
@@ -1217,7 +1037,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setLeaseExpiry(LeaseExpiryObject $leaseExpiry)
+    public function setLeaseExpiry(LeaseExpiryObject $leaseExpiry): self
     {
         $this->leaseExpiry = $leaseExpiry;
 
@@ -1225,7 +1045,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return string
+     * @return null|string
      */
     public function getLifeCycleStatus()
     {
@@ -1237,7 +1057,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setLifeCycleStatus($lifeCycleStatus)
+    public function setLifeCycleStatus(string $lifeCycleStatus): self
     {
         $this->lifeCycleStatus = $lifeCycleStatus;
 
@@ -1245,7 +1065,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return string
+     * @return null|string
      */
     public function getListedBuildingGrade()
     {
@@ -1257,7 +1077,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setListedBuildingGrade($listedBuildingGrade)
+    public function setListedBuildingGrade(string $listedBuildingGrade): self
     {
         $this->listedBuildingGrade = $listedBuildingGrade;
 
@@ -1265,7 +1085,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return string
+     * @return null|string
      */
     public function getListingReference()
     {
@@ -1277,7 +1097,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setListingReference($listingReference)
+    public function setListingReference(string $listingReference): self
     {
         $this->listingReference = $listingReference;
 
@@ -1285,7 +1105,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return int
+     * @return null|int
      */
     public function getLivingRooms()
     {
@@ -1297,7 +1117,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setLivingRooms($livingRooms)
+    public function setLivingRooms(int $livingRooms): self
     {
         $this->livingRooms = $livingRooms;
 
@@ -1305,7 +1125,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return LocationObject
+     * @return null|LocationObject
      */
     public function getLocation()
     {
@@ -1317,7 +1137,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setLocation($location)
+    public function setLocation(LocationObject $location): self
     {
         $this->location = $location;
 
@@ -1325,7 +1145,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return bool
+     * @return null|bool
      */
     public function hasLoft()
     {
@@ -1337,7 +1157,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setLoft($loft)
+    public function setLoft(bool $loft): self
     {
         $this->loft = $loft;
 
@@ -1345,7 +1165,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return bool
+     * @return null|bool
      */
     public function isNewHome()
     {
@@ -1357,7 +1177,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setNewHome($newHome)
+    public function setNewHome(bool $newHome): self
     {
         $this->newHome = $newHome;
 
@@ -1365,7 +1185,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return DateTimeHelper
+     * @return null|DateTimeHelper
      */
     public function getOpenDay()
     {
@@ -1377,7 +1197,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setOpenDay(DateTimeHelper $openDay)
+    public function setOpenDay(DateTimeHelper $openDay): self
     {
         $this->openDay = $openDay;
 
@@ -1385,7 +1205,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return bool
+     * @return null|bool
      */
     public function hasOutbuildings()
     {
@@ -1397,7 +1217,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setOutbuildings($outbuildings)
+    public function setOutbuildings(bool $outbuildings): self
     {
         $this->outbuildings = $outbuildings;
 
@@ -1405,7 +1225,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return array
+     * @return null|array
      */
     public function getOutsideSpace()
     {
@@ -1417,7 +1237,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setOutsideSpace($outsideSpace)
+    public function setOutsideSpace(array $outsideSpace): self
     {
         $this->outsideSpace = $outsideSpace;
 
@@ -1425,7 +1245,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return array
+     * @return null|array
      */
     public function getParking()
     {
@@ -1437,7 +1257,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setParking($parking)
+    public function setParking(array $parking): self
     {
         $this->parking = $parking;
 
@@ -1445,7 +1265,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return bool
+     * @return null|bool
      */
     public function isPetsAllowed()
     {
@@ -1457,7 +1277,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setPetsAllowed($petsAllowed)
+    public function setPetsAllowed(bool $petsAllowed): self
     {
         $this->petsAllowed = $petsAllowed;
 
@@ -1465,7 +1285,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return bool
+     * @return null|bool
      */
     public function hasPorterSecurity()
     {
@@ -1477,7 +1297,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setPorterSecurity($porterSecurity)
+    public function setPorterSecurity(bool $porterSecurity): self
     {
         $this->porterSecurity = $porterSecurity;
 
@@ -1485,7 +1305,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return PricingObject
+     * @return null|PricingObject
      */
     public function getPricing()
     {
@@ -1497,7 +1317,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setPricing(PricingObject $pricing)
+    public function setPricing(PricingObject $pricing): self
     {
         $this->pricing = $pricing;
 
@@ -1505,7 +1325,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return string
+     * @return null|string
      */
     public function getPropertyType()
     {
@@ -1517,7 +1337,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setPropertyType($propertyType)
+    public function setPropertyType(string $propertyType): self
     {
         $this->propertyType = $propertyType;
 
@@ -1525,7 +1345,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return float
+     * @return null|float
      */
     public function getRateableValue()
     {
@@ -1537,7 +1357,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setRateableValue($rateableValue)
+    public function setRateableValue(float $rateableValue): self
     {
         $this->rateableValue = $rateableValue;
 
@@ -1545,7 +1365,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return MinimumContractLengthObject
+     * @return null|MinimumContractLengthObject
      */
     public function getRentalTerm()
     {
@@ -1557,7 +1377,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setRentalTerm(MinimumContractLengthObject $rentalTerm)
+    public function setRentalTerm(MinimumContractLengthObject $rentalTerm): self
     {
         $this->rentalTerm = $rentalTerm;
 
@@ -1565,7 +1385,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return bool
+     * @return null|bool
      */
     public function isRepossession()
     {
@@ -1577,7 +1397,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setRepossession($repossession)
+    public function setRepossession(bool $repossession): self
     {
         $this->repossession = $repossession;
 
@@ -1585,7 +1405,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return bool
+     * @return null|bool
      */
     public function isRetirement()
     {
@@ -1597,7 +1417,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setRetirement($retirement)
+    public function setRetirement(bool $retirement): self
     {
         $this->retirement = $retirement;
 
@@ -1605,7 +1425,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return int
+     * @return null|int
      */
     public function getSapRating()
     {
@@ -1617,7 +1437,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setSapRating($sapRating)
+    public function setSapRating(int $sapRating): self
     {
         $this->sapRating = $sapRating;
 
@@ -1625,7 +1445,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return ServiceChargeObject
+     * @return null|ServiceChargeObject
      */
     public function getServiceCharge()
     {
@@ -1637,7 +1457,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setServiceCharge(ServiceChargeObject $serviceCharge)
+    public function setServiceCharge(ServiceChargeObject $serviceCharge): self
     {
         $this->serviceCharge = $serviceCharge;
 
@@ -1645,7 +1465,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return bool
+     * @return null|bool
      */
     public function isServiced()
     {
@@ -1657,7 +1477,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setServiced($serviced)
+    public function setServiced(bool $serviced): self
     {
         $this->serviced = $serviced;
 
@@ -1665,7 +1485,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return bool
+     * @return null|bool
      */
     public function isSharedAccommodation()
     {
@@ -1677,7 +1497,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setSharedAccommodation($sharedAccommodation)
+    public function setSharedAccommodation(bool $sharedAccommodation): self
     {
         $this->sharedAccommodation = $sharedAccommodation;
 
@@ -1685,7 +1505,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return string
+     * @return null|string
      */
     public function getSummaryDescription()
     {
@@ -1697,7 +1517,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setSummaryDescription($summaryDescription)
+    public function setSummaryDescription(string $summaryDescription): self
     {
         $this->summaryDescription = $summaryDescription;
 
@@ -1705,7 +1525,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return bool
+     * @return null|bool
      */
     public function hasSwimmingPool()
     {
@@ -1717,7 +1537,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setSwimmingPool($swimmingPool)
+    public function setSwimmingPool(bool $swimmingPool): self
     {
         $this->swimmingPool = $swimmingPool;
 
@@ -1725,7 +1545,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return bool
+     * @return null|bool
      */
     public function isTenanted()
     {
@@ -1737,7 +1557,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setTenanted($tenanted)
+    public function setTenanted(bool $tenanted): self
     {
         $this->tenanted = $tenanted;
 
@@ -1745,7 +1565,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return TenantEligibilityObject
+     * @return null|TenantEligibilityObject
      */
     public function getTenantEligibility()
     {
@@ -1757,7 +1577,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setTenantEligibility(TenantEligibilityObject $tenantEligibility)
+    public function setTenantEligibility(TenantEligibilityObject $tenantEligibility): self
     {
         $this->tenantEligibility = $tenantEligibility;
 
@@ -1765,7 +1585,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return bool
+     * @return null|bool
      */
     public function hasTennisCourt()
     {
@@ -1777,7 +1597,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setTennisCourt($tennisCourt)
+    public function setTennisCourt(bool $tennisCourt): self
     {
         $this->tennisCourt = $tennisCourt;
 
@@ -1785,7 +1605,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return string
+     * @return null|string
      */
     public function getTenure()
     {
@@ -1797,7 +1617,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setTenure($tenure)
+    public function setTenure(string $tenure): self
     {
         $this->tenure = $tenure;
 
@@ -1805,7 +1625,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return int
+     * @return null|int
      */
     public function getTotalBedrooms()
     {
@@ -1817,7 +1637,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setTotalBedrooms($totalBedrooms)
+    public function setTotalBedrooms(int $totalBedrooms): self
     {
         $this->totalBedrooms = $totalBedrooms;
 
@@ -1825,7 +1645,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return bool
+     * @return null|bool
      */
     public function hasUtilityRoom()
     {
@@ -1837,7 +1657,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setUtilityRoom($utilityRoom)
+    public function setUtilityRoom(bool $utilityRoom): self
     {
         $this->utilityRoom = $utilityRoom;
 
@@ -1845,7 +1665,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return bool
+     * @return null|bool
      */
     public function isWaterfront()
     {
@@ -1857,7 +1677,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setWaterfront($waterfront)
+    public function setWaterfront(bool $waterfront): self
     {
         $this->waterfront = $waterfront;
 
@@ -1865,7 +1685,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /**
-     * @return bool
+     * @return null|bool
      */
     public function hasWoodFloors()
     {
@@ -1877,7 +1697,7 @@ class ListingObject implements \JsonSerializable
      *
      * @return ListingObject
      */
-    public function setWoodFloors($woodFloors)
+    public function setWoodFloors(bool $woodFloors): self
     {
         $this->woodFloors = $woodFloors;
 
@@ -1885,7 +1705,7 @@ class ListingObject implements \JsonSerializable
     }
 
     /** {@inheritDoc} */
-    public function jsonSerialize()
+    public function jsonSerialize(): array
     {
         return array_filter([
             'accessibility' => $this->hasAccessibility(),

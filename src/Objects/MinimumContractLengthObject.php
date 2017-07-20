@@ -8,18 +8,18 @@ namespace ZpgRtf\Objects;
  */
 class MinimumContractLengthObject implements \JsonSerializable
 {
-    /** @var float */
+    /** @var null|float */
     private $minimumLength;
 
     /**
      * Enum (days, weeks, months, years)
      *
-     * @var string
+     * @var null|string
      */
     private $units;
 
     /**
-     * @return float
+     * @return null|float
      */
     public function getMinimumLength()
     {
@@ -31,7 +31,7 @@ class MinimumContractLengthObject implements \JsonSerializable
      *
      * @return MinimumContractLengthObject
      */
-    public function setMinimumLength($minimumLength)
+    public function setMinimumLength(float $minimumLength): self
     {
         $this->minimumLength = $minimumLength;
 
@@ -39,7 +39,7 @@ class MinimumContractLengthObject implements \JsonSerializable
     }
 
     /**
-     * @return string
+     * @return null|string
      */
     public function getUnits()
     {
@@ -51,7 +51,7 @@ class MinimumContractLengthObject implements \JsonSerializable
      *
      * @return MinimumContractLengthObject
      */
-    public function setUnits($units)
+    public function setUnits(string $units): self
     {
         $this->units = $units;
 
@@ -59,7 +59,7 @@ class MinimumContractLengthObject implements \JsonSerializable
     }
 
     /** {@inheritDoc} */
-    public function jsonSerialize()
+    public function jsonSerialize(): array
     {
         return array_filter([
             'minimum_length' => $this->getMinimumLength(),

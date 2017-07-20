@@ -8,25 +8,25 @@ namespace ZpgRtf\Objects;
  */
 class ServiceChargeObject implements \JsonSerializable
 {
-    /** @var float */
+    /** @var null|float */
     private $charge;
 
     /**
      * Enum (sq_feet, sq_yards, sq_metres, acres, hectares)
      *
-     * @var string
+     * @var null|string
      */
     private $perUnitAreaUnits;
 
     /**
      * Enum (per_person_per_week, per_week, per_month, per_quarter, per_year)
      *
-     * @var string
+     * @var null|string
      */
     private $frequency;
 
     /**
-     * @return float
+     * @return null|float
      */
     public function getCharge()
     {
@@ -38,7 +38,7 @@ class ServiceChargeObject implements \JsonSerializable
      *
      * @return ServiceChargeObject
      */
-    public function setCharge($charge)
+    public function setCharge(float $charge): self
     {
         $this->charge = $charge;
 
@@ -46,7 +46,7 @@ class ServiceChargeObject implements \JsonSerializable
     }
 
     /**
-     * @return string
+     * @return null|string
      */
     public function getPerUnitAreaUnits()
     {
@@ -58,7 +58,7 @@ class ServiceChargeObject implements \JsonSerializable
      *
      * @return ServiceChargeObject
      */
-    public function setPerUnitAreaUnits($perUnitAreaUnits)
+    public function setPerUnitAreaUnits(string $perUnitAreaUnits): self
     {
         $this->perUnitAreaUnits = $perUnitAreaUnits;
 
@@ -66,7 +66,7 @@ class ServiceChargeObject implements \JsonSerializable
     }
 
     /**
-     * @return string
+     * @return null|string
      */
     public function getFrequency()
     {
@@ -78,7 +78,7 @@ class ServiceChargeObject implements \JsonSerializable
      *
      * @return ServiceChargeObject
      */
-    public function setFrequency($frequency)
+    public function setFrequency(string $frequency): self
     {
         $this->frequency = $frequency;
 
@@ -86,7 +86,7 @@ class ServiceChargeObject implements \JsonSerializable
     }
 
     /** {@inheritDoc} */
-    public function jsonSerialize()
+    public function jsonSerialize(): array
     {
         return array_filter([
             'charge' => $this->getCharge(),
