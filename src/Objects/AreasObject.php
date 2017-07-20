@@ -14,9 +14,9 @@ class AreasObject implements \JsonSerializable
     private $internal;
 
     /**
-     * @return MinMaxAreaObject
+     * @return null|MinMaxAreaObject
      */
-    public function getExternal(): MinMaxAreaObject
+    public function getExternal()
     {
         return $this->external;
     }
@@ -34,9 +34,9 @@ class AreasObject implements \JsonSerializable
     }
 
     /**
-     * @return MinMaxAreaObject
+     * @return null|MinMaxAreaObject
      */
-    public function getInternal(): MinMaxAreaObject
+    public function getInternal()
     {
         return $this->internal;
     }

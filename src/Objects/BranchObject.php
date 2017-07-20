@@ -26,7 +26,7 @@ class BranchObject implements \JsonSerializable
     private $website;
 
     /**
-     * @return string
+     * @return null|string
      */
     public function getBranchReference()
     {
@@ -46,7 +46,7 @@ class BranchObject implements \JsonSerializable
     }
 
     /**
-     * @return string
+     * @return null|string
      */
     public function getBranchName()
     {
@@ -58,7 +58,7 @@ class BranchObject implements \JsonSerializable
      *
      * @return BranchObject
      */
-    public function setBranchName($branchName)
+    public function setBranchName($branchName): self
     {
         $this->branchName = $branchName;
 
@@ -66,7 +66,7 @@ class BranchObject implements \JsonSerializable
     }
 
     /**
-     * @return LocationObject
+     * @return null|LocationObject
      */
     public function getLocation()
     {
@@ -78,7 +78,7 @@ class BranchObject implements \JsonSerializable
      *
      * @return BranchObject
      */
-    public function setLocation(LocationObject $location)
+    public function setLocation(LocationObject $location): self
     {
         $this->location = $location;
 
@@ -86,7 +86,7 @@ class BranchObject implements \JsonSerializable
     }
 
     /**
-     * @return string
+     * @return null|string
      */
     public function getTelephone()
     {
@@ -98,7 +98,7 @@ class BranchObject implements \JsonSerializable
      *
      * @return BranchObject
      */
-    public function setTelephone($telephone)
+    public function setTelephone($telephone): self
     {
         $this->telephone = $telephone;
 
@@ -106,7 +106,7 @@ class BranchObject implements \JsonSerializable
     }
 
     /**
-     * @return string
+     * @return null|string
      */
     public function getEmail()
     {
@@ -118,7 +118,7 @@ class BranchObject implements \JsonSerializable
      *
      * @return BranchObject
      */
-    public function setEmail($email)
+    public function setEmail($email): self
     {
         $this->email = $email;
 
@@ -126,7 +126,7 @@ class BranchObject implements \JsonSerializable
     }
 
     /**
-     * @return string
+     * @return null|string
      */
     public function getWebsite()
     {
@@ -138,7 +138,7 @@ class BranchObject implements \JsonSerializable
      *
      * @return BranchObject
      */
-    public function setWebsite($website)
+    public function setWebsite($website): self
     {
         $this->website = $website;
 
@@ -146,7 +146,7 @@ class BranchObject implements \JsonSerializable
     }
 
     /** {@inheritDoc} */
-    public function jsonSerialize()
+    public function jsonSerialize(): array
     {
         return array_filter([
             'branch_reference' => $this->getBranchReference(),

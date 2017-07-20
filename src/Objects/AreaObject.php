@@ -19,9 +19,9 @@ class AreaObject implements \JsonSerializable
     private $units;
 
     /**
-     * @return int
+     * @return null|int
      */
-    public function getValue(): string
+    public function getValue()
     {
         return $this->value;
     }
@@ -39,9 +39,9 @@ class AreaObject implements \JsonSerializable
     }
 
     /**
-     * @return string
+     * @return null|string
      */
-    public function getUnits(): string
+    public function getUnits()
     {
         return $this->units;
     }
