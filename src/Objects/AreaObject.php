@@ -31,7 +31,7 @@ class AreaObject implements \JsonSerializable
      *
      * @return AreaObject
      */
-    public function setValue(string $value): self
+    public function setValue(int $value): self
     {
         $this->value = $value;
 
