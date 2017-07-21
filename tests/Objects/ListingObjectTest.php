@@ -146,10 +146,17 @@ class ListingObjectTest extends TestCase
             $this->object->setBillsIncluded(['water', 'tv_licence'])
         );
 
-        $this->assertSameSize(
+        $this->assertSame(
             ['water', 'tv_licence'],
             $this->object->getBillsIncluded()
         );
+    }
+
+    public function testSetBillsIncludedInvalidValueReturnsException()
+    {
+        $this->expectException(\Exception::class);
+
+        $this->object->setBillsIncluded(['bananas', 'tv_licence']);
     }
 
     public function testCanSetBranchReference()

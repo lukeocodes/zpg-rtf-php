@@ -459,9 +459,25 @@ class ListingObject implements \JsonSerializable
      */
     public function setBillsIncluded(array $billsIncluded): self
     {
-        $this->billsIncluded = $billsIncluded;
+        $billTypes = [
+            'electricity',
+            'gas',
+            'internet',
+            'satellite_cable_tv',
+            'telephone',
+            'tv_licence',
+            'water'
+        ];
 
-        return $this;
+        $diffBills = array_diff($billsIncluded, $billTypes);
+
+        if (empty($diffBills)) {
+            $this->billsIncluded = $billsIncluded;
+
+            return $this;
+        }
+
+        throw new \Exception(sprintf('%s are not in %s', json_encode($diffBills), json_encode($billTypes)));
     }
 
     /**

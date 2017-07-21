@@ -64,6 +64,13 @@ class DimensionsObjectTest extends TestCase
         );
     }
 
+    public function testSetUnitsInvalidValueReturnsException()
+    {
+        $this->expectException(\Exception::class);
+
+        $this->object->setUnits('foot');
+    }
+
     public function testCanJsonSerialize()
     {
         $this->assertJson(

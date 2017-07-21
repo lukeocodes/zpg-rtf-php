@@ -53,9 +53,21 @@ class AreaObject implements \JsonSerializable
      */
     public function setUnits(string $units): self
     {
-        $this->units = $units;
+        $unitTypes = [
+            'sq_feet',
+            'sq_yards',
+            'sq_metres',
+            'acres',
+            'hectares'
+        ];
 
-        return $this;
+        if (in_array($units, $unitTypes)) {
+            $this->units = $units;
+
+            return $this;
+        }
+
+        throw new \Exception(sprintf('%s is not in %s', $units, json_encode($unitTypes)));
     }
 
     /** {@inheritDoc} */

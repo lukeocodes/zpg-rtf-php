@@ -58,9 +58,26 @@ class ContentObject implements \JsonSerializable
      */
     public function setType(string $type): self
     {
-        $this->type = $type;
+        $types = [
+            'audio_tour',
+            'brochure',
+            'document',
+            'epc_graph',
+            'epc_report',
+            'floor_plan',
+            'home_pack',
+            'image',
+            'site_plan',
+            'virtual_tour'
+        ];
 
-        return $this;
+        if (in_array($type, $types)) {
+            $this->type = $type;
+
+            return $this;
+        }
+
+        throw new \Exception(sprintf('%s is not in %s', $type, json_encode($types)));
     }
 
     /**

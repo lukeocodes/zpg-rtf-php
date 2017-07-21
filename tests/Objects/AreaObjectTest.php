@@ -42,13 +42,20 @@ class AreaObjectTest extends TestCase
     {
         $this->assertInstanceOf(
             AreaObject::class,
-            $this->object->setUnits('sq_meters')
+            $this->object->setUnits('sq_metres')
         );
 
         $this->assertStringStartsWith(
-            'sq_meters',
+            'sq_metres',
             $this->object->getUnits()
         );
+    }
+
+    public function testSetUnitsInvalidValueReturnsException()
+    {
+        $this->expectException(\Exception::class);
+
+        $this->object->setUnits('sq_meters');
     }
 
     public function testCanJsonSerialize()

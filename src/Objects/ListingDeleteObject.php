@@ -52,9 +52,21 @@ class ListingDeleteObject implements \JsonSerializable
      */
     public function setDeletionReason(string $deletionReason): self
     {
-        $this->deletionReason = $deletionReason;
+        $deletionReasons = [
+            'withdrawn',
+            'offer_accepted',
+            'exchanged',
+            'completed',
+            'let'
+        ];
 
-        return $this;
+        if (in_array($deletionReason, $deletionReasons)) {
+            $this->deletionReason = $deletionReason;
+
+            return $this;
+        }
+
+        throw new \Exception(sprintf('%s is not in %s', $deletionReason, json_encode($deletionReasons)));
     }
 
     /** {@inheritDoc} */

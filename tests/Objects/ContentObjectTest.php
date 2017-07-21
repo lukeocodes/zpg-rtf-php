@@ -51,6 +51,13 @@ class ContentObjectTest extends TestCase
         );
     }
 
+    public function testSetTypeInvalidValueReturnsException()
+    {
+        $this->expectException(\Exception::class);
+
+        $this->object->setType('not_an_image');
+    }
+
     public function testCanSetCaption()
     {
         $this->assertInstanceOf(

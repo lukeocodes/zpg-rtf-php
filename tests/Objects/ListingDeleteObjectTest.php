@@ -51,6 +51,13 @@ class ListingDeleteObjectTest extends TestCase
         );
     }
 
+    public function testSetDeletionReasonInvalidValueReturnsException()
+    {
+        $this->expectException(\Exception::class);
+
+        $this->object->setDeletionReason('withdraw');
+    }
+
     public function testCanJsonSerialize()
     {
         $this->assertJson(
