@@ -243,7 +243,7 @@ This method allows you to describe a branch, to which listings are then associat
         $pathToZpgCert = '../local/cert/file.pem';
 
         $method = new BranchMethod($pathToZpgCert);
-        $response = $method->update($branch);
+        $response = $method->sendUpdate($branch);
 ```
 
 ## Credit
