@@ -20,6 +20,18 @@
 composer require lukeoliff/zpg-rtf-php
 ```
 
+## Certificate File
+
+Before making calls to the ZPG API, you will need to follow [Zoopla's instructions](https://realtime-listings.webservices.zpg.co.uk/docs/latest/documentation.html#security) for generating a public-private key-pair with which to authenticate against Zoopla's servers.
+
+Once you have provided Zoopla with the generated certificate signing request file, they will verify and provide you with a certificate by email. Combine the certificate with the private key you have generated:
+
+```bash
+cat zoopla_provided_certificate.crt private.pem > combined.pem
+```
+
+Change the `$pathToZpgCert` variable to the location of your `combined.pem` file and you will be ready to authenticate against the ZPG servers.
+
 ## Update/Create a listing
 
 This method allows you to describe a listing. It is used for both creation and update purposes and, in either case, the listing should be described in its entirety.
@@ -231,7 +243,7 @@ This method allows you to describe a branch, to which listings are then associat
         $pathToZpgCert = '../local/cert/file.pem';
 
         $method = new BranchMethod($pathToZpgCert);
-        $response = $method->update($branch);
+        $response = $method->sendUpdate($branch);
 ```
 
 ## Credit

@@ -86,6 +86,7 @@ abstract class AbstractMethod
                 'body' => $payload,
                 'headers' => [
                     'Content-Type' => 'application/json; profile=' . $schemaUri,
+                    'ZPG-Listing-ETag' => md5($payload),
                 ],
             ]);
 
