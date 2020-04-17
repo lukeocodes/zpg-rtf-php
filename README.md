@@ -1,3 +1,5 @@
+I no longer have access to this API to continue working on the SDK. I am happy to transfer the project to someone. In the meantime, the project will be archived. Please nudge me on twitter.com/lukeocodes to discuss.
+
 # ZPG Real-time Listings Service for PHP
 
 [![Software License][ico-license]](LICENSE.md)
